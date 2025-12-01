@@ -1,0 +1,268 @@
+<!DOCTYPE html>
+<html lang="pt-br" data-theme="light">
+
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width,initial-scale=1" />
+    <title>Cachorro Cafezeiro — Questões de TI</title>
+
+    <!-- Bootstrap (opcional mas recomendado para responsividade) -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
+
+    <!-- Seu CSS externo (verifique se o arquivo styles.css está no mesmo diretório do index.html) -->
+    <link rel="stylesheet" href="styles.css">
+
+    <!-- meta theme (é atualizado pelo script para dark mode) -->
+    <meta name="theme-color" content="#5D4037" id="meta-theme">
+</head>
+
+<body>
+
+    <!-- NAVBAR -->
+    <nav class="navbar navbar-expand-lg shadow-sm sticky-top" aria-label="Barra de navegação">
+        <div class="container">
+            <a class="navbar-brand d-flex align-items-center gap-2" href="#">
+                <!-- Atenção: verifique o path. Aqui está como 'imagens/logo.png' -->
+                <img src="imagens/logo2.png" alt="Logo Cachorro Cafezeiro" width="45" height="45"
+                    style="object-fit:contain">
+                <span class="fw-bold">Cachorro Cafezeiro</span>
+            </a>
+
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#mainNav"
+                aria-controls="mainNav" aria-expanded="false" aria-label="Alternar navegação">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+
+            <div class="collapse navbar-collapse" id="mainNav">
+                <ul class="navbar-nav ms-auto align-items-lg-center">
+                    <li class="nav-item"><a class="nav-link" href="#beneficios">Benefícios</a></li>
+                    <li class="nav-item"><a class="nav-link" href="#questoes">Questões</a></li>
+                    <li class="nav-item"><a class="nav-link" href="#simulados">Simulados</a></li>
+                    <li class="nav-item"><a class="nav-link" href="#cadastro">Cadastrar</a></li>
+
+                    <!-- Toggle dark mode -->
+                    <li class="nav-item d-flex align-items-center ms-3">
+                        <button id="darkToggle" class="btn btn-sm btn-outline-secondary" aria-pressed="false"
+                            title="Alternar tema">🌙</button>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+
+    <!-- HERO -->
+    <header class="hero py-5">
+        <div class="container">
+            <div class="row align-items-center">
+                <div class="col-lg-6 reveal" style="animation-delay:120ms">
+                    <h1 class="display-5 fw-bold">Questões de TI focadas no Banco do Brasil</h1>
+                    <p class="lead mt-3">Pratique com filtros inteligentes, simulados cronometrados, estatísticas e
+                        explicações objetivas.</p>
+                    <div class="mt-4 d-flex gap-2 flex-wrap">
+                        <a class="btn btn-primary btn-lg" href="#questoes">Começar agora</a>
+                        <a class="btn btn-outline-primary btn-lg" href="#questoes">Ver questões</a>
+                    </div>
+                </div>
+
+                <div class="col-lg-6 text-center reveal" style="animation-delay:240ms">
+                    <!-- Atenção: ajuste o path da imagem se necessário -->
+                    <img src="imagens/logo2.png" alt="Mascote Cachorro Cafezeiro segurando xícara de café"
+                        class="img-fluid" style="max-width:380px;">
+                </div>
+            </div>
+        </div>
+    </header>
+
+    <!-- SEARCH -->
+    <section class="py-4">
+        <div class="container">
+            <form class="row g-3 search-panel align-items-center reveal" style="animation-delay:320ms" role="search"
+                aria-label="Pesquisar questões">
+                <div class="col-12 col-md-4">
+                    <label for="mat" class="visually-hidden">Matéria</label>
+                    <select id="mat" class="form-select" aria-label="Selecionar matéria">
+                        <option selected>Selecione a matéria</option>
+                        <option>TI</option>
+                        <option>Conhecimentos Bancários</option>
+                    </select>
+                </div>
+
+                <div class="col-12 col-md-4">
+                    <label for="assunto" class="visually-hidden">Assunto</label>
+                    <select id="assunto" class="form-select" aria-label="Selecionar assunto">
+                        <option selected>Selecione o assunto</option>
+                        <option>SQL</option>
+                        <option>Redes</option>
+                        <option>Segurança</option>
+                    </select>
+                </div>
+
+                <div class="col-12 col-md-4 d-grid">
+                    <button type="submit" class="btn btn-primary w-100">Buscar</button>
+                </div>
+            </form>
+        </div>
+    </section>
+
+    <!-- BENEFÍCIOS -->
+    <main>
+        <section id="beneficios" class="py-5 reveal" style="animation-delay:400ms">
+            <div class="container">
+                <h2 class="fw-bold text-center mb-4">O que você encontra aqui</h2>
+                <div class="row g-4">
+                    <div class="col-12 col-md-6 col-lg-3">
+                        <div class="card h-100">
+                            <div class="card-body text-center">
+                                <h5 class="fw-bold">Questões Comentadas</h5>
+                                <p class="muted mb-0">Explicações objetivas focadas na banca CESGRANRIO e no BB.</p>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="col-12 col-md-6 col-lg-3">
+                        <div class="card h-100">
+                            <div class="card-body text-center">
+                                <h5 class="fw-bold">Filtros Inteligentes</h5>
+                                <p class="muted mb-0">Filtre por assunto, banca, dificuldade e ano.</p>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="col-12 col-md-6 col-lg-3">
+                        <div class="card h-100">
+                            <div class="card-body text-center">
+                                <h5 class="fw-bold">Simulados</h5>
+                                <p class="muted mb-0">Cronometrados, com gabarito e relatório de desempenho.</p>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="col-12 col-md-6 col-lg-3">
+                        <div class="card h-100">
+                            <div class="card-body text-center">
+                                <h5 class="fw-bold">Dashboard</h5>
+                                <p class="muted mb-0">Acompanhe acertos, erros e evolução por assunto.</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- QUESTÕES -->
+        <section id="questoes" class="py-5 bg-light">
+            <div class="container">
+                <h2 class="fw-bold mb-4 reveal" style="animation-delay:480ms">Questões Recentes</h2>
+                <div class="row g-4">
+                    <div class="col-12 col-md-6 col-lg-4 reveal" style="animation-delay:520ms">
+                        <div class="card h-100">
+                            <div class="card-body">
+                                <h6 class="text-primary fw-bold">SQL • CESGRANRIO</h6>
+                                <p class="muted">Considere o comando SELECT no contexto de filtragem com WHERE...</p>
+                                <button class="btn btn-outline-primary w-100 mt-2">Resolver</button>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="col-12 col-md-6 col-lg-4 reveal" style="animation-delay:560ms">
+                        <div class="card h-100">
+                            <div class="card-body">
+                                <h6 class="text-primary fw-bold">Redes • CESGRANRIO</h6>
+                                <p class="muted">Sobre o protocolo HTTP, analise as afirmações a seguir...</p>
+                                <button class="btn btn-outline-primary w-100 mt-2">Resolver</button>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="col-12 col-md-6 col-lg-4 reveal" style="animation-delay:600ms">
+                        <div class="card h-100">
+                            <div class="card-body">
+                                <h6 class="text-primary fw-bold">Segurança • CESGRANRIO</h6>
+                                <p class="muted">Firewalls de próxima geração possuem as seguintes características...
+                                </p>
+                                <button class="btn btn-outline-primary w-100 mt-2">Resolver</button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- CTA -->
+        <section id="cadastro" class="py-5 text-center reveal" style="animation-delay:680ms">
+            <div class="container">
+                <h2 class="fw-bold">Crie sua conta gratuita</h2>
+                <p class="muted">Salve seu progresso, crie simulados e acompanhe sua evolução.</p>
+                <a class="btn btn-primary btn-lg mt-3" href="#">Cadastrar grátis</a>
+            </div>
+        </section>
+    </main>
+
+    <!-- FOOTER -->
+    <footer class="py-4" style="background:#2B201C; color:#fff;">
+        <div class="container text-center small">
+            <div class="mb-2">© <span id="year"></span> Cachorro Cafezeiro — Todos os direitos reservados.</div>
+            <div class="muted">Política de Privacidade • Termos</div>
+        </div>
+    </footer>
+
+    <!-- Bootstrap JS (mantém funcionalidade do collapse do menu) -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
+
+    <!-- SCRIPT: dark mode + reveal animations + year -->
+    <script>
+        (function () {
+            const body = document.body;
+            const toggle = document.getElementById('darkToggle');
+            const meta = document.getElementById('meta-theme');
+
+            // safe guards
+            function setYear() { const el = document.getElementById('year'); if (el) el.textContent = new Date().getFullYear(); }
+            setYear();
+
+            // theme helpers
+            function applyTheme(isDark) {
+                if (isDark) { body.classList.add('dark'); document.documentElement.setAttribute('data-theme', 'dark'); meta.setAttribute('content', '#121212'); toggle.textContent = '☀️'; toggle.setAttribute('aria-pressed', 'true'); }
+                else { body.classList.remove('dark'); document.documentElement.setAttribute('data-theme', 'light'); meta.setAttribute('content', '#5D4037'); toggle.textContent = '🌙'; toggle.setAttribute('aria-pressed', 'false'); }
+            }
+
+            // read stored or system
+            let stored = localStorage.getItem('cc-theme');
+            if (stored === null) {
+                const prefersDark = window.matchMedia && window.matchMedia('(prefers-color-scheme: dark)').matches;
+                stored = prefersDark ? 'dark' : 'light';
+            }
+            applyTheme(stored === 'dark');
+
+            // toggle click
+            if (toggle) {
+                toggle.addEventListener('click', () => {
+                    const isDark = document.documentElement.getAttribute('data-theme') === 'dark';
+                    const next = !isDark;
+                    applyTheme(next);
+                    localStorage.setItem('cc-theme', next ? 'dark' : 'light');
+                });
+            }
+
+            // small staggered reveal for elements with class 'reveal'
+            document.addEventListener('DOMContentLoaded', () => {
+                const reveals = Array.from(document.querySelectorAll('.reveal'));
+                reveals.forEach((el, i) => setTimeout(() => el.classList.add('show'), i * 90));
+            });
+
+            // smooth anchor scrolling
+            document.querySelectorAll('a[href^="#"]').forEach(a => {
+                a.addEventListener('click', function (e) {
+                    const target = document.querySelector(this.getAttribute('href'));
+                    if (target) {
+                        e.preventDefault();
+                        target.scrollIntoView({ behavior: 'smooth', block: 'start' });
+                    }
+                });
+            });
+        })();
+    </script>
+
+</body>
+
+</html>

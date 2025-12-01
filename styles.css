@@ -1,0 +1,152 @@
+/* ===================
+   VARIÁVEIS (Light / Dark)
+====================== */
+
+:root {
+    --bg: #ffffff;
+    --text: #333;
+    --card: #f3f3f3;
+    --accent: #6F4E37;       /* marrom café */
+    --accent-hover: #4E3526; /* marrom escuro */
+
+}
+
+[data-theme="dark"] {
+    --bg: #0f0f0f;
+    --text: #e5e5e5;
+    --card: #1a1a1a;
+    --accent: #A67B5B;
+    --accent-hover: #8B6449;
+
+}
+
+/* ===================
+   RESET
+====================== */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: "Inter", sans-serif;
+}
+
+body {
+    background: var(--bg);
+    color: var(--text);
+    transition: background 0.3s, color 0.3s;
+}
+
+/* ===================
+   NAVBAR
+====================== */
+
+.navbar {
+    width: 100%;
+    padding: 1rem 2rem;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background: var(--card);
+    border-bottom: 1px solid #ccc3;
+}
+
+.logo {
+    display: flex;
+    gap: 10px;
+    align-items: center;
+    font-weight: bold;
+    font-size: 1.2rem;
+}
+
+.logo img {
+    width: 40px;
+    height: 40px;
+}
+
+/* Dark mode button */
+#theme-toggle {
+    background: none;
+    border: none;
+    font-size: 1.5rem;
+    cursor: pointer;
+}
+
+/* ===================
+   HERO
+====================== */
+
+.hero {
+    text-align: center;
+    padding: 4rem 2rem;
+}
+
+.hero h1 {
+    font-size: 2.5rem;
+    margin-bottom: 1rem;
+}
+
+.hero p {
+    font-size: 1.2rem;
+    margin-bottom: 2rem;
+}
+
+.btn {
+    padding: 0.8rem 1.5rem;
+    background: var(--accent);
+    color: white;
+    border-radius: 12px;
+    text-decoration: none;
+    transition: background 0.3s, transform 0.2s;
+}
+
+.btn:hover {
+    background: var(--accent-hover);
+    transform: translateY(-3px);
+}
+
+/* ===================
+   FEATURES
+====================== */
+
+.features {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+    gap: 1.5rem;
+    padding: 2rem;
+}
+
+.feature-card {
+    background: var(--card);
+    padding: 1.8rem;
+    border-radius: 16px;
+    text-align: center;
+    transition: transform 0.3s, background 0.3s;
+}
+
+.feature-card:hover {
+    transform: translateY(-5px);
+}
+
+/* ===================
+   FOOTER
+====================== */
+
+footer {
+    text-align: center;
+    padding: 2rem;
+    opacity: 0.7;
+}
+
+/* ===================
+   ANIMAÇÕES
+====================== */
+
+.fade-in {
+    opacity: 0;
+    animation: fadeIn 0.8s ease forwards;
+}
+
+@keyframes fadeIn {
+    from { opacity: 0; transform: translateY(10px); }
+    to   { opacity: 1; transform: translateY(0); }
+}
