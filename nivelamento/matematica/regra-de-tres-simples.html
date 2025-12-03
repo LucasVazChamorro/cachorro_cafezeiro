@@ -1,0 +1,245 @@
+<!DOCTYPE html>
+<html lang="pt-br" data-theme="light">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Regra de Três Simples — Nivelamento Matemática</title>
+
+    <!-- Bootstrap -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css">
+
+    <!-- CSS do projeto -->
+    <link rel="stylesheet" href="/assets/css/base.css">
+    <link rel="stylesheet" href="/assets/css/layout.css">
+    <link rel="stylesheet" href="/assets/css/nivelamento.css">
+
+    <meta name="theme-color" content="#5D4037" id="meta-theme">
+</head>
+
+<body>
+
+    <!-- NAVBAR DINÂMICA -->
+    <div id="navbar-dashboard"></div>
+    <script src="/assets/js/loadNavbar.js"></script>
+
+    <main class="container my-5">
+
+        <!-- TÍTULO / CABEÇALHO -->
+        <header class="mb-4">
+            <h1 class="fw-bold text-center">Regra de Três Simples</h1>
+            <p class="text-center text-muted">Resumo completo + exemplos + questões interativas</p>
+        </header>
+
+        <!-- CARD PRINCIPAL -->
+        <div class="col-md-10 mx-auto">
+
+            <div class="card shadow-sm mb-4">
+                <div class="card-body">
+
+                    <h3 class="mb-3">1) O que é Regra de Três Simples?</h3>
+                    <p>
+                        A regra de três simple é usada quando há duas grandezas que se relacionam proporcionalmente,
+                        e queremos encontrar um valor desconhecido usando outros três conhecidos.
+                    </p>
+
+                    <p>A Cesgranrio gosta de questões diretas, onde o essencial é identificar se a proporcionalidade é:
+                    </p>
+
+                    <ul>
+                        <li><strong>Direta</strong> — uma aumenta → a outra aumenta</li>
+                        <li><strong>Inversa</strong> — uma aumenta → a outra diminui</li>
+                    </ul>
+
+                    <h4 class="mt-4">2) Grandezas Diretamente Proporcionais</h4>
+
+                    <p><strong>Exemplos:</strong></p>
+                    <ul>
+                        <li>Quantidade ↔ Preço</li>
+                        <li>Tempo ↔ Distância</li>
+                        <li>Consumo ↔ Conta de energia</li>
+                    </ul>
+
+                    <p><strong>Proporção direta:</strong></p>
+                    <pre>A / B = C / X</pre>
+
+                    <h4 class="mt-4">3) Grandezas Inversamente Proporcionais</h4>
+                    <p>Uma cresce → a outra diminui. Exemplo:</p>
+
+                    <ul>
+                        <li>Número de trabalhadores ↔ Tempo de execução</li>
+                        <li>Velocidade ↔ Tempo de viagem</li>
+                    </ul>
+
+                    <p><strong>Proporção inversa:</strong></p>
+                    <pre>A / B = X / C</pre>
+
+                    <h4 class="mt-4">4) Exemplo Direto</h4>
+                    <p><strong>3 kg de arroz custam R$ 24. Quanto custam 5 kg?</strong></p>
+                    <pre>3/5 = 24/X → X = 40</pre>
+
+                    <h4 class="mt-4">5) Exemplo Inverso</h4>
+                    <p><strong>6 operários fazem um serviço em 10 horas. Quantos são necessários para fazer em 4
+                            horas?</strong></p>
+                    <pre>6/X = 4/10 → X = 15</pre>
+
+                </div>
+            </div>
+
+            <!-- EXERCÍCIOS -->
+            <div class="card shadow-sm mb-4">
+                <div class="card-body">
+                    <h3 class="mb-3" style="color: var(--accent);">📘 Exercícios Estilo Cesgranrio</h3>
+
+                    <ul>
+                        <li>Um carro percorre 180 km com 15 L. Quantos litros para 260 km?</li>
+                        <li>9 máquinas produzem 540 peças em 6h. Quantas peças 6 máquinas produzem em 8h?</li>
+                        <li>2 funcionários fazem a tarefa em 9 dias. Quantos dias 6 funcionários levam?</li>
+                    </ul>
+                </div>
+            </div>
+
+            <!-- EXEMPLOS INTERATIVOS -->
+            <div class="card shadow-sm mb-4">
+                <div class="card-body">
+                    <h3 class="mb-3" style="color: var(--accent);">🛠 Exemplos Interativos</h3>
+
+                    <p>Clique para revelar a solução:</p>
+
+                    <div class="example-box mb-3" onclick="this.querySelector('div').classList.toggle('d-none')">
+                        <strong>Exemplo 1 — Direto:</strong>
+                        Se 8 metros de tecido custam R$ 56, quanto custam 5 metros?
+                        <div class="d-none mt-2">Proporção direta: 8/5 = 56/X → X = 35</div>
+                    </div>
+
+                    <div class="example-box" onclick="this.querySelector('div').classList.toggle('d-none')">
+                        <strong>Exemplo 2 — Inverso:</strong>
+                        4 pintores fazem um serviço em 12h. Quanto tempo 6 pintores levam?
+                        <div class="d-none mt-2">Proporção inversa: 4/6 = X/12 → X = 8h</div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- LEMBRETE -->
+            <div class="card shadow-sm mb-4">
+                <div class="card-body">
+                    <h3 class="mb-3" style="color: var(--accent);">💡 Lembrete Importante</h3>
+                    <p class="tip-box">
+                        Sempre confira se a proporcionalidade é <strong>direta</strong> ou <strong>inversa</strong>.
+                        Esse é o principal ponto onde a Cesgranrio costuma induzir erro.
+                    </p>
+                </div>
+            </div>
+
+            <!-- QUESTÕES INTERATIVAS -->
+            <h2 class="fw-bold mb-3 text-center">Questões Interativas</h2>
+            <div id="questions" class="col-md-10 mx-auto"></div>
+
+        </div>
+
+    </main>
+
+    <!-- SCRIPTS -->
+    <script>
+        const questions = [
+            {
+                enunciado: "1) Se 5 kg de arroz custam R$ 20, quanto custam 8 kg?",
+                options: ["R$ 28", "R$ 32", "R$ 30", "R$ 26"],
+                answer: 1
+            },
+            {
+                enunciado: "2) Um carro consome 10 L para percorrer 80 km. Quantos litros gastará para 140 km?",
+                options: ["15 L", "17,5 L", "12 L", "20 L"],
+                answer: 1
+            },
+            {
+                enunciado: "3) 12 funcionários fazem um serviço em 9 dias. Quantos dias 18 funcionários levam?",
+                options: ["6 dias", "8 dias", "10 dias", "12 dias"],
+                answer: 0
+            }
+        ];
+
+        const videos = [
+            "https://www.youtube.com/embed/hucsz2l8AFU",
+            "https://www.youtube.com/embed/_u-7rWKnVVo",
+            "https://www.youtube.com/embed/YBq9Kfdp6O4"
+        ];
+
+        function renderQuestions() {
+            const container = document.getElementById("questions");
+
+            questions.forEach((q, index) => {
+                const card = document.createElement("div");
+                card.className = "card shadow-sm mb-4";
+
+                card.innerHTML = `
+                    <div class="card-body">
+                        <p class="fw-bold">${q.enunciado}</p>
+                        <div class="options mb-3">
+                            ${q.options.map((opt, i) => `
+                                <button class="btn btn-outline-secondary w-100 mb-2 option-btn"
+                                    data-q="${index}" data-i="${i}">
+                                    ${opt}
+                                </button>
+                            `).join("")}
+                        </div>
+
+                        <button class="btn btn-primary" data-submit="${index}">Concluir</button>
+                        <div class="mt-3" id="feedback-${index}"></div>
+
+                        <div class="video-correção d-none mt-3" id="video-${index}">
+                            <iframe width="100%" height="315" src="" frameborder="0" allowfullscreen></iframe>
+                        </div>
+                    </div>
+                `;
+
+                container.appendChild(card);
+            });
+
+            document.querySelectorAll(".option-btn").forEach(btn => {
+                btn.addEventListener("click", () => {
+                    const q = btn.dataset.q;
+                    document.querySelectorAll(`button[data-q='${q}']`).forEach(b => b.classList.remove("selected"));
+                    btn.classList.add("selected");
+                });
+
+                btn.addEventListener("contextmenu", e => {
+                    e.preventDefault();
+                    btn.classList.toggle("discard");
+                });
+            });
+
+            document.querySelectorAll("[data-submit]").forEach(btn => {
+                btn.addEventListener("click", () => {
+                    const qIndex = btn.dataset.submit;
+                    const selected = document.querySelector(`button[data-q='${qIndex}'].selected`);
+                    const feedback = document.getElementById(`feedback-${qIndex}`);
+
+                    if (!selected) {
+                        feedback.innerHTML = `<div class="alert alert-danger">Selecione uma alternativa.</div>`;
+                        return;
+                    }
+
+                    const correct = questions[qIndex].answer;
+
+                    if (parseInt(selected.dataset.i) === correct) {
+                        feedback.innerHTML = `<div class="alert alert-success">✔ Resposta correta!</div>`;
+                    } else {
+                        feedback.innerHTML = `<div class="alert alert-danger">✖ Resposta incorreta.</div>`;
+                    }
+
+                    const videoDiv = document.getElementById(`video-${qIndex}`);
+                    videoDiv.classList.remove("d-none");
+                    videoDiv.querySelector("iframe").src = videos[qIndex];
+                });
+            });
+        }
+
+        renderQuestions();
+    </script>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
+
+</body>
+
+</html>

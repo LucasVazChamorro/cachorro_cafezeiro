@@ -1,0 +1,76 @@
+/* HEADER DO DASHBOARD */
+.dashboard-header {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: space-between;
+    gap: .75rem;
+}
+
+/* CARDS DE MÉTRICA */
+.metric-card {
+    border-radius: .9rem;
+}
+
+.metric-label {
+    font-size: .9rem;
+    text-transform: uppercase;
+    letter-spacing: .04em;
+    color: #7a7a7a;
+    margin-bottom: .25rem;
+}
+
+.metric-value {
+    font-size: 1.8rem;
+    font-weight: 700;
+    line-height: 1;
+}
+
+.metric-sub {
+    font-size: .8rem;
+}
+
+/* PROGRESSOS */
+.progress-cc {
+    height: .6rem;
+    border-radius: 999px;
+    background-color: rgba(0, 0, 0, 0.06);
+}
+
+.progress-bar-cc {
+    background-color: var(--accent);
+    border-radius: 999px;
+}
+
+/* PILLS DE ASSUNTOS COM MAIS ERROS */
+.topic-pill {
+    border-radius: .9rem;
+    padding: .9rem 1rem;
+    background-color: rgba(0, 0, 0, 0.02);
+}
+
+body.dark .topic-pill {
+    background-color: rgba(255, 255, 255, 0.04);
+}
+
+.topic-title {
+    font-weight: 600;
+    font-size: .95rem;
+}
+
+.topic-sub {
+    font-size: .8rem;
+}
+
+/* Pequenos ajustes de tabela no dark mode */
+body.dark .table {
+    color: var(--text);
+}
+
+body.dark .table thead tr th {
+    border-color: rgba(255, 255, 255, 0.08);
+}
+
+body.dark .table tbody tr td {
+    border-color: rgba(255, 255, 255, 0.04);
+}

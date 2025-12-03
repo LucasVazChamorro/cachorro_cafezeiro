@@ -1,0 +1,154 @@
+/* ============================
+   HOME / LANDING PAGE
+   (apenas estilos específicos da index)
+============================ */
+
+/* HERO (seção inicial) */
+.hero {
+    padding-top: 4rem;
+    padding-bottom: 4rem;
+    background: radial-gradient(circle at top left, rgba(111, 78, 55, 0.12), transparent 55%),
+        radial-gradient(circle at bottom right, rgba(166, 123, 91, 0.18), transparent 55%);
+}
+
+/* Badge do topo (ex: "Focado em TI...") */
+.hero .badge {
+    border-radius: 999px;
+    padding: .4rem .9rem;
+}
+
+/* Título e lead mais confortáveis */
+.hero h1 {
+    line-height: 1.15;
+}
+
+.hero .lead {
+    font-size: 1.05rem;
+    max-width: 38rem;
+}
+
+/* Imagem do mascote */
+.hero img {
+    filter: drop-shadow(0 18px 30px rgba(0, 0, 0, 0.18));
+}
+
+/* ============================
+   SEÇÃO BENEFÍCIOS
+============================ */
+
+#beneficios {
+    scroll-margin-top: 90px;
+}
+
+#beneficios .card {
+    border-radius: 1rem;
+    text-align: center;
+}
+
+#beneficios .card-body {
+    padding: 1.8rem 1.5rem;
+}
+
+#beneficios .card h5 {
+    margin-bottom: .6rem;
+}
+
+/* ============================
+   SEÇÃO COMO FUNCIONA
+============================ */
+
+#como-funciona {
+    scroll-margin-top: 90px;
+}
+
+#como-funciona .card {
+    border-radius: .9rem;
+}
+
+#como-funciona .card-body {
+    padding: 1.5rem 1.4rem;
+}
+
+/* ============================
+   SEÇÃO PLANOS
+============================ */
+
+#planos {
+    scroll-margin-top: 90px;
+}
+
+/* Cards de plano */
+#planos .card {
+    border-radius: 1rem;
+}
+
+#planos .card-body {
+    padding: 1.7rem 1.6rem;
+}
+
+/* Plano destacado (Café Forte) */
+#planos .card.border-2 {
+    box-shadow: 0 16px 40px rgba(0, 0, 0, 0.16);
+    transform: translateY(-4px);
+}
+
+#planos .card.border-2:hover {
+    transform: translateY(-6px);
+}
+
+/* Lista de benefícios do plano */
+#planos ul li {
+    margin-bottom: .3rem;
+}
+
+/* ============================
+   CTA / CADASTRO
+============================ */
+
+#cadastro {
+    scroll-margin-top: 90px;
+}
+
+#cadastro form .form-label {
+    font-size: .9rem;
+    font-weight: 500;
+}
+
+/* Campos com borda um pouco mais suave */
+#cadastro .form-control {
+    border-radius: .6rem;
+}
+
+/* ============================
+   RESPONSIVIDADE
+============================ */
+
+@media (max-width: 991.98px) {
+    .hero {
+        text-align: center;
+    }
+
+    .hero .lead {
+        margin-left: auto;
+        margin-right: auto;
+    }
+
+    .hero .mt-4.d-flex {
+        justify-content: center;
+    }
+}
+
+@media (max-width: 575.98px) {
+    .hero {
+        padding-top: 3rem;
+        padding-bottom: 3rem;
+    }
+
+    .hero h1 {
+        font-size: 1.8rem;
+    }
+
+    #planos .card-body {
+        padding: 1.4rem 1.2rem;
+    }
+}

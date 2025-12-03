@@ -1,0 +1,197 @@
+/* =======================================
+   NIVELAMENTO — ESTILO GERAL DAS PÁGINAS
+   (Matemática, Estatística, TI, etc.)
+======================================= */
+
+body {
+    background: var(--bg, #faf7f4);
+    color: var(--text, #2b201c);
+}
+
+/* Container principal das páginas de nivelamento */
+main.nivelamento-main,
+main.container,
+.nivelamento-wrapper {
+    padding-top: 2rem;
+    padding-bottom: 3rem;
+}
+
+/* Títulos padrão das páginas de nivelamento */
+.nivelamento-title,
+h1.nivelamento-title {
+    font-weight: 700;
+    font-size: clamp(1.7rem, 2vw + 1rem, 2.2rem);
+    text-align: center;
+    margin-bottom: 0.5rem;
+    background: linear-gradient(90deg, var(--accent, #5D4037), var(--accent-hover, #3e2723));
+    -webkit-background-clip: text;
+    color: transparent;
+}
+
+.nivelamento-subtitle {
+    text-align: center;
+    color: var(--text-muted, #7a6c66);
+    margin-bottom: 2rem;
+}
+
+/* Cards “café” levemente neumórficos */
+.nivelamento-card,
+.card.nivelamento-card {
+    background: var(--card, #f5f0eb);
+    border-radius: 18px;
+    border: none;
+    box-shadow:
+        6px 6px 14px rgba(0, 0, 0, 0.12),
+        -6px -6px 14px rgba(255, 255, 255, 0.08);
+    transition: transform 0.25s ease, box-shadow 0.25s ease;
+}
+
+.nivelamento-card:hover {
+    transform: translateY(-4px);
+    box-shadow:
+        8px 8px 18px rgba(0, 0, 0, 0.18),
+        -8px -8px 18px rgba(255, 255, 255, 0.05);
+}
+
+/* Títulos dentro dos cards */
+.nivelamento-card h2,
+.nivelamento-card h3,
+.nivelamento-card h4 {
+    font-weight: 700;
+}
+
+/* =======================================
+   CAIXAS ESPECIAIS (exemplos, lembretes)
+======================================= */
+
+.example-box {
+    background: var(--card, #f5f0eb);
+    border-radius: 14px;
+    padding: 14px 16px;
+    border: 1px solid #ccc3;
+    cursor: pointer;
+    transition: transform 0.25s ease, box-shadow 0.25s ease, background 0.25s ease;
+}
+
+.example-box:hover {
+    transform: translateY(-3px);
+    box-shadow: 0 8px 18px rgba(0, 0, 0, 0.15);
+    background: rgba(0, 0, 0, 0.02);
+}
+
+.example-box strong {
+    display: block;
+    margin-bottom: 4px;
+}
+
+.tip-box {
+    background: rgba(255, 255, 255, 0.6);
+    padding: 16px 18px;
+    border-radius: 14px;
+    border: 1px solid #ccc3;
+    backdrop-filter: blur(6px);
+    font-size: 0.95rem;
+}
+
+/* =======================================
+   QUESTÕES INTERATIVAS
+======================================= */
+
+/* Container das questões */
+#questions {
+    margin-top: 1.5rem;
+    margin-bottom: 2rem;
+}
+
+/* Card padrão das questões */
+#questions .card {
+    background: var(--card, #f5f0eb);
+    border-radius: 16px;
+    border: 1px solid rgba(0, 0, 0, 0.04);
+}
+
+/* Enunciado da questão */
+#questions .card-body>p.fw-bold {
+    margin-bottom: 0.75rem;
+}
+
+/* Botão de alternativa */
+.option-btn {
+    border-radius: 14px !important;
+    padding: 10px 12px !important;
+    background: var(--card, #f5f0eb);
+    color: var(--text, #2b201c);
+    border: 1px solid rgba(0, 0, 0, 0.08);
+    transition: 0.25s ease;
+    text-align: left;
+    font-size: 0.96rem;
+}
+
+/* Hover normal */
+.option-btn:hover {
+    transform: translateX(4px);
+    background: rgba(0, 0, 0, 0.03);
+}
+
+/* Quando estiver selecionada (clique esquerdo) */
+.option-btn.selected {
+    background: var(--accent, #5D4037) !important;
+    color: #fff !important;
+    border-color: var(--accent-hover, #3e2723) !important;
+    box-shadow: 0 0 0 2px rgba(93, 64, 55, 0.25);
+}
+
+/* Quando marcada como descartada (clique direito) */
+.option-btn.discard {
+    text-decoration: line-through;
+    opacity: 0.45;
+}
+
+/* Botão "Concluir" */
+#questions .btn.btn-primary {
+    border-radius: 12px;
+    padding-inline: 18px;
+}
+
+/* Feedback (alert do Bootstrap) */
+#questions .alert {
+    border-radius: 12px;
+    animation: nivelamento-pop 0.3s ease-out forwards;
+}
+
+/* Animação suave no feedback */
+@keyframes nivelamento-pop {
+    0% {
+        transform: scale(0.9);
+        opacity: 0;
+    }
+
+    100% {
+        transform: scale(1);
+        opacity: 1;
+    }
+}
+
+/* Iframe de vídeo de correção */
+.video-correção iframe {
+    border-radius: 14px;
+    border: 1px solid rgba(0, 0, 0, 0.06);
+}
+
+/* =======================================
+   RESPONSIVIDADE
+======================================= */
+
+@media (max-width: 768px) {
+
+    main.nivelamento-main,
+    main.container,
+    .nivelamento-wrapper {
+        padding-top: 1.5rem;
+        padding-bottom: 2.5rem;
+    }
+
+    #questions .card {
+        margin-inline: 0;
+    }
+}

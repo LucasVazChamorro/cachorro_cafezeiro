@@ -1,0 +1,268 @@
+<!DOCTYPE html>
+<html lang="pt-br" data-theme="light">
+
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width,initial-scale=1" />
+    <title>Cachorro Cafezeiro — Dashboard</title>
+
+    <!-- Bootstrap -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
+
+    <!-- CSS do projeto -->
+    <link rel="stylesheet" href="assets/css/base.css">
+    <link rel="stylesheet" href="assets/css/layout.css">
+    <link rel="stylesheet" href="assets/css/dashboard.css">
+
+    <meta name="theme-color" content="#5D4037" id="meta-theme">
+</head>
+
+<body>
+
+    <!-- NAVBAR DINÂMICA -->
+    <div id="navbar-dashboard"></div>
+    <script src="assets/js/loadNavbar.js"></script>
+
+    <!-- resto do conteúdo -->
+
+
+
+    <main class="py-4">
+        <div class="container">
+
+            <!-- HEADER DO DASHBOARD -->
+            <section class="dashboard-header mb-4 reveal" style="animation-delay:120ms">
+                <div>
+                    <h1 class="h3 fw-bold mb-1">Dashboard do Aluno</h1>
+                    <p class="text-muted mb-0">Visão geral do seu desempenho nas questões de TI para o Banco do Brasil.</p>
+                </div>
+                <div class="text-end">
+                    <span class="badge bg-primary-subtle text-primary-emphasis rounded-pill">
+                        Última atualização: 12/03/2025 • 14:32
+                    </span>
+                </div>
+            </section>
+
+            <!-- CARDS RESUMO -->
+            <section class="row g-3 mb-4">
+                <div class="col-12 col-sm-6 col-xl-3 reveal" style="animation-delay:160ms">
+                    <div class="card metric-card h-100">
+                        <div class="card-body">
+                            <p class="metric-label">Questões respondidas</p>
+                            <p class="metric-value">248</p>
+                            <p class="metric-sub text-muted">+12 hoje</p>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="col-12 col-sm-6 col-xl-3 reveal" style="animation-delay:200ms">
+                    <div class="card metric-card h-100">
+                        <div class="card-body">
+                            <p class="metric-label">Taxa de acertos</p>
+                            <p class="metric-value text-success">78%</p>
+                            <div class="progress progress-cc mt-2">
+                                <div class="progress-bar progress-bar-cc" style="width: 78%"></div>
+                            </div>
+                            <p class="metric-sub text-muted mt-1">Meta: 85%</p>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="col-12 col-sm-6 col-xl-3 reveal" style="animation-delay:240ms">
+                    <div class="card metric-card h-100">
+                        <div class="card-body">
+                            <p class="metric-label">Questões em TI</p>
+                            <p class="metric-value">195</p>
+                            <p class="metric-sub text-muted">Banco de Dados, Redes, Segurança…</p>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="col-12 col-sm-6 col-xl-3 reveal" style="animation-delay:280ms">
+                    <div class="card metric-card h-100">
+                        <div class="card-body">
+                            <p class="metric-label">Simulados realizados</p>
+                            <p class="metric-value">7</p>
+                            <p class="metric-sub text-muted">Média: 71% de acertos</p>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <!-- LINHA 2: GRÁFICO + TABELA -->
+            <section class="row g-4 mb-4">
+                
+                <!-- Desempenho por matéria -->
+                <div class="col-12 col-lg-6 reveal" style="animation-delay:320ms">
+                    <div class="card h-100">
+                        <div class="card-body">
+
+                            <h2 class="h5 fw-bold mb-3">Desempenho por matéria</h2>
+
+                            <div class="mb-3">
+                                <div class="d-flex justify-content-between mb-1">
+                                    <span>Banco de Dados (SQL)</span>
+                                    <span class="text-muted">82%</span>
+                                </div>
+                                <div class="progress progress-cc">
+                                    <div class="progress-bar progress-bar-cc" style="width: 82%"></div>
+                                </div>
+                            </div>
+
+                            <div class="mb-3">
+                                <div class="d-flex justify-content-between mb-1">
+                                    <span>Redes de Computadores</span>
+                                    <span class="text-muted">74%</span>
+                                </div>
+                                <div class="progress progress-cc">
+                                    <div class="progress-bar progress-bar-cc" style="width: 74%"></div>
+                                </div>
+                            </div>
+
+                            <div class="mb-3">
+                                <div class="d-flex justify-content-between mb-1">
+                                    <span>Segurança da Informação</span>
+                                    <span class="text-muted">69%</span>
+                                </div>
+                                <div class="progress progress-cc">
+                                    <div class="progress-bar progress-bar-cc" style="width: 69%"></div>
+                                </div>
+                            </div>
+
+                            <div>
+                                <div class="d-flex justify-content-between mb-1">
+                                    <span>Desenvolvimento / Programação</span>
+                                    <span class="text-muted">81%</span>
+                                </div>
+                                <div class="progress progress-cc">
+                                    <div class="progress-bar progress-bar-cc" style="width: 81%"></div>
+                                </div>
+                            </div>
+
+                            <p class="small text-muted mt-3 mb-0">
+                                Dica: concentre sua revisão nos assuntos com barras abaixo de 75%.
+                            </p>
+
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Últimas sessões -->
+                <div class="col-12 col-lg-6 reveal" style="animation-delay:360ms">
+                    <div class="card h-100">
+                        <div class="card-body">
+
+                            <h2 class="h5 fw-bold mb-3">Últimas sessões de estudo</h2>
+
+                            <div class="table-responsive">
+                                <table class="table table-sm align-middle mb-0">
+                                    <thead>
+                                        <tr>
+                                            <th>Data</th>
+                                            <th>Modo</th>
+                                            <th>Questões</th>
+                                            <th>Acertos</th>
+                                            <th>Desempenho</th>
+                                        </tr>
+                                    </thead>
+
+                                    <tbody>
+                                        <tr>
+                                            <td>12/03/2025</td>
+                                            <td>Simulado</td>
+                                            <td>20</td>
+                                            <td>16</td>
+                                            <td><span class="badge bg-success-subtle text-success-emphasis">80%</span></td>
+                                        </tr>
+
+                                        <tr>
+                                            <td>11/03/2025</td>
+                                            <td>Treino por assunto</td>
+                                            <td>15</td>
+                                            <td>10</td>
+                                            <td><span class="badge bg-warning-subtle text-warning-emphasis">67%</span></td>
+                                        </tr>
+
+                                        <tr>
+                                            <td>10/03/2025</td>
+                                            <td>Revisão de erros</td>
+                                            <td>12</td>
+                                            <td>9</td>
+                                            <td><span class="badge bg-success-subtle text-success-emphasis">75%</span></td>
+                                        </tr>
+
+                                        <tr>
+                                            <td>09/03/2025</td>
+                                            <td>Simulado</td>
+                                            <td>20</td>
+                                            <td>13</td>
+                                            <td><span class="badge bg-danger-subtle text-danger-emphasis">65%</span></td>
+                                        </tr>
+                                    </tbody>
+                                </table>
+                            </div>
+
+                            <p class="small text-muted mt-3 mb-0">
+                                Futuro: estes dados virão do seu histórico real.
+                            </p>
+
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <!-- ASSUNTOS COM MAIS ERROS -->
+            <section class="reveal" style="animation-delay:400ms">
+                <div class="card">
+                    <div class="card-body">
+
+                        <h2 class="h5 fw-bold mb-3">Assuntos com mais erros recentes</h2>
+
+                        <div class="row g-3">
+
+                            <div class="col-12 col-md-4">
+                                <div class="topic-pill">
+                                    <p class="topic-title mb-1">JOINs (INNER/LEFT/RIGHT)</p>
+                                    <p class="topic-sub mb-0 text-muted">Banco de Dados • 6 erros na semana</p>
+                                </div>
+                            </div>
+
+                            <div class="col-12 col-md-4">
+                                <div class="topic-pill">
+                                    <p class="topic-title mb-1">Modelo OSI x TCP/IP</p>
+                                    <p class="topic-sub mb-0 text-muted">Redes • 5 erros recentes</p>
+                                </div>
+                            </div>
+
+                            <div class="col-12 col-md-4">
+                                <div class="topic-pill">
+                                    <p class="topic-title mb-1">Criptografia simétrica/assimétrica</p>
+                                    <p class="topic-sub mb-0 text-muted">Segurança • 4 erros recentes</p>
+                                </div>
+                            </div>
+
+                        </div>
+
+                    </div>
+                </div>
+            </section>
+
+        </div>
+    </main>
+
+    <!-- FOOTER -->
+    <footer class="py-4 footer-cc mt-4">
+        <div class="container text-center small">
+            <div class="mb-2">© <span id="year"></span> Cachorro Cafezeiro — Todos os direitos reservados.</div>
+            <div class="muted">Política de Privacidade • Termos</div>
+        </div>
+    </footer>
+
+    <!-- Bootstrap JS -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
+
+    <!-- JS global -->
+    <script src="assets/js/main.js"></script>
+
+</body>
+</html>
