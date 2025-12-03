@@ -2,14 +2,14 @@
 <html lang="pt-br" data-theme="light">
 
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Regra de Três Simples — Nivelamento Matemática</title>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width,initial-scale=1" />
+    <title>Regra de 3 Simples — Nivelamento Matemática</title>
 
     <!-- Bootstrap -->
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css">
 
-    <!-- CSS do projeto -->
+    <!-- CSS Geral e Nivelamento -->
     <link rel="stylesheet" href="/assets/css/base.css">
     <link rel="stylesheet" href="/assets/css/layout.css">
     <link rel="stylesheet" href="/assets/css/nivelamento.css">
@@ -21,125 +21,187 @@
 
     <!-- NAVBAR DINÂMICA -->
     <div id="navbar-dashboard"></div>
-    <script src="/assets/js/loadNavbar.js"></script>
 
-    <main class="container my-5">
+    <main class="nivelamento-main">
+        <div class="container">
 
-        <!-- TÍTULO / CABEÇALHO -->
-        <header class="mb-4">
-            <h1 class="fw-bold text-center">Regra de Três Simples</h1>
-            <p class="text-center text-muted">Resumo completo + exemplos + questões interativas</p>
-        </header>
+            <!-- BREADCRUMB -->
+            <nav class="breadcrumb-cc mt-3 mb-3">
+                <a href="/index.html">Início</a>
+                <span>›</span>
+                <a href="/dashboard.html">Dashboard</a>
+                <span>›</span>
+                <a href="/nivelamento/matematica/">Matemática</a>
+                <span>›</span>
+                <span class="current">Regra de Três Simples</span>
+            </nav>
 
-        <!-- CARD PRINCIPAL -->
-        <div class="col-md-10 mx-auto">
+            <!-- TÍTULO GERAL -->
+            <section class="mb-4 text-center">
+                <h1 class="nivelamento-title">Regra de 3 Simples</h1>
+                <p class="nivelamento-subtitle">
+                    Resumo direto para prova, com foco em como a Cesgranrio costuma cobrar.
+                </p>
+            </section>
 
-            <div class="card shadow-sm mb-4">
-                <div class="card-body">
+            <!-- CONTEÚDO TEÓRICO -->
+            <section class="col-md-10 col-lg-8 mx-auto mb-4">
+                <div class="card nivelamento-card mb-4">
+                    <div class="card-body">
+                        <p>
+                            A regra de três simples é usada quando o problema envolve <strong>duas grandezas</strong>
+                            que
+                            se relacionam de forma proporcional. O objetivo é encontrar um valor desconhecido usando
+                            outros três conhecidos.
+                        </p>
 
-                    <h3 class="mb-3">1) O que é Regra de Três Simples?</h3>
-                    <p>
-                        A regra de três simple é usada quando há duas grandezas que se relacionam proporcionalmente,
-                        e queremos encontrar um valor desconhecido usando outros três conhecidos.
-                    </p>
+                        <p>
+                            A Cesgranrio costuma cobrar basicamente a interpretação da proporcionalidade
+                            (<strong>direta ou inversa</strong>), sem muita enrolação.
+                        </p>
 
-                    <p>A Cesgranrio gosta de questões diretas, onde o essencial é identificar se a proporcionalidade é:
-                    </p>
+                        <h5 class="mt-3">☑️ 1) Grandezas Diretamente Proporcionais</h5>
+                        <p>
+                            Quando uma grandeza aumenta e a outra também aumenta, ou uma diminui e a outra também
+                            diminui.
+                        </p>
+                        <p><strong>Exemplos típicos:</strong><br>
+                            quantidade ↔ preço<br>
+                            tempo ↔ distância (velocidade constante)<br>
+                            consumo ↔ conta de energia
+                        </p>
+                        <p><strong>Como resolver:</strong><br>
+                            Monte as frações na mesma ordem e use proporção:
+                        </p>
 
-                    <ul>
-                        <li><strong>Direta</strong> — uma aumenta → a outra aumenta</li>
-                        <li><strong>Inversa</strong> — uma aumenta → a outra diminui</li>
-                    </ul>
+                        <pre>A/B = C/X</pre>
+                        <pre>A·X = B·C</pre>
 
-                    <h4 class="mt-4">2) Grandezas Diretamente Proporcionais</h4>
+                        <h5 class="mt-4">☑️ 2) Grandezas Inversamente Proporcionais</h5>
+                        <p>Quando uma grandeza aumenta e a outra diminui.</p>
 
-                    <p><strong>Exemplos:</strong></p>
-                    <ul>
-                        <li>Quantidade ↔ Preço</li>
-                        <li>Tempo ↔ Distância</li>
-                        <li>Consumo ↔ Conta de energia</li>
-                    </ul>
+                        <p><strong>Exemplos típicos:</strong><br>
+                            número de trabalhadores ↔ tempo de execução<br>
+                            velocidade ↔ tempo de viagem
+                        </p>
 
-                    <p><strong>Proporção direta:</strong></p>
-                    <pre>A / B = C / X</pre>
+                        <p><strong>Como resolver (padrão Cesgranrio):</strong><br>
+                            Faça a proporção invertendo uma das linhas, pois a variação é inversa:
+                        </p>
 
-                    <h4 class="mt-4">3) Grandezas Inversamente Proporcionais</h4>
-                    <p>Uma cresce → a outra diminui. Exemplo:</p>
+                        <pre>A/B = X/C</pre>
 
-                    <ul>
-                        <li>Número de trabalhadores ↔ Tempo de execução</li>
-                        <li>Velocidade ↔ Tempo de viagem</li>
-                    </ul>
+                        <p>Depois, é só aplicar o cruzamento.</p>
 
-                    <p><strong>Proporção inversa:</strong></p>
-                    <pre>A / B = X / C</pre>
+                        <h5 class="mt-4">🧠 3) Pontos-chave para acertar a questão</h5>
+                        <ul>
+                            <li>Identifique primeiro se a relação é direta ou inversa.</li>
+                            <li>Mantenha as grandezas ordenadas (tipo com tipo).</li>
+                            <li>A Cesgranrio não usa linguagem rebuscada: o problema é direto e a matemática também.
+                            </li>
+                            <li>Depois de identificar a proporcionalidade, faça o cálculo sem complicar.</li>
+                        </ul>
 
-                    <h4 class="mt-4">4) Exemplo Direto</h4>
-                    <p><strong>3 kg de arroz custam R$ 24. Quanto custam 5 kg?</strong></p>
-                    <pre>3/5 = 24/X → X = 40</pre>
+                        <h5 class="mt-4">📌 Exemplo Direto (padrão Cesgranrio)</h5>
+                        <p>
+                            <strong>3 kg de arroz custam R$ 24. Quanto custam 5 kg?</strong><br>
+                            Grandezas diretas.
+                        </p>
 
-                    <h4 class="mt-4">5) Exemplo Inverso</h4>
-                    <p><strong>6 operários fazem um serviço em 10 horas. Quantos são necessários para fazer em 4
-                            horas?</strong></p>
-                    <pre>6/X = 4/10 → X = 15</pre>
+                        <pre>3/5 = 24/X</pre>
+                        <pre>3X = 120 → X = 40</pre>
 
-                </div>
-            </div>
+                        <h5 class="mt-4">📌 Exemplo Inverso (padrão Cesgranrio)</h5>
+                        <p>
+                            <strong>6 operários fazem um serviço em 10 horas. Quantos operários são necessários para
+                                concluir em 4 horas?</strong><br>
+                            Menos horas → mais operários → proporcionalidade inversa.
+                        </p>
 
-            <!-- EXERCÍCIOS -->
-            <div class="card shadow-sm mb-4">
-                <div class="card-body">
-                    <h3 class="mb-3" style="color: var(--accent);">📘 Exercícios Estilo Cesgranrio</h3>
-
-                    <ul>
-                        <li>Um carro percorre 180 km com 15 L. Quantos litros para 260 km?</li>
-                        <li>9 máquinas produzem 540 peças em 6h. Quantas peças 6 máquinas produzem em 8h?</li>
-                        <li>2 funcionários fazem a tarefa em 9 dias. Quantos dias 6 funcionários levam?</li>
-                    </ul>
-                </div>
-            </div>
-
-            <!-- EXEMPLOS INTERATIVOS -->
-            <div class="card shadow-sm mb-4">
-                <div class="card-body">
-                    <h3 class="mb-3" style="color: var(--accent);">🛠 Exemplos Interativos</h3>
-
-                    <p>Clique para revelar a solução:</p>
-
-                    <div class="example-box mb-3" onclick="this.querySelector('div').classList.toggle('d-none')">
-                        <strong>Exemplo 1 — Direto:</strong>
-                        Se 8 metros de tecido custam R$ 56, quanto custam 5 metros?
-                        <div class="d-none mt-2">Proporção direta: 8/5 = 56/X → X = 35</div>
+                        <pre>6/X = 4/10</pre>
+                        <pre>60 = 4X → X = 15</pre>
                     </div>
+                </div>
 
-                    <div class="example-box" onclick="this.querySelector('div').classList.toggle('d-none')">
-                        <strong>Exemplo 2 — Inverso:</strong>
-                        4 pintores fazem um serviço em 12h. Quanto tempo 6 pintores levam?
-                        <div class="d-none mt-2">Proporção inversa: 4/6 = X/12 → X = 8h</div>
+                <!-- EXERCÍCIOS CESGRANRIO -->
+                <div class="card nivelamento-card mb-4">
+                    <div class="card-body">
+                        <h4 class="mb-3">📘 Exercícios no estilo Cesgranrio</h4>
+                        <ul>
+                            <li>Um carro percorre 180 km com 15 L. Quantos litros são necessários para 260 km?</li>
+                            <li>9 máquinas produzem 540 peças em 6 horas. Quantas peças 6 máquinas produzem em 8 horas?
+                            </li>
+                            <li>2 funcionários fazem uma tarefa em 9 dias. Quantos dias 6 funcionários levam?</li>
+                        </ul>
                     </div>
                 </div>
-            </div>
 
-            <!-- LEMBRETE -->
-            <div class="card shadow-sm mb-4">
-                <div class="card-body">
-                    <h3 class="mb-3" style="color: var(--accent);">💡 Lembrete Importante</h3>
-                    <p class="tip-box">
-                        Sempre confira se a proporcionalidade é <strong>direta</strong> ou <strong>inversa</strong>.
-                        Esse é o principal ponto onde a Cesgranrio costuma induzir erro.
-                    </p>
+                <!-- EXEMPLOS INTERATIVOS -->
+                <div class="card nivelamento-card mb-4">
+                    <div class="card-body">
+                        <h4 class="mb-3">🛠 Exemplos Interativos</h4>
+                        <p>Clique para revelar a solução:</p>
+
+                        <div class="mb-3 example-box"
+                            onclick="this.querySelector('.answer').classList.toggle('d-none')">
+                            <strong>Exemplo 1 — Direto:</strong>
+                            Se 8 metros de tecido custam R$ 56, quanto custam 5 metros?
+                            <div class="answer d-none mt-2">
+                                Proporção direta:<br>
+                                8/5 = 56/X → X = 35
+                            </div>
+                        </div>
+
+                        <div class="mb-3 example-box"
+                            onclick="this.querySelector('.answer').classList.toggle('d-none')">
+                            <strong>Exemplo 2 — Inverso:</strong>
+                            4 pintores fazem um serviço em 12h. Quanto tempo 6 pintores levam?
+                            <div class="answer d-none mt-2">
+                                Proporção inversa:<br>
+                                4/6 = X/12 → X = 8h
+                            </div>
+                        </div>
+                    </div>
                 </div>
-            </div>
+
+                <!-- LEMBRETE IMPORTANTE -->
+                <div class="card nivelamento-card mb-4">
+                    <div class="card-body">
+                        <h4 class="mb-3">💡 Lembrete Importante</h4>
+                        <div class="tip-box">
+                            Sempre confira se a proporcionalidade é <strong>direta</strong> ou <strong>inversa</strong>
+                            antes de montar a proporção.<br>
+                            Esse é o ponto onde a Cesgranrio mais tenta induzir erro.
+                        </div>
+                    </div>
+                </div>
+            </section>
 
             <!-- QUESTÕES INTERATIVAS -->
-            <h2 class="fw-bold mb-3 text-center">Questões Interativas</h2>
-            <div id="questions" class="col-md-10 mx-auto"></div>
+            <section class="col-md-10 col-lg-8 mx-auto">
+                <h2 class="h5 fw-bold mb-3">Questões para Fixação</h2>
+                <div id="questions"></div>
+            </section>
 
         </div>
-
     </main>
 
-    <!-- SCRIPTS -->
+    <!-- FOOTER -->
+    <footer class="py-4 footer-cc mt-4">
+        <div class="container text-center small">
+            <div class="mb-2">
+                © <span id="year"></span> Cachorro Cafezeiro — Todos os direitos reservados.
+            </div>
+            <div class="muted">Nivelamento de Matemática — Regra de Três Simples</div>
+        </div>
+    </footer>
+
+    <!-- JS -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="/assets/js/main.js"></script>
+    <script src="/assets/js/loadNavbar.js"></script>
+
+    <!-- SCRIPT DAS QUESTÕES -->
     <script>
         const questions = [
             {
@@ -148,12 +210,12 @@
                 answer: 1
             },
             {
-                enunciado: "2) Um carro consome 10 L para percorrer 80 km. Quantos litros gastará para 140 km?",
+                enunciado: "2) Um carro consome 10 litros para percorrer 80 km. Quantos litros gastará para percorrer 140 km?",
                 options: ["15 L", "17,5 L", "12 L", "20 L"],
                 answer: 1
             },
             {
-                enunciado: "3) 12 funcionários fazem um serviço em 9 dias. Quantos dias 18 funcionários levam?",
+                enunciado: "3) Se 12 funcionários fazem um serviço em 9 dias, quantos dias 18 funcionários levariam?",
                 options: ["6 dias", "8 dias", "10 dias", "12 dias"],
                 answer: 0
             }
@@ -167,6 +229,7 @@
 
         function renderQuestions() {
             const container = document.getElementById("questions");
+            if (!container) return;
 
             questions.forEach((q, index) => {
                 const card = document.createElement("div");
@@ -183,7 +246,6 @@
                                 </button>
                             `).join("")}
                         </div>
-
                         <button class="btn btn-primary" data-submit="${index}">Concluir</button>
                         <div class="mt-3" id="feedback-${index}"></div>
 
@@ -192,26 +254,31 @@
                         </div>
                     </div>
                 `;
-
                 container.appendChild(card);
             });
 
+            // Seleção de alternativa
             document.querySelectorAll(".option-btn").forEach(btn => {
                 btn.addEventListener("click", () => {
-                    const q = btn.dataset.q;
-                    document.querySelectorAll(`button[data-q='${q}']`).forEach(b => b.classList.remove("selected"));
+                    const q = btn.getAttribute("data-q");
+                    document
+                        .querySelectorAll(`button[data-q='${q}']`)
+                        .forEach(b => b.classList.remove("selected"));
+
                     btn.classList.add("selected");
                 });
 
+                // Clique direito para descartar
                 btn.addEventListener("contextmenu", e => {
                     e.preventDefault();
                     btn.classList.toggle("discard");
                 });
             });
 
+            // Botão concluir
             document.querySelectorAll("[data-submit]").forEach(btn => {
                 btn.addEventListener("click", () => {
-                    const qIndex = btn.dataset.submit;
+                    const qIndex = btn.getAttribute("data-submit");
                     const selected = document.querySelector(`button[data-q='${qIndex}'].selected`);
                     const feedback = document.getElementById(`feedback-${qIndex}`);
 
@@ -220,26 +287,24 @@
                         return;
                     }
 
-                    const correct = questions[qIndex].answer;
+                    const answerIndex = questions[qIndex].answer;
+                    const videoDiv = document.getElementById(`video-${qIndex}`);
+                    const iframe = videoDiv.querySelector("iframe");
 
-                    if (parseInt(selected.dataset.i) === correct) {
+                    if (parseInt(selected.getAttribute("data-i")) === answerIndex) {
                         feedback.innerHTML = `<div class="alert alert-success">✔ Resposta correta!</div>`;
                     } else {
-                        feedback.innerHTML = `<div class="alert alert-danger">✖ Resposta incorreta.</div>`;
+                        feedback.innerHTML = `<div class="alert alert-danger">✖ Resposta incorreta. Reveja a explicação no vídeo.</div>`;
                     }
 
-                    const videoDiv = document.getElementById(`video-${qIndex}`);
                     videoDiv.classList.remove("d-none");
-                    videoDiv.querySelector("iframe").src = videos[qIndex];
+                    iframe.src = videos[qIndex];
                 });
             });
         }
 
-        renderQuestions();
+        document.addEventListener("DOMContentLoaded", renderQuestions);
     </script>
-
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
-
 </body>
 
 </html>

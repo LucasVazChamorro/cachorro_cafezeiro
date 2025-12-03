@@ -1,63 +1,77 @@
-(function () {
+// ====================================================================
+//  main.js — lógica global do projeto (Dark Mode + utilidades)
+// ====================================================================
+
+// --------------------------------------------------------------
+// FUNÇÃO GLOBAL — chamada por loadNavbar.js
+// --------------------------------------------------------------
+function initDarkMode() {
+
     const body = document.body;
-    const toggle = document.getElementById('darkToggle');
-    const meta = document.getElementById('meta-theme');
+    const html = document.documentElement;
+    const meta = document.getElementById("meta-theme");
 
-    function setYear() {
-        const el = document.getElementById('year');
-        if (el) el.textContent = new Date().getFullYear();
+    const toggle = document.getElementById("darkToggle");
+
+    if (!toggle) {
+        console.warn("⏳ Aguardando navbar carregar para ativar dark mode…");
+        return;
     }
-    setYear();
 
-    function applyTheme(isDark) {
-        if (isDark) {
-            body.classList.add('dark');
-            document.documentElement.setAttribute('data-theme', 'dark');
-            meta.setAttribute('content', '#121212');
-            if (toggle) {
-                toggle.textContent = '☀️';
-                toggle.setAttribute('aria-pressed', 'true');
-            }
+    // -------------------------------
+    // Carrega tema salvo
+    // -------------------------------
+
+    let saved = localStorage.getItem("cc-theme");
+
+    // Se não houver configuração salva, usa o sistema
+    if (!saved) {
+        saved = window.matchMedia("(prefers-color-scheme: dark)").matches
+            ? "dark"
+            : "light";
+    }
+
+    applyTheme(saved);
+
+    // -------------------------------
+    // Evento do botão
+    // -------------------------------
+
+    toggle.addEventListener("click", () => {
+        const newTheme = html.getAttribute("data-theme") === "light" ? "dark" : "light";
+        applyTheme(newTheme);
+        localStorage.setItem("cc-theme", newTheme);
+    });
+
+    // -------------------------------
+    // Função auxiliar
+    // -------------------------------
+
+    function applyTheme(theme) {
+        const dark = theme === "dark";
+
+        html.setAttribute("data-theme", theme);
+        meta.setAttribute("content", dark ? "#121212" : "#5D4037");
+        toggle.textContent = dark ? "☀️" : "🌙";
+
+        // Classe opcional para estilizar no CSS
+        if (dark) {
+            body.classList.add("dark");
         } else {
-            body.classList.remove('dark');
-            document.documentElement.setAttribute('data-theme', 'light');
-            meta.setAttribute('content', '#5D4037');
-            if (toggle) {
-                toggle.textContent = '🌙';
-                toggle.setAttribute('aria-pressed', 'false');
-            }
+            body.classList.remove("dark");
         }
     }
 
-    let stored = localStorage.getItem('cc-theme');
-    if (stored === null) {
-        const prefersDark = window.matchMedia &&
-            window.matchMedia('(prefers-color-scheme: dark)').matches;
-        stored = prefersDark ? 'dark' : 'light';
+    console.log("✔ Dark mode inicializado corretamente.");
+}
+
+// ====================================================================
+//  Utilidade: atualiza o ano no footer
+// ====================================================================
+
+document.addEventListener("DOMContentLoaded", () => {
+    const yearEl = document.getElementById("year");
+    if (yearEl) {
+        yearEl.textContent = new Date().getFullYear();
     }
-    applyTheme(stored === 'dark');
-
-    if (toggle) {
-        toggle.addEventListener('click', () => {
-            const isDark = document.documentElement.getAttribute('data-theme') === 'dark';
-            const next = !isDark;
-            applyTheme(next);
-            localStorage.setItem('cc-theme', next ? 'dark' : 'light');
-        });
-    }
-
-    document.addEventListener('DOMContentLoaded', () => {
-        const reveals = Array.from(document.querySelectorAll('.reveal'));
-        reveals.forEach((el, i) => setTimeout(() => el.classList.add('show'), i * 90));
-    });
-
-    document.querySelectorAll('a[href^="#"]').forEach(a => {
-        a.addEventListener('click', function (e) {
-            const target = document.querySelector(this.getAttribute('href'));
-            if (target) {
-                e.preventDefault();
-                target.scrollIntoView({ behavior: 'smooth', block: 'start' });
-            }
-        });
-    });
-})();
+});

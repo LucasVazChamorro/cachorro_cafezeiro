@@ -14,13 +14,13 @@
     <link rel="stylesheet" href="assets/css/layout.css">
     <link rel="stylesheet" href="assets/css/home.css">
 
-    <meta name="theme-color" content="#5D4037" id="meta-theme">
+    <meta name="theme-color" content="#5D4037">
 </head>
 
 <body>
 
     <!-- NAVBAR (landing / vendas) -->
-    <nav class="navbar navbar-expand-lg shadow-sm sticky-top" aria-label="Barra de navegação principal">
+    <nav class="navbar navbar-expand-lg shadow-sm sticky-top bg-white" aria-label="Barra de navegação principal">
         <div class="container">
             <a class="navbar-brand d-flex align-items-center gap-2" href="#inicio">
                 <img src="assets/img/logo2.png" alt="Logo Cachorro Cafezeiro" width="45" height="45"
@@ -36,75 +36,60 @@
             <div class="collapse navbar-collapse" id="mainNav">
                 <ul class="navbar-nav ms-auto align-items-lg-center">
 
-                    <li class="nav-item">
-                        <a class="nav-link" href="#inicio">Início</a>
-                    </li>
-
-                    <li class="nav-item">
-                        <a class="nav-link" href="#beneficios">Benefícios</a>
-                    </li>
-
-                    <li class="nav-item">
-                        <a class="nav-link" href="#como-funciona">Como funciona</a>
-                    </li>
-
-                    <li class="nav-item">
-                        <a class="nav-link" href="#planos">Planos</a>
-                    </li>
-
-                    <li class="nav-item">
-                        <a class="nav-link" href="dashboard.html">Entrar</a>
-                    </li>
-
-                    <li class="nav-item d-flex align-items-center ms-3">
-                        <button id="darkToggle" class="btn btn-sm btn-outline-secondary" aria-pressed="false"
-                            title="Alternar tema">🌙</button>
-                    </li>
+                    <li class="nav-item"><a class="nav-link" href="#inicio">Início</a></li>
+                    <li class="nav-item"><a class="nav-link" href="#beneficios">Benefícios</a></li>
+                    <li class="nav-item"><a class="nav-link" href="#como-funciona">Como funciona</a></li>
+                    <li class="nav-item"><a class="nav-link" href="#planos">Planos</a></li>
+                    <li class="nav-item"><a class="nav-link" href="dashboard.html">Entrar</a></li>
 
                     <li class="nav-item ms-2 mt-2 mt-lg-0">
-                        <a class="btn btn-primary btn-sm px-3" href="#cadastro">Criar conta</a>
+                        <a class="btn-coffee btn-sm px-3" href="#cadastro">Criar conta</a>
                     </li>
+
                 </ul>
             </div>
         </div>
     </nav>
 
-    <!-- HERO / INÍCIO -->
+    <!-- HERO -->
     <header id="inicio" class="hero py-5">
         <div class="container">
             <div class="row align-items-center">
+
                 <!-- Texto -->
                 <div class="col-lg-6 reveal" style="animation-delay:120ms">
                     <span class="badge bg-light text-dark mb-3">Focado em TI para Banco do Brasil</span>
+
                     <h1 class="display-5 fw-bold">
-                        Aumente sua taxa de acertos em TI estudando com questões filtradas e simulados inteligentes.
+                        Aumente sua taxa de acertos estudando com questões filtradas e simulados inteligentes.
                     </h1>
+
                     <p class="lead mt-3">
-                        Organize sua preparação, treine com questões no estilo CESGRANRIO e acompanhe a evolução em um
-                        dashboard
-                        claro e objetivo.
+                        Organize sua preparação, treine com questões no estilo CESGRANRIO e acompanhe sua evolução em um
+                        dashboard claro e objetivo.
                     </p>
 
                     <div class="mt-4 d-flex gap-2 flex-wrap">
-                        <a class="btn btn-primary btn-lg" href="#planos">Começar agora</a>
-                        <a class="btn btn-outline-primary btn-lg" href="#beneficios">Ver como funciona</a>
+                        <a class="btn-coffee btn-lg" href="#planos">Acessar painel de estudos</a>
+                        <a class="btn-coffee-outline btn-lg" href="#beneficios">Ver como funciona</a>
                     </div>
 
                     <p class="small text-muted mt-3 mb-0">
-                        Comece grátis, sem cartão de crédito. Depois, contrate um plano só se fizer sentido para você.
+                        Comece grátis, sem cartão de crédito. Depois, contrate um plano se fizer sentido para você.
                     </p>
                 </div>
 
-                <!-- Imagem / Mascote -->
+                <!-- Mascote -->
                 <div class="col-lg-6 text-center reveal" style="animation-delay:240ms">
-                    <img src="assets/img/logo2.png" alt="Mascote Cachorro Cafezeiro segurando xícara de café"
-                        class="img-fluid" style="max-width:380px;">
+                    <img src="assets/img/logo2.png" alt="Mascote Cachorro Cafezeiro segurando café" class="img-fluid"
+                        style="max-width:380px;">
                 </div>
+
             </div>
         </div>
     </header>
 
-    <!-- BENEFÍCIOS (seção de vendas) -->
+    <!-- BENEFÍCIOS -->
     <section id="beneficios" class="py-5 reveal" style="animation-delay:320ms">
         <div class="container">
             <div class="text-center mb-4">
@@ -115,41 +100,37 @@
             </div>
 
             <div class="row g-4">
-                <div class="col-12 col-md-4">
+
+                <div class="col-md-4">
                     <div class="card h-100 text-center">
                         <div class="card-body">
-                            <div class="mb-2" style="font-size:2rem;">📚</div>
+                            <div style="font-size:2rem;">📚</div>
                             <h5 class="fw-bold">Questões focadas em TI</h5>
-                            <p class="muted mb-0">
-                                Banco de Dados, Redes, Segurança, Programação e muito mais, sempre no nível das provas.
-                            </p>
+                            <p class="muted mb-0">Banco de Dados, Redes, Segurança, Programação e muito mais.</p>
                         </div>
                     </div>
                 </div>
 
-                <div class="col-12 col-md-4">
+                <div class="col-md-4">
                     <div class="card h-100 text-center">
                         <div class="card-body">
-                            <div class="mb-2" style="font-size:2rem;">⏱️</div>
+                            <div style="font-size:2rem;">⏱️</div>
                             <h5 class="fw-bold">Simulados cronometrados</h5>
-                            <p class="muted mb-0">
-                                Simule o tempo real da prova, receba seu desempenho e identifique os pontos fracos.
-                            </p>
+                            <p class="muted mb-0">Treine no ritmo da prova com relatórios completos.</p>
                         </div>
                     </div>
                 </div>
 
-                <div class="col-12 col-md-4">
+                <div class="col-md-4">
                     <div class="card h-100 text-center">
                         <div class="card-body">
-                            <div class="mb-2" style="font-size:2rem;">📊</div>
+                            <div style="font-size:2rem;">📊</div>
                             <h5 class="fw-bold">Dashboard do aluno</h5>
-                            <p class="muted mb-0">
-                                Acompanhe evolução por matéria, assunto, percentual de acertos e histórico de simulados.
-                            </p>
+                            <p class="muted mb-0">Acompanhe percentuais, erros, evolução e desempenho geral.</p>
                         </div>
                     </div>
                 </div>
+
             </div>
 
         </div>
@@ -158,58 +139,52 @@
     <!-- COMO FUNCIONA -->
     <section id="como-funciona" class="py-5 bg-light reveal" style="animation-delay:360ms">
         <div class="container">
+
             <div class="text-center mb-4">
                 <h2 class="fw-bold">Como funciona na prática?</h2>
                 <p class="muted mb-0">
-                    Em poucos passos, você organiza o estudo e começa a treinar com foco total na prova.
+                    Em poucos passos, você organiza o estudo e começa a treinar focado na prova.
                 </p>
             </div>
 
             <div class="row g-4">
-                <div class="col-12 col-md-4">
+
+                <div class="col-md-4">
                     <div class="card h-100">
                         <div class="card-body">
                             <div class="d-flex align-items-center mb-2">
-                                <span class="badge rounded-pill bg-primary me-2">1</span>
-                                <h5 class="fw-bold mb-0">Crie sua conta</h5>
+                                <span class="step-badge">1</span>
+                                <h5 class="fw-bold mb-0 ms-2">Crie sua conta</h5>
                             </div>
-                            <p class="muted mb-0">
-                                Cadastre-se em poucos segundos e informe o concurso/área de foco. Vamos adaptar as
-                                sugestões para TI Banco do Brasil.
-                            </p>
+                            <p class="muted">Cadastro simples para liberar o painel de estudo.</p>
                         </div>
                     </div>
                 </div>
 
-                <div class="col-12 col-md-4">
+                <div class="col-md-4">
                     <div class="card h-100">
                         <div class="card-body">
                             <div class="d-flex align-items-center mb-2">
-                                <span class="badge rounded-pill bg-primary me-2">2</span>
-                                <h5 class="fw-bold mb-0">Resolva questões e simulados</h5>
+                                <span class="step-badge">2</span>
+                                <h5 class="fw-bold mb-0 ms-2">Resolva questões e simulados</h5>
                             </div>
-                            <p class="muted mb-0">
-                                Use filtros por matéria, assunto e banca, ou monte simulados cronometrados para treinar
-                                o ritmo de prova.
-                            </p>
+                            <p class="muted">Filtros por banca, assunto, matéria e dificuldade.</p>
                         </div>
                     </div>
                 </div>
 
-                <div class="col-12 col-md-4">
+                <div class="col-md-4">
                     <div class="card h-100">
                         <div class="card-body">
                             <div class="d-flex align-items-center mb-2">
-                                <span class="badge rounded-pill bg-primary me-2">3</span>
-                                <h5 class="fw-bold mb-0">Ajuste o estudo pelo dashboard</h5>
+                                <span class="step-badge">3</span>
+                                <h5 class="fw-bold mb-0 ms-2">Acompanhe seu desempenho</h5>
                             </div>
-                            <p class="muted mb-0">
-                                Veja onde mais erra, revise os temas críticos e acompanhe sua evolução até atingir a
-                                meta de acertos.
-                            </p>
+                            <p class="muted">Dashboard com métricas reais da sua evolução.</p>
                         </div>
                     </div>
                 </div>
+
             </div>
 
         </div>
@@ -218,98 +193,96 @@
     <!-- PLANOS -->
     <section id="planos" class="py-5 reveal" style="animation-delay:400ms">
         <div class="container">
+
             <div class="text-center mb-4">
                 <h2 class="fw-bold">Escolha seu plano</h2>
-                <p class="muted mb-0">
-                    Comece no plano gratuito e migre para um plano completo quando estiver pronto.
-                </p>
+                <p class="muted">Comece grátis e evolua para o plano completo quando quiser.</p>
             </div>
 
             <div class="row g-4 justify-content-center">
 
-                <!-- Plano Gratuito -->
-                <div class="col-12 col-md-4">
+                <!-- Gratuito -->
+                <div class="col-md-4">
                     <div class="card h-100 text-center">
                         <div class="card-body d-flex flex-column">
-                            <h5 class="fw-bold mb-1">Gratuito</h5>
-                            <p class="muted mb-3">Para começar a conhecer a plataforma.</p>
+                            <h5 class="fw-bold">Gratuito</h5>
+                            <p class="muted mb-3">Ideal para iniciar</p>
 
-                            <p class="display-6 fw-bold mb-0">R$ 0</p>
+                            <p class="display-6 fw-bold">R$ 0</p>
                             <p class="muted">para sempre</p>
 
-                            <ul class="list-unstyled text-start small flex-grow-1">
-                                <li>• Acesso limitado a questões de TI</li>
-                                <li>• Simulados básicos</li>
-                                <li>• Estatísticas simplificadas</li>
+                            <ul class="list-unstyled small text-start flex-grow-1">
+                                <li>• Acesso limitado</li>
+                                <li>• Quantidade de simulados limitados</li>
                             </ul>
 
-                            <a href="#cadastro" class="btn btn-outline-primary mt-2">Começar grátis</a>
+                            <a href="#cadastro" class="btn-coffee-outline mt-2">Começar grátis</a>
                         </div>
                     </div>
                 </div>
 
-                <!-- Plano Café Forte -->
-                <div class="col-12 col-md-4">
-                    <div class="card h-100 text-center border-2 border-primary">
+                <!-- Café Forte -->
+                <div class="col-md-4">
+                    <div class="card h-100 text-center border-2" style="border-color:#5D4037;">
                         <div class="card-body d-flex flex-column">
-                            <h5 class="fw-bold mb-1">Café Forte</h5>
-                            <p class="muted mb-3">Para quem está sério com a aprovação.</p>
+                            <h5 class="fw-bold">Café Forte</h5>
+                            <p class="muted mb-3">Para quem está sério com a aprovação</p>
 
-                            <p class="display-6 fw-bold mb-0">R$ 39<span class="fs-6">/mês</span></p>
+                            <p class="display-6 fw-bold">R$ 39 <span class="fs-6">/mês</span></p>
                             <p class="muted">cancelamento a qualquer momento</p>
 
-                            <ul class="list-unstyled text-start small flex-grow-1">
+                            <ul class="list-unstyled small text-start flex-grow-1">
                                 <li>• Acesso completo a todas as questões de TI</li>
                                 <li>• Simulados personalizados ilimitados</li>
                                 <li>• Dashboard detalhado por assunto e matéria</li>
                                 <li>• Revisão inteligente das questões que você erra</li>
                             </ul>
-
-                            <a href="#cadastro" class="btn btn-primary mt-2">Assinar Café Forte</a>
+                            <a href="#cadastro" class="btn-coffee mt-2">Assinar Café Forte</a>
                         </div>
                     </div>
                 </div>
 
             </div>
+
         </div>
     </section>
 
-    <!-- CADASTRO / CTA FINAL -->
+    <!-- CADASTRO -->
     <section id="cadastro" class="py-5 bg-light reveal" style="animation-delay:440ms">
         <div class="container">
-            <div class="row align-items-center g-4">
-                <div class="col-12 col-lg-6">
-                    <h2 class="fw-bold mb-3">Pronto para começar a acertar mais questões?</h2>
-                    <p class="muted mb-0">
-                        Crie sua conta gratuita agora, teste a plataforma e, se fizer sentido para você, migre para o
-                        plano Café Forte.
-                    </p>
+            <div class="row g-4 align-items-center">
+
+                <div class="col-lg-6">
+                    <h2 class="fw-bold">Pronto para começar a acertar mais questões?</h2>
+                    <p class="muted">Crie sua conta gratuita agora e experimente o painel completo.</p>
                 </div>
-                <div class="col-12 col-lg-6">
+
+                <div class="col-lg-6">
                     <form class="row g-3">
                         <div class="col-12">
-                            <label for="nome" class="form-label">Nome</label>
-                            <input type="text" id="nome" class="form-control" placeholder="Seu nome completo">
+                            <label class="form-label">Nome</label>
+                            <input type="text" class="form-control" placeholder="Seu nome completo">
                         </div>
+
                         <div class="col-12">
-                            <label for="email" class="form-label">E-mail</label>
-                            <input type="email" id="email" class="form-control" placeholder="seuemail@exemplo.com">
+                            <label class="form-label">E-mail</label>
+                            <input type="email" class="form-control" placeholder="seuemail@exemplo.com">
                         </div>
+
                         <div class="col-12">
-                            <label for="senha" class="form-label">Senha</label>
-                            <input type="password" id="senha" class="form-control" placeholder="Crie uma senha segura">
+                            <label class="form-label">Senha</label>
+                            <input type="password" class="form-control" placeholder="Crie uma senha segura">
                         </div>
-                        <div class="col-12 d-grid d-md-flex gap-2 mt-2">
-                            <button type="submit" class="btn btn-primary">Criar conta gratuita</button>
-                            <a href="dashboard.html" class="btn btn-outline-primary">Já tenho conta</a>
+
+                        <div class="col-12 d-grid d-md-flex gap-2">
+                            <button type="submit" class="btn-coffee">Criar conta gratuita</button>
+                            <a href="dashboard.html" class="btn-coffee-outline">Já tenho conta</a>
                         </div>
-                        <div class="col-12">
-                            <p class="small text-muted mb-0">
-                                Ao criar sua conta, você concorda com nossos termos de uso e política de privacidade.
-                            </p>
-                        </div>
+                        <br>
+                        Ao criar sua conta, você concorda com nossos termos de uso e política de privacidade.
                     </form>
                 </div>
+
             </div>
         </div>
     </section>
@@ -325,8 +298,9 @@
     <!-- Bootstrap JS -->
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
 
-    <!-- JS global -->
+    <!-- JS Global -->
     <script src="assets/js/main.js"></script>
+
 </body>
 
 </html>

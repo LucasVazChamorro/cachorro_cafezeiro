@@ -1,57 +1,93 @@
-// loadNavbar.js — versão estável e atualizada
+// ====================================================================
+//  loadNavbar.js — Carrega a navbar global e ativa dropdown multinível
+// ====================================================================
+
 document.addEventListener("DOMContentLoaded", async () => {
 
-    // Caminhos possíveis para localizar navbar.html
     const paths = [
         "/assets/components/navbar.html",
         "../assets/components/navbar.html",
-        "../../assets/components/navbar.html"
+        "../../assets/components/navbar.html",
+        "../../../assets/components/navbar.html"
     ];
 
     let navbarHTML = null;
 
-    // Tenta carregar a navbar em múltiplos caminhos
+    // Tentativa inteligente de encontrar o arquivo navbar.html
     for (const path of paths) {
         try {
             const response = await fetch(path + "?v=" + Date.now());
-
             if (response.ok) {
                 navbarHTML = await response.text();
                 break;
             }
-        } catch (e) { /* silencioso */ }
+        } catch (err) { }
     }
 
     if (!navbarHTML) {
-        console.error("❌ Navbar não encontrada. Verifique o caminho do arquivo.");
+        console.error("❌ ERRO: navbar.html não encontrada.");
         return;
     }
 
-    // Insere o HTML no placeholder
     const container = document.getElementById("navbar-dashboard");
     if (!container) {
-        console.error("❌ Elemento #navbar-dashboard não encontrado na página.");
+        console.error("❌ ERRO: elemento #navbar-dashboard não foi encontrado.");
         return;
     }
 
+    // Insere a navbar na página
     container.innerHTML = navbarHTML;
 
-    // Reativa dropdowns do Bootstrap
+    // ======================================================
+    // Ativa dropdown do Bootstrap nos menus principais
+    // ======================================================
+
     document.querySelectorAll('.dropdown-toggle').forEach((el) => {
         new bootstrap.Dropdown(el);
     });
 
-    // Ativa comportamento dos submenus multinível
-    document.querySelectorAll(".dropdown-submenu").forEach((submenu) => {
+    // ======================================================
+    // SUBMENUS MULTINÍVEL — Lógica avançada de abertura
+    // ======================================================
+
+    document.querySelectorAll(".dropdown-submenu").forEach(submenu => {
+
         submenu.addEventListener("mouseenter", function () {
-            const dropdown = submenu.querySelector(".dropdown-menu");
-            if (dropdown) dropdown.classList.add("show");
+            const menu = submenu.querySelector(".dropdown-menu");
+            if (!menu) return;
+
+            // reset
+            menu.classList.remove("open-left");
+
+            // mostra de forma invisível para medir o espaço
+            menu.style.visibility = "hidden";
+            menu.classList.add("show");
+
+            const rect = menu.getBoundingClientRect();
+            const screenWidth = window.innerWidth;
+
+            // se ultrapassar a tela, abre para a esquerda
+            if (rect.right > screenWidth) {
+                menu.classList.add("open-left");
+            }
+
+            menu.style.visibility = "visible";
         });
+
         submenu.addEventListener("mouseleave", function () {
-            const dropdown = submenu.querySelector(".dropdown-menu");
-            if (dropdown) dropdown.classList.remove("show");
+            const menu = submenu.querySelector(".dropdown-menu");
+            if (menu) menu.classList.remove("show");
         });
     });
 
-    console.log("✔ Navbar carregada com sucesso.");
+    // ======================================================
+    // ⭐ FIX IMPORTANTE:
+    // Reativa o modo escuro agora que o botão está no DOM
+    // ======================================================
+
+    if (typeof initDarkMode === "function") {
+        initDarkMode();
+    }
+
+    console.log("✔ Navbar carregada, submenus ativos e dark mode reativado.");
 });
