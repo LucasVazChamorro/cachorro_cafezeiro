@@ -264,3 +264,7 @@ h1.nivelamento-title {
         height: 360px;
     }
 }
+
+html {
+    scroll-behavior: smooth;
+}
