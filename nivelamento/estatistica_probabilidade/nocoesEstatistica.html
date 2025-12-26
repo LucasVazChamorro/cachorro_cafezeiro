@@ -1,0 +1,2414 @@
+<!DOCTYPE html>
+<html lang="pt-br" data-theme="light">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Noções de Estatística</title>
+
+    <!-- Bootstrap -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css">
+
+    <!-- Bootstrap Icons -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css">
+
+    <!-- CSS do projeto -->
+    <link rel="stylesheet" href="assets/css/base.css">
+    <link rel="stylesheet" href="assets/css/layout.css">
+    <link rel="stylesheet" href="assets/css/nivelamento.css">
+    <meta name="theme-color" content="#5D4037" id="meta-theme">
+</head>
+
+<body>
+
+    <!-- NAVBAR DINÂMICA -->
+    <div id="navbar-dashboard"></div>
+
+    <main class="nivelamento-main">
+        <div class="container">
+
+            <!-- BREADCRUMB -->
+            <nav class="breadcrumb-cc mt-3 mb-3">
+                <a href="/index.html">Início</a>
+                <span>›</span>
+                <a href="/dashboard.html">Dashboard</a>
+                <span>›</span>
+                <a href="/nivelamento/estatistica_probabilidade/">Estatística e Probabilidade</a>
+                <span>›</span>
+                <span class="current">Noções Gerais de Estatística</span>
+            </nav>
+            <!-- TÍTULO -->
+            <div class="mb-5 text-center">
+                <h1 class="fw-bold">
+                    <i class="bi bi-graph-up-arrow me-2"></i>
+                    Noções de Estatística
+                </h1>
+                <p class="text-muted mt-2">
+                    Conceitos fundamentais para análise, organização e interpretação de dados
+                </p>
+            </div>
+            <!-- CAPA DO NIVELAMENTO (imagem padrão) -->
+            <div class="card nivelamento-card mb-4 nivelamento-media-card">
+                <img src="nocoes-estatistica.png" class="nivelamento-cover" alt="Noções de Estatística">
+            </div>
+
+            <!-- INTRODUÇÃO -->
+            <div class="card nivelamento-card mb-4">
+                <div class="card-body">
+                    <h4 class="mb-3">
+                        <i class="bi bi-info-circle me-2 text-success"></i>
+                        1. Introdução
+                    </h4>
+                    <p class="mb-0">
+                        Estatística é um conjunto de métodos e processos quantitativos usado para estudar e medir
+                        fenômenos
+                        coletivos,
+                        a partir da obtenção de dados e de sua organização, resumo e apresentação (tabelas e
+                        gráficos).
+                        Com essas representações, aplicam-se medidas de tendência central e dispersão para descrever
+                        o
+                        comportamento
+                        dos dados e, quando os dados vêm de amostras, utilizam-se noções de amostragem e inferência
+                        para
+                        tirar conclusões
+                        sobre a população.
+                    </p>
+                </div>
+            </div>
+
+            <!-- O QUE O EDITAL COBRA -->
+            <div class="card nivelamento-card mb-4">
+                <div class="card-body">
+                    <h4 class="mb-3">
+                        <i class="bi bi-journal-text me-2 text-success"></i>
+                        O que o edital cobra em Estatística e Probabilidade
+                    </h4>
+
+                    <p class="mb-3">
+                        No edital, os conteúdos de Estatística e Probabilidade aparecem de forma integrada.
+                        É fundamental compreender como os dados são organizados, analisados e interpretados,
+                        bem como como a probabilidade é utilizada para modelar situações de incerteza.
+                    </p>
+
+                    <ul class="mb-0">
+                        <li>
+                            <strong>Representação de dados:</strong> tabelas, gráficos e distribuições de
+                            frequência.
+                        </li>
+                        <li>
+                            <strong>Medidas descritivas:</strong> média, mediana, moda, mínimo, máximo e medidas de
+                            posição.
+                        </li>
+                        <li>
+                            <strong>Medidas de dispersão:</strong> amplitude, amplitude interquartil, variância,
+                            desvio padrão e coeficiente de variação.
+                        </li>
+                        <li>
+                            <strong>População e amostra:</strong> noções de amostragem e inferência estatística.
+                        </li>
+                        <li>
+                            <strong>Probabilidade:</strong> variáveis aleatórias, distribuição de probabilidade,
+                            probabilidade condicional e Teorema de Bayes.
+                        </li>
+                        <li>
+                            <strong>Distribuições importantes:</strong> distribuição binomial e distribuição normal.
+                        </li>
+                        <li>
+                            <strong>Relação entre variáveis:</strong> variância, covariância e correlação linear
+                            simples.
+                        </li>
+                    </ul>
+                </div>
+            </div>
+
+            <!-- CONCEITOS INICIAIS -->
+            <div class="card nivelamento-card mb-4">
+                <div class="card-body">
+                    <h4 class="mb-3">
+                        <i class="bi bi-lightbulb me-2 text-success"></i>
+                        2. Conceitos Iniciais
+                    </h4>
+
+                    <p>
+                        <strong>a) População:</strong> Conjunto universo de todos os elementos
+                        (pessoas, objetos ou fenômenos) que possuem uma característica comum
+                        e constituem o objeto de estudo.
+                        Um <strong>parâmetro</strong> é uma medida numérica que descreve alguma
+                        característica da população.
+                    </p>
+
+                    <p>
+                        <strong>b) Censo:</strong> Ocorre quando todos os elementos da população
+                        são observados e analisados.
+                        Em um censo, as informações coletadas representam exatamente a população,
+                        porém, na prática, esse procedimento pode ser inviável devido a custos,
+                        tempo ou dificuldade de acesso aos dados.
+                    </p>
+
+                    <p>
+                        <strong>c) Amostra:</strong> É qualquer subconjunto não vazio da população.
+                        Uma <strong>estatística</strong> (ou estimador) é uma medida numérica que
+                        descreve alguma característica da amostra.
+                    </p>
+
+                    <p>
+                        <strong>Exemplo:</strong> No fenômeno coletivo “eleição para síndico”,
+                        a população é o conjunto de todos os moradores do condomínio.
+                        Um censo corresponderia à apuração dos votos de todos os eleitores.
+                        Uma amostra poderia ser um grupo de eleitores selecionados aleatoriamente.
+                        A proporção de votos obtida pelo candidato X na amostra é uma estatística.
+                    </p>
+
+                    <p class="mb-0">
+                        Em estatística, utiliza-se a amostra para obter informações e
+                        realizar inferências sobre a população,
+                        uma vez que, na prática, nem sempre é possível observar todos
+                        os seus elementos.
+                    </p>
+                </div>
+            </div>
+
+            <!-- EXERCÍCIOS: POPULAÇÃO E AMOSTRA -->
+            <!-- EXERCÍCIO 1 -->
+            <div class="card nivelamento-card mb-4 border-start border-4 border-success">
+                <div class="card-body">
+                    <h4 class="mb-3">
+                        <i class="bi bi-pencil-square me-2 text-success"></i>
+                        Exercício de Fixação 1
+                    </h4>
+
+                    <div class="alert alert-light border mb-3">
+                        <i class="bi bi-check2-circle me-2"></i>
+                        Complete corretamente o conceito abaixo:
+                    </div>
+
+                    <p class="mb-0">
+                        O conjunto formado por <strong>todos os alunos matriculados em uma universidade</strong>,
+                        que possuem a característica comum de estarem regularmente inscritos,
+                        constitui o universo completo do estudo estatístico e é denominado
+                        <select id="ex1" class="form-select d-inline-block w-auto mx-2">
+                            <option value="">---</option>
+                            <option value="populacao">População</option>
+                            <option value="amostra">Amostra</option>
+                            <option value="censo">Censo</option>
+                        </select>
+
+                    </p>
+
+                    <button class="btn btn-outline-success mt-3" onclick="verificarEx1()">
+                        <i class="bi bi-search me-2"></i>Verificar resposta
+                    </button>
+                    <div id="fb1" class="mt-3"></div>
+                </div>
+            </div>
+
+            <!-- EXERCÍCIO 2 -->
+            <div class="card nivelamento-card mb-4 border-start border-4 border-success">
+                <div class="card-body">
+                    <h4 class="mb-3">
+                        <i class="bi bi-pencil-square me-2 text-success"></i>
+                        Exercício de Fixação 2
+                    </h4>
+
+                    <div class="alert alert-light border mb-3">
+                        <i class="bi bi-check2-circle me-2"></i>
+                        Complete corretamente o conceito abaixo:
+                    </div>
+
+                    <p class="mb-0">
+                        Em um estudo sobre o consumo de energia elétrica,
+                        foram considerados <strong>os domicílios residenciais existentes em um município</strong>,
+                        definidos como o conjunto completo de unidades analisadas.
+                        Esse conjunto é classificado como
+                        <select id="ex2" class="form-select d-inline-block w-auto mx-2">
+                            <option value="">---</option>
+                            <option value="populacao">População</option>
+                            <option value="amostra">Amostra</option>
+                            <option value="censo">Censo</option>
+                        </select>
+
+                    </p>
+
+                    <button class="btn btn-outline-success mt-3" onclick="verificarEx2()">
+                        <i class="bi bi-search me-2"></i>Verificar resposta
+                    </button>
+                    <div id="fb2" class="mt-3"></div>
+                </div>
+            </div>
+
+            <!-- EXERCÍCIO 3 -->
+            <div class="card nivelamento-card mb-4 border-start border-4 border-success">
+                <div class="card-body">
+                    <h4 class="mb-3">
+                        <i class="bi bi-pencil-square me-2 text-success"></i>
+                        Exercício de Fixação 3
+                    </h4>
+
+                    <div class="alert alert-light border mb-3">
+                        <i class="bi bi-check2-circle me-2"></i>
+                        Complete corretamente o conceito abaixo:
+                    </div>
+
+                    <p class="mb-0">
+                        Para analisar a satisfação dos clientes de uma empresa,
+                        foi selecionado <strong>um grupo de 200 consumidores</strong>
+                        entre todos os clientes cadastrados.
+                        Esse grupo selecionado representa uma
+                        <select id="ex3" class="form-select d-inline-block w-auto mx-2">
+                            <option value="">---</option>
+                            <option value="populacao">População</option>
+                            <option value="amostra">Amostra</option>
+                            <option value="censo">Censo</option>
+                        </select>
+
+                    </p>
+
+                    <button class="btn btn-outline-success mt-3" onclick="verificarEx3()">
+                        <i class="bi bi-search me-2"></i>Verificar resposta
+                    </button>
+                    <div id="fb3" class="mt-3"></div>
+                </div>
+            </div>
+
+            <!-- EXERCÍCIO 4 -->
+            <div class="card nivelamento-card mb-4 border-start border-4 border-success">
+                <div class="card-body">
+                    <h4 class="mb-3">
+                        <i class="bi bi-pencil-square me-2 text-success"></i>
+                        Exercício de Fixação 4
+                    </h4>
+
+                    <div class="alert alert-light border mb-3">
+                        <i class="bi bi-check2-circle me-2"></i>
+                        Complete corretamente o conceito abaixo:
+                    </div>
+
+                    <p class="mb-0">
+                        Com o objetivo de estimar a renda média de uma cidade,
+                        foram escolhidos <strong>500 moradores, selecionados aleatoriamente</strong>,
+                        para responder a um questionário socioeconômico.
+                        O conjunto desses moradores corresponde a uma
+                        <select id="ex4" class="form-select d-inline-block w-auto mx-2">
+                            <option value="">---</option>
+                            <option value="populacao">População</option>
+                            <option value="amostra">Amostra</option>
+                            <option value="censo">Censo</option>
+                        </select>
+                        .
+                    </p>
+
+                    <button class="btn btn-outline-success mt-3" onclick="verificarEx4()">
+                        <i class="bi bi-search me-2"></i>Verificar resposta
+                    </button>
+                    <div id="fb4" class="mt-3"></div>
+                </div>
+            </div>
+
+            <!-- EXERCÍCIO 5 -->
+            <div class="card nivelamento-card mb-4 border-start border-4 border-success">
+                <div class="card-body">
+                    <h4 class="mb-3">
+                        <i class="bi bi-pencil-square me-2 text-success"></i>
+                        Exercício de Fixação 5
+                    </h4>
+
+                    <div class="alert alert-light border mb-3">
+                        <i class="bi bi-check2-circle me-2"></i>
+                        Complete corretamente o conceito abaixo:
+                    </div>
+
+                    <p class="mb-0">
+                        Em um levantamento demográfico, foram coletadas informações de
+                        <strong>todos os habitantes de uma cidade</strong>.
+                        Esse procedimento estatístico é denominado
+                        <select id="ex5" class="form-select d-inline-block w-auto mx-2">
+                            <option value="">---</option>
+                            <option value="populacao">População</option>
+                            <option value="amostra">Amostra</option>
+                            <option value="censo">Censo</option>
+                        </select>.
+                    </p>
+
+                    <button class="btn btn-outline-success mt-3" onclick="verificarEx5()">
+                        <i class="bi bi-search me-2"></i>Verificar resposta
+                    </button>
+                    <div id="fb5" class="mt-3"></div>
+                </div>
+            </div>
+
+            <!-- EXERCÍCIO 6 -->
+            <div class="card nivelamento-card mb-4 border-start border-4 border-success">
+                <div class="card-body">
+                    <h4 class="mb-3">
+                        <i class="bi bi-pencil-square me-2 text-success"></i>
+                        Exercício de Fixação 6
+                    </h4>
+
+                    <div class="alert alert-light border mb-3">
+                        <i class="bi bi-check2-circle me-2"></i>
+                        Complete corretamente o conceito abaixo:
+                    </div>
+
+                    <p class="mb-0">
+                        Quando um estudo estatístico analisa
+                        <strong>todos os elementos que compõem a população</strong>,
+                        sem realizar qualquer tipo de seleção ou amostragem,
+                        dizemos que foi realizado um
+                        <select id="ex6" class="form-select d-inline-block w-auto mx-2">
+                            <option value="">---</option>
+                            <option value="populacao">População</option>
+                            <option value="amostra">Amostra</option>
+                            <option value="censo">Censo</option>
+                        </select>.
+                    </p>
+
+                    <button class="btn btn-outline-success mt-3" onclick="verificarEx6()">
+                        <i class="bi bi-search me-2"></i>Verificar resposta
+                    </button>
+                    <div id="fb6" class="mt-3"></div>
+                </div>
+            </div>
+
+            <!-- DADOS ESTATÍSTICOS -->
+            <div class="card nivelamento-card mb-4">
+                <div class="card-body">
+                    <h4 class="mb-3">
+                        <i class="bi bi-database me-2 text-success"></i>
+                        3. Dados Estatísticos
+                    </h4>
+
+                    <p>
+                        Os dados estatísticos correspondem às informações coletadas a partir da observação de
+                        fenômenos
+                        de interesse, podendo ser obtidos tanto de uma população quanto de uma amostra.
+                        Quando os dados são amostrais, devem ser coletados de modo apropriado, por meio de um
+                        processo
+                        de seleção aleatória, a fim de permitir inferências sobre a população.
+                    </p>
+
+                    <p>
+                        Dados coletados ou organizados de forma inadequada podem se tornar inúteis ou induzir a erro
+                        o processo de análise e de tomada de decisão.
+                    </p>
+
+                    <hr>
+
+                    <h5 class="mt-3">
+                        <i class="bi bi-list-ol me-2 text-muted"></i>
+                        3.1 Quanto à organização
+                    </h5>
+                    <ul class="mb-3">
+                        <li>
+                            <strong>Dados Brutos:</strong> Dados obtidos diretamente da observação, ainda não
+                            organizados
+                            numericamente.
+                        </li>
+                        <li>
+                            <strong>Rol:</strong> Conjunto de dados brutos organizados numericamente,
+                            em ordem crescente ou decrescente.
+                        </li>
+                    </ul>
+
+                    <!-- EXEMPLO PRÁTICO: DADOS BRUTOS E ROL (sem card dentro de card) -->
+                    <div class="p-3 rounded border bg-light mb-4">
+                        <h5 class="mb-2">
+                            <i class="bi bi-search me-2 text-secondary"></i>
+                            Exemplo Prático — Dados Brutos e Rol
+                        </h5>
+
+                        <p class="mb-2">
+                            Considere as notas obtidas por um grupo de alunos em uma avaliação:
+                        </p>
+
+                        <p class="fw-bold mb-2">
+                            6, 8, 5, 7, 6, 9, 5, 8
+                        </p>
+
+                        <p class="mb-2">
+                            Esses valores representam os <strong>dados brutos</strong>, pois foram obtidos
+                            diretamente
+                            da observação e ainda não estão organizados.
+                        </p>
+
+                        <p class="mb-2">
+                            Ao organizar esses dados numericamente em ordem crescente, obtemos o
+                            <strong>rol</strong>:
+                        </p>
+
+                        <p class="fw-bold mb-0">
+                            5, 5, 6, 6, 7, 8, 8, 9
+                        </p>
+                    </div>
+
+                    <h5 class="mt-3">
+                        <i class="bi bi-tags me-2 text-muted"></i>
+                        3.2 Quanto ao tipo
+                    </h5>
+
+                    <p class="mb-2">
+                        <strong>a) Dados Quantitativos:</strong> São dados expressos numericamente, resultantes de
+                        contagens ou medições.
+                    </p>
+                    <ul>
+                        <li>
+                            <strong>Discretos:</strong> Assumem valores inteiros e resultam de contagens
+                            (ex.: número de alunos, quantidade de aparelhos de TV).
+                        </li>
+                        <li>
+                            <strong>Contínuos:</strong> Podem assumir qualquer valor em um intervalo real,
+                            resultantes de medições
+                            (ex.: altura, peso, salário, temperatura).
+                        </li>
+                    </ul>
+
+                    <p class="mb-2">
+                        <strong>b) Dados Qualitativos:</strong> Representam características não numéricas,
+                        expressas por categorias ou atributos.
+                    </p>
+                    <ul class="mb-3">
+                        <li>
+                            <strong>Nominais:</strong> Categorias sem ordem natural
+                            (ex.: sexo, cor dos olhos, respostas “sim” ou “não”).
+                        </li>
+                        <li>
+                            <strong>Por postos:</strong> Categorias que dependem de uma ordenação subjetiva
+                            ou hierárquica
+                            (ex.: classificação em concursos, rankings).
+                        </li>
+                    </ul>
+
+                    <!-- EXEMPLO PRÁTICO: TIPOS DE DADOS (sem card dentro de card) -->
+                    <div class="p-3 rounded border bg-light">
+                        <h5 class="mb-2">
+                            <i class="bi bi-diagram-3 me-2 text-secondary"></i>
+                            Exemplo Prático — Tipos de Dados
+                        </h5>
+
+                        <p class="mb-2">
+                            Considere as seguintes informações coletadas em uma escola:
+                        </p>
+
+                        <ul class="mb-2">
+                            <li>Número de alunos por sala</li>
+                            <li>Altura dos estudantes</li>
+                            <li>Sexo dos alunos</li>
+                            <li>Classificação final em um concurso interno</li>
+                        </ul>
+
+                        <p class="mb-2">
+                            O <strong>número de alunos por sala</strong> e a <strong>altura dos estudantes</strong>
+                            são exemplos de <strong>dados quantitativos</strong>, pois podem ser expressos
+                            numericamente.
+                        </p>
+
+                        <p class="mb-2">
+                            Já o <strong>sexo dos alunos</strong> e a <strong>classificação em um concurso</strong>
+                            são exemplos de <strong>dados qualitativos</strong>, pois representam categorias ou
+                            atributos.
+                        </p>
+
+                        <p class="mb-0">
+                            Entre os dados quantitativos, o número de alunos é um dado <strong>discreto</strong>,
+                            enquanto a altura é um dado <strong>contínuo</strong>, pois pode assumir qualquer valor
+                            em um intervalo.
+                        </p>
+                    </div>
+
+                </div>
+            </div>
+
+            <!-- EXERCÍCIOS: DADOS ESTATÍSTICOS -->
+            <!-- EXERCÍCIO 7 -->
+            <div class="card nivelamento-card mb-4 border-start border-4 border-success">
+                <div class="card-body">
+                    <h4 class="mb-3">
+                        <i class="bi bi-pencil-square me-2 text-success"></i>
+                        Exercício de Fixação 7
+                    </h4>
+
+                    <div class="alert alert-light border mb-3">
+                        <i class="bi bi-check2-circle me-2"></i>
+                        Complete corretamente o conceito abaixo:
+                    </div>
+
+                    <p class="mb-0">
+                        Os valores obtidos diretamente da observação, ainda
+                        <strong>sem qualquer tipo de ordenação ou organização numérica</strong>,
+                        são denominados
+                        <select id="ex7" class="form-select d-inline-block w-auto mx-2">
+                            <option value="">---</option>
+                            <option value="brutos">Dados Brutos</option>
+                            <option value="rol">Rol</option>
+                        </select>.
+                    </p>
+
+                    <button class="btn btn-outline-success mt-3" onclick="verificarEx7()">
+                        <i class="bi bi-search me-2"></i>Verificar resposta
+                    </button>
+                    <div id="fb7" class="mt-3"></div>
+                </div>
+            </div>
+
+            <!-- EXERCÍCIO 8 -->
+            <div class="card nivelamento-card mb-4 border-start border-4 border-success">
+                <div class="card-body">
+                    <h4 class="mb-3">
+                        <i class="bi bi-pencil-square me-2 text-success"></i>
+                        Exercício de Fixação 8
+                    </h4>
+
+                    <div class="alert alert-light border mb-3">
+                        <i class="bi bi-check2-circle me-2"></i>
+                        Complete corretamente o conceito abaixo:
+                    </div>
+
+                    <p class="mb-0">
+                        Após a coleta, os valores de uma variável foram
+                        <strong>organizados numericamente em ordem crescente</strong>,
+                        facilitando a análise estatística.
+                        Esse conjunto organizado é denominado
+                        <select id="ex8" class="form-select d-inline-block w-auto mx-2">
+                            <option value="">---</option>
+                            <option value="brutos">Dados Brutos</option>
+                            <option value="rol">Rol</option>
+                        </select>.
+                    </p>
+
+                    <button class="btn btn-outline-success mt-3" onclick="verificarEx8()">
+                        <i class="bi bi-search me-2"></i>Verificar resposta
+                    </button>
+                    <div id="fb8" class="mt-3"></div>
+                </div>
+            </div>
+
+            <!-- EXERCÍCIO 9 -->
+            <div class="card nivelamento-card mb-4 border-start border-4 border-success">
+                <div class="card-body">
+                    <h4 class="mb-3">
+                        <i class="bi bi-pencil-square me-2 text-success"></i>
+                        Exercício de Fixação 9
+                    </h4>
+
+                    <div class="alert alert-light border mb-3">
+                        <i class="bi bi-check2-circle me-2"></i>
+                        Complete corretamente o conceito abaixo:
+                    </div>
+
+                    <p class="mb-0">
+                        A variável <strong>número de filhos por família</strong> assume valores numéricos
+                        e representa uma contagem.
+                        Trata-se de um dado
+                        <select id="ex9" class="form-select d-inline-block w-auto mx-2">
+                            <option value="">---</option>
+                            <option value="quantitativo">Quantitativo</option>
+                            <option value="qualitativo">Qualitativo</option>
+                        </select>.
+                    </p>
+
+                    <button class="btn btn-outline-success mt-3" onclick="verificarEx9()">
+                        <i class="bi bi-search me-2"></i>Verificar resposta
+                    </button>
+                    <div id="fb9" class="mt-3"></div>
+                </div>
+            </div>
+
+            <!-- EXERCÍCIO 10 -->
+            <div class="card nivelamento-card mb-4 border-start border-4 border-success">
+                <div class="card-body">
+                    <h4 class="mb-3">
+                        <i class="bi bi-pencil-square me-2 text-success"></i>
+                        Exercício de Fixação 10
+                    </h4>
+
+                    <div class="alert alert-light border mb-3">
+                        <i class="bi bi-check2-circle me-2"></i>
+                        Complete corretamente o conceito abaixo:
+                    </div>
+
+                    <p class="mb-0">
+                        A variável <strong>altura de uma pessoa</strong> pode assumir qualquer valor
+                        dentro de um intervalo real.
+                        Portanto, trata-se de um dado quantitativo
+                        <select id="ex10" class="form-select d-inline-block w-auto mx-2">
+                            <option value="">---</option>
+                            <option value="discreto">Discreto</option>
+                            <option value="continuo">Contínuo</option>
+                        </select>.
+                    </p>
+
+                    <button class="btn btn-outline-success mt-3" onclick="verificarEx10()">
+                        <i class="bi bi-search me-2"></i>Verificar resposta
+                    </button>
+                    <div id="fb10" class="mt-3"></div>
+                </div>
+            </div>
+
+            <!-- EXERCÍCIO 11 -->
+            <div class="card nivelamento-card mb-4 border-start border-4 border-success">
+                <div class="card-body">
+                    <h4 class="mb-3">
+                        <i class="bi bi-pencil-square me-2 text-success"></i>
+                        Exercício de Fixação 11
+                    </h4>
+
+                    <div class="alert alert-light border mb-3">
+                        <i class="bi bi-check2-circle me-2"></i>
+                        Complete corretamente o conceito abaixo:
+                    </div>
+
+                    <p class="mb-0">
+                        A variável <strong>cor dos olhos</strong> representa uma característica categórica,
+                        sem valor numérico associado.
+                        Portanto, trata-se de um dado
+                        <select id="ex11" class="form-select d-inline-block w-auto mx-2">
+                            <option value="">---</option>
+                            <option value="quantitativo">Quantitativo</option>
+                            <option value="qualitativo">Qualitativo</option>
+                        </select>.
+                    </p>
+
+                    <button class="btn btn-outline-success mt-3" onclick="verificarEx11()">
+                        <i class="bi bi-search me-2"></i>Verificar resposta
+                    </button>
+                    <div id="fb11" class="mt-3"></div>
+                </div>
+            </div>
+
+            <!-- EXERCÍCIO 12 -->
+            <div class="card nivelamento-card mb-4 border-start border-4 border-success">
+                <div class="card-body">
+                    <h4 class="mb-3">
+                        <i class="bi bi-pencil-square me-2 text-success"></i>
+                        Exercício de Fixação 12
+                    </h4>
+
+                    <div class="alert alert-light border mb-3">
+                        <i class="bi bi-check2-circle me-2"></i>
+                        Complete corretamente o conceito abaixo:
+                    </div>
+
+                    <p class="mb-0">
+                        A variável <strong>tempo gasto para concluir uma prova</strong> pode assumir
+                        qualquer valor dentro de um intervalo de tempo.
+                        Logo, trata-se de um dado quantitativo
+                        <select id="ex12" class="form-select d-inline-block w-auto mx-2">
+                            <option value="">---</option>
+                            <option value="discreto">Discreto</option>
+                            <option value="continuo">Contínuo</option>
+                        </select>.
+                    </p>
+
+                    <button class="btn btn-outline-success mt-3" onclick="verificarEx12()">
+                        <i class="bi bi-search me-2"></i>Verificar resposta
+                    </button>
+                    <div id="fb12" class="mt-3"></div>
+                </div>
+            </div>
+
+            <!-- EXERCÍCIO 13 -->
+            <div class="card nivelamento-card mb-4 border-start border-4 border-success">
+                <div class="card-body">
+                    <h4 class="mb-3">
+                        <i class="bi bi-pencil-square me-2 text-success"></i>
+                        Exercício de Fixação 13
+                    </h4>
+
+                    <div class="alert alert-light border mb-3">
+                        <i class="bi bi-check2-circle me-2"></i>
+                        Classifique corretamente cada variável citada no texto:
+                    </div>
+
+                    <p>
+                        Em uma pesquisa, foram coletadas as variáveis <strong>número de filhos</strong>,
+                        <strong>renda mensal</strong> e <strong>estado civil</strong>.
+                        A variável <strong>número de filhos</strong> é um dado quantitativo
+                        <select id="ex13a" class="form-select d-inline-block w-auto mx-2">
+                            <option value="">---</option>
+                            <option value="discreto">Discreto</option>
+                            <option value="continuo">Contínuo</option>
+                        </select>,
+                        a variável <strong>renda mensal</strong> é um dado quantitativo
+                        <select id="ex13b" class="form-select d-inline-block w-auto mx-2">
+                            <option value="">---</option>
+                            <option value="discreto">Discreto</option>
+                            <option value="continuo">Contínuo</option>
+                        </select>
+                        e a variável <strong>estado civil</strong> é um dado
+                        <select id="ex13c" class="form-select d-inline-block w-auto mx-2">
+                            <option value="">---</option>
+                            <option value="qualitativo-nominal">Qualitativo nominal</option>
+                            <option value="qualitativo-postos">Qualitativo por postos</option>
+                        </select>.
+                    </p>
+
+                    <button class="btn btn-outline-success mt-3" onclick="verificarEx13Reformulado()">
+                        <i class="bi bi-search me-2"></i>Verificar resposta
+                    </button>
+
+                    <div id="fb13" class="mt-3"></div>
+                </div>
+            </div>
+
+            <!-- EXERCÍCIO 14 - CLASSIFICAÇÃO COMPLETA DE VARIÁVEIS -->
+            <div class="card nivelamento-card mb-4 border-start border-4 border-success">
+                <div class="card-body">
+                    <h4 class="mb-3">
+                        <i class="bi bi-pencil-square me-2 text-success"></i>
+                        Exercício de Fixação 14
+                    </h4>
+
+                    <div class="alert alert-light border mb-3">
+                        <i class="bi bi-check2-circle me-2"></i>
+                        Classifique corretamente cada variável apresentada no texto.
+                    </div>
+
+                    <p>
+                        Em um levantamento estatístico, foram coletadas as seguintes informações:
+                        <strong>posição obtida em um concurso</strong>,
+                        <strong>peso corporal</strong>,
+                        <strong>número de veículos por residência</strong>
+                        e <strong>cor do automóvel</strong>.
+                        A variável <strong>posição obtida em um concurso</strong> é um dado
+                        <select id="ex14a" class="form-select d-inline-block w-auto mx-2">
+                            <option value="">---</option>
+                            <option value="qualitativo-postos">Qualitativo por postos</option>
+                            <option value="qualitativo-nominal">Qualitativo nominal</option>
+                        </select>,
+                        a variável <strong>peso corporal</strong> é um dado quantitativo
+                        <select id="ex14b" class="form-select d-inline-block w-auto mx-2">
+                            <option value="">---</option>
+                            <option value="discreto">Discreto</option>
+                            <option value="continuo">Contínuo</option>
+                        </select>,
+                        a variável <strong>número de veículos por residência</strong> é um dado quantitativo
+                        <select id="ex14c" class="form-select d-inline-block w-auto mx-2">
+                            <option value="">---</option>
+                            <option value="discreto">Discreto</option>
+                            <option value="continuo">Contínuo</option>
+                        </select>
+                        e a variável <strong>cor do automóvel</strong> é um dado
+                        <select id="ex14d" class="form-select d-inline-block w-auto mx-2">
+                            <option value="">---</option>
+                            <option value="qualitativo-nominal">Qualitativo nominal</option>
+                            <option value="qualitativo-postos">Qualitativo por postos</option>
+                        </select>.
+                    </p>
+
+                    <button class="btn btn-outline-success mt-3" onclick="verificarEx14()">
+                        <i class="bi bi-search me-2"></i>Verificar resposta
+                    </button>
+
+                    <div id="fb14" class="mt-3"></div>
+                </div>
+            </div>
+
+
+            <!-- DISTRIBUIÇÃO DE FREQUÊNCIA -->
+            <div class="card nivelamento-card mb-4">
+                <div class="card-body">
+                    <h4 class="mb-3">
+                        <i class="bi bi-table me-2 text-success"></i>
+                        4. Distribuição de Frequência
+                    </h4>
+
+                    <p>
+                        A distribuição de frequência é uma representação tabular dos dados estatísticos,
+                        discretos ou contínuos, na qual se organizam os valores observados (ou classes)
+                        e o número de vezes em que cada um ocorre, permitindo resumir grandes conjuntos de dados.
+                    </p>
+
+                    <p>
+                        Para ilustrar esse conceito, considere a quantidade de
+                        <strong>atendimentos diários realizados por um técnico de TI</strong>
+                        ao longo de <strong>20 dias úteis</strong>.
+                        Cada dia representa uma observação da amostra.
+                    </p>
+
+                    <p>
+                        Na tabela a seguir, cada coluna representa um dia de trabalho,
+                        e o valor correspondente indica a quantidade de atendimentos realizados nesse dia.
+                    </p>
+
+
+                    <!-- TABELA HORIZONTAL: DIA x ATENDIMENTOS -->
+                    <div class="table-responsive mb-3">
+                        <table class="table table-bordered text-center align-middle">
+                            <thead class="table-light">
+                                <tr>
+                                    <th>Dia</th>
+                                    <th>1</th>
+                                    <th>2</th>
+                                    <th>3</th>
+                                    <th>4</th>
+                                    <th>5</th>
+                                    <th>6</th>
+                                    <th>7</th>
+                                    <th>8</th>
+                                    <th>9</th>
+                                    <th>10</th>
+                                    <th>11</th>
+                                    <th>12</th>
+                                    <th>13</th>
+                                    <th>14</th>
+                                    <th>15</th>
+                                    <th>16</th>
+                                    <th>17</th>
+                                    <th>18</th>
+                                    <th>19</th>
+                                    <th>20</th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr>
+                                    <th class="table-light">Atendimentos realizados</th>
+                                    <td>3</td>
+                                    <td>6</td>
+                                    <td>5</td>
+                                    <td>4</td>
+                                    <td>6</td>
+                                    <td>7</td>
+                                    <td>5</td>
+                                    <td>5</td>
+                                    <td>4</td>
+                                    <td>6</td>
+                                    <td>7</td>
+                                    <td>6</td>
+                                    <td>5</td>
+                                    <td>4</td>
+                                    <td>6</td>
+                                    <td>5</td>
+                                    <td>7</td>
+                                    <td>6</td>
+                                    <td>4</td>
+                                    <td>5</td>
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
+
+                    <p>
+                        A partir desses dados, podemos listar os valores observados
+                        em uma única sequência numérica, formando os <strong>dados brutos</strong>:
+                    </p>
+
+                    <p class="fw-bold">
+                        3, 6, 5, 4, 6, 7, 5, 5, 4, 6, 7, 6, 5, 4, 6, 5, 7, 6, 4, 5
+                    </p>
+
+                    <p class="mb-0">
+                        Organizando esses valores em ordem crescente, obtemos o
+                        <strong>rol</strong>:
+                        <br>
+                        <strong>
+                            3, 4, 4, 4, 4, 5, 5, 5, 5, 5,
+                            6, 6, 6, 6, 6, 6, 7, 7, 7
+                        </strong>
+                    </p>
+                </div>
+            </div>
+
+
+            <!-- FREQUÊNCIA ABSOLUTA -->
+            <div class="card nivelamento-card mb-4">
+                <div class="card-body">
+                    <h4 class="mb-3">
+                        <i class="bi bi-123 me-2 text-success"></i>
+                        a) Frequência Simples Absoluta (Fi)
+                    </h4>
+
+                    <p>
+                        A frequência simples absoluta corresponde ao número de vezes
+                        que um determinado valor aparece no conjunto de dados.
+                    </p>
+
+                    <div class="table-responsive">
+                        <table class="table table-bordered text-center align-middle">
+                            <thead class="table-success">
+                                <tr>
+                                    <th>Atendimentos (xi)</th>
+                                    <th>fi</th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr>
+                                    <td>3</td>
+                                    <td>1</td>
+                                </tr>
+                                <tr>
+                                    <td>4</td>
+                                    <td>4</td>
+                                </tr>
+                                <tr>
+                                    <td>5</td>
+                                    <td>5</td>
+                                </tr>
+                                <tr>
+                                    <td>6</td>
+                                    <td>6</td>
+                                </tr>
+                                <tr>
+                                    <td>7</td>
+                                    <td>4</td>
+                                </tr>
+                            </tbody>
+                            <tfoot>
+                                <tr class="fw-bold table-light">
+                                    <td>Total</td>
+                                    <td>∑ fi = 20</td>
+                                </tr>
+                            </tfoot>
+                        </table>
+                    </div>
+                </div>
+            </div>
+
+            <!-- FREQUÊNCIA RELATIVA -->
+            <div class="card nivelamento-card mb-4">
+                <div class="card-body">
+                    <h4 class="mb-3">
+                        <i class="bi bi-percent me-2 text-success"></i>
+                        b) Frequência Relativa (Fr)
+                    </h4>
+
+                    <p>
+                        A frequência relativa é obtida pela razão entre a frequência absoluta do valor
+                        e o número total de observações da amostra (<strong>n = 20</strong>),
+                        conforme a expressão:
+                    </p>
+
+                    <p class="fw-bold text-center">
+                        Fr = fi / n
+                    </p>
+
+                    <div class="table-responsive">
+                        <table class="table table-bordered text-center align-middle">
+                            <thead class="table-success">
+                                <tr>
+                                    <th>Atendimentos (xi)</th>
+                                    <th>fi</th>
+                                    <th>Cálculo (fi / n)</th>
+                                    <th>Fr</th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr>
+                                    <td>3</td>
+                                    <td>1</td>
+                                    <td>1 / 20</td>
+                                    <td>0,05 (5%)</td>
+                                </tr>
+                                <tr>
+                                    <td>4</td>
+                                    <td>4</td>
+                                    <td>4 / 20</td>
+                                    <td>0,20 (20%)</td>
+                                </tr>
+                                <tr>
+                                    <td>5</td>
+                                    <td>5</td>
+                                    <td>5 / 20</td>
+                                    <td>0,25 (25%)</td>
+                                </tr>
+                                <tr>
+                                    <td>6</td>
+                                    <td>6</td>
+                                    <td>6 / 20</td>
+                                    <td>0,30 (30%)</td>
+                                </tr>
+                                <tr>
+                                    <td>7</td>
+                                    <td>4</td>
+                                    <td>4 / 20</td>
+                                    <td>0,20 (20%)</td>
+                                </tr>
+                            </tbody>
+                            <tfoot>
+                                <tr class="fw-bold table-light">
+                                    <td>Total</td>
+                                    <td>20</td>
+                                    <td>—</td>
+                                    <td>1,00 (100%)</td>
+                                </tr>
+                            </tfoot>
+                        </table>
+                    </div>
+
+                    <!-- LEGENDA EXPLICATIVA -->
+                    <div class="alert alert-secondary mt-3 mb-0">
+                        <strong>Legenda:</strong>
+                        <ul class="mb-0 mt-2">
+                            <li>
+                                <strong>Fr</strong>: frequência relativa — indica a proporção de vezes
+                                que um valor ocorre em relação ao total da amostra.
+                            </li>
+                            <li>
+                                <strong>fi</strong>: frequência absoluta — número de vezes que o valor
+                                aparece no conjunto de dados.
+                            </li>
+                            <li>
+                                <strong>n</strong>: número total de observações da amostra.
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+
+
+            <!-- FREQUÊNCIA ACUMULADA -->
+            <div class="card nivelamento-card mb-4">
+                <div class="card-body">
+                    <h4 class="mb-3">
+                        <i class="bi bi-stack me-2 text-success"></i>
+                        c) Frequência Acumulada (Fac)
+                    </h4>
+
+                    <p>
+                        A frequência acumulada corresponde ao <strong>somatório progressivo</strong> das frequências
+                        absolutas,
+                        indicando quantas observações possuem valor <strong>menor ou igual</strong> ao valor
+                        considerado.
+                        Essa frequência é sempre crescente e, no último valor, é igual ao total da amostra.
+                    </p>
+
+                    <p class="fw-bold text-center">
+                        Fac<sub>i</sub> = f<sub>1</sub> + f<sub>2</sub> + … + f<sub>i</sub>
+                    </p>
+
+                    <div class="table-responsive">
+                        <table class="table table-bordered text-center align-middle">
+                            <thead class="table-success">
+                                <tr>
+                                    <th>Atendimentos (xi)</th>
+                                    <th>fi</th>
+                                    <th>Cálculo da Fac</th>
+                                    <th>Fac</th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr>
+                                    <td>3</td>
+                                    <td>1</td>
+                                    <td>1</td>
+                                    <td>1</td>
+                                </tr>
+                                <tr>
+                                    <td>4</td>
+                                    <td>4</td>
+                                    <td>1 + 4</td>
+                                    <td>5</td>
+                                </tr>
+                                <tr>
+                                    <td>5</td>
+                                    <td>5</td>
+                                    <td>5 + 5</td>
+                                    <td>10</td>
+                                </tr>
+                                <tr>
+                                    <td>6</td>
+                                    <td>6</td>
+                                    <td>10 + 6</td>
+                                    <td>16</td>
+                                </tr>
+                                <tr>
+                                    <td>7</td>
+                                    <td>4</td>
+                                    <td>16 + 4</td>
+                                    <td>20</td>
+                                </tr>
+                            </tbody>
+                            <tfoot>
+                                <tr class="fw-bold table-light">
+                                    <td>Total</td>
+                                    <td>20</td>
+                                    <td>—</td>
+                                    <td>20</td>
+                                </tr>
+                            </tfoot>
+                        </table>
+                    </div>
+
+                    <!-- LEGENDA EXPLICATIVA -->
+                    <div class="alert alert-secondary mt-3 mb-0">
+                        <strong>Legenda:</strong>
+                        <ul class="mb-0 mt-2">
+                            <li>
+                                <strong>Fac</strong>: frequência acumulada — soma progressiva das frequências
+                                absolutas.
+                            </li>
+                            <li>
+                                <strong>fi</strong>: frequência absoluta do valor considerado.
+                            </li>
+                            <li>
+                                O último valor da Fac é sempre igual ao <strong>tamanho da amostra (n)</strong>.
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+
+
+            <!-- TABELA CONSOLIDADA -->
+            <div class="card nivelamento-card mb-4">
+                <div class="card-body">
+                    <h4 class="mb-3">
+                        <i class="bi bi-layout-text-window me-2 text-success"></i>
+                        Tabela de Distribuição de Frequência (Resumo)
+                    </h4>
+
+                    <p class="mb-3">
+                        A tabela a seguir apresenta, de forma integrada, as frequências absoluta,
+                        relativa e acumulada da amostra (n = 20).
+                    </p>
+
+                    <div class="table-responsive">
+                        <table class="table table-bordered text-center align-middle">
+                            <thead class="table-success">
+                                <tr>
+                                    <th>Atendimentos (xi)</th>
+                                    <th>fi</th>
+                                    <th>Fr</th>
+                                    <th>Fac</th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr>
+                                    <td>3</td>
+                                    <td>1</td>
+                                    <td>0,05 (5%)</td>
+                                    <td>1</td>
+                                </tr>
+                                <tr>
+                                    <td>4</td>
+                                    <td>4</td>
+                                    <td>0,20 (20%)</td>
+                                    <td>5</td>
+                                </tr>
+                                <tr>
+                                    <td>5</td>
+                                    <td>5</td>
+                                    <td>0,25 (25%)</td>
+                                    <td>10</td>
+                                </tr>
+                                <tr>
+                                    <td>6</td>
+                                    <td>6</td>
+                                    <td>0,30 (30%)</td>
+                                    <td>16</td>
+                                </tr>
+                                <tr>
+                                    <td>7</td>
+                                    <td>4</td>
+                                    <td>0,20 (20%)</td>
+                                    <td>20</td>
+                                </tr>
+                            </tbody>
+                            <tfoot>
+                                <tr class="fw-bold table-light">
+                                    <td>Total</td>
+                                    <td>20</td>
+                                    <td>1,00 (100%)</td>
+                                    <td>20</td>
+                                </tr>
+                            </tfoot>
+                        </table>
+                    </div>
+                </div>
+            </div>
+
+            <!-- =========================
+        EXERCÍCIOS 15 a 17
+        Distribuição de Frequência
+        ========================= -->
+
+            <!-- EXERCÍCIO 15 -->
+            <div class="card nivelamento-card mb-4 exercise-card" data-exercise="15">
+                <div class="card-body">
+                    <h4 class="mb-3">
+                        <i class="bi bi-pencil-square me-2 text-success"></i>
+                        Exercício 15 — Frequência Simples Absoluta (Fi)
+                    </h4>
+
+                    <p>
+                        <strong>Considerando a Tabela de Distribuição de Frequência (Resumo)</strong>
+                        apresentada anteriormente, complete corretamente a afirmação abaixo.
+                    </p>
+
+                    <p class="fw-bold">
+                        A frequência simples absoluta (fi) do valor
+                        <select id="ex15_xi" class="form-select d-inline w-auto mx-1">
+                            <option value="" disabled selected>?</option>
+                            <option>3</option>
+                            <option>4</option>
+                            <option>5</option>
+                            <option>6</option>
+                            <option>7</option>
+                        </select>
+                        corresponde ao número de dias em que esse valor de atendimentos ocorreu.
+                        Para o valor escolhido, a frequência absoluta é igual a
+                        <select id="ex15_fi" class="form-select d-inline w-auto mx-1">
+                            <option value="" disabled selected>?</option>
+                            <option>1</option>
+                            <option>4</option>
+                            <option>5</option>
+                            <option>6</option>
+                        </select>.
+                    </p>
+
+                    <button class="btn btn-outline-success btn-sm verify-btn">Verificar resposta</button>
+                    <button class="btn btn-outline-secondary btn-sm ms-2 toggle-explanation">Ver explicação</button>
+
+                    <div class="feedback mt-2"></div>
+
+                    <!-- EXPLICAÇÃO EXERCÍCIO 15 -->
+                    <div class="explanation mt-3 d-none">
+                        <div class="alert alert-secondary mb-0">
+                            <h5 class="text-success mb-3">Correção — Exercício 15</h5>
+
+                            <p>
+                                A <strong>frequência simples absoluta (fi)</strong> indica o número de vezes
+                                que um determinado valor aparece no conjunto de dados.
+                                Em outras palavras, ela responde à pergunta:
+                                <em>“quantos dias esse valor ocorreu?”</em>
+                            </p>
+
+                            <p class="mb-2">
+                                Observando a <strong>Tabela de Distribuição de Frequência (Resumo)</strong>, temos:
+                            </p>
+
+                            <ul class="mb-3">
+                                <li>
+                                    Para <strong>xi = 3</strong>, a frequência absoluta é <strong>fi = 1</strong>.
+                                    <div class="small text-muted">
+                                        O valor 3 atendimentos ocorreu em apenas 1 dia.
+                                    </div>
+                                </li>
+
+                                <li>
+                                    Para <strong>xi = 4</strong>, a frequência absoluta é <strong>fi = 4</strong>.
+                                    <div class="small text-muted">
+                                        O valor 4 atendimentos ocorreu em 4 dias.
+                                    </div>
+                                </li>
+
+                                <li>
+                                    Para <strong>xi = 5</strong>, a frequência absoluta é <strong>fi = 5</strong>.
+                                    <div class="small text-muted">
+                                        O valor 5 atendimentos ocorreu em 5 dias.
+                                    </div>
+                                </li>
+
+                                <li>
+                                    Para <strong>xi = 6</strong>, a frequência absoluta é <strong>fi = 6</strong>.
+                                    <div class="small text-muted">
+                                        O valor 6 atendimentos ocorreu em 6 dias.
+                                    </div>
+                                </li>
+
+                                <li class="mb-0">
+                                    Para <strong>xi = 7</strong>, a frequência absoluta é <strong>fi = 4</strong>.
+                                    <div class="small text-muted">
+                                        O valor 7 atendimentos ocorreu em 4 dias.
+                                    </div>
+                                </li>
+                            </ul>
+
+                            <p class="mb-0">
+                                Portanto, ao escolher um valor de <strong>xi</strong>, basta verificar
+                                na tabela quantas vezes ele aparece. Esse número é a
+                                <strong>frequência simples absoluta (fi)</strong>.
+                            </p>
+                        </div>
+                    </div>
+
+                </div>
+            </div>
+
+            <!-- EXERCÍCIO 16 -->
+            <div class="card nivelamento-card mb-4 exercise-card" data-exercise="16">
+                <div class="card-body">
+                    <h4 class="mb-3">
+                        <i class="bi bi-pencil-square me-2 text-success"></i>
+                        Exercício 16 — Frequência Relativa (Fr)
+                    </h4>
+
+                    <p>
+                        <strong>Considerando a Tabela de Distribuição de Frequência (Resumo)</strong>
+                        e sabendo que a amostra é composta por <strong>20 dias úteis</strong>,
+                        complete corretamente a afirmação abaixo.
+                    </p>
+
+                    <p class="fw-bold text-center">Fr = fi / n</p>
+
+                    <p class="fw-bold">
+                        Para o valor de
+                        <select id="ex16_xi" class="form-select d-inline w-auto mx-1">
+                            <option value="" disabled selected>?</option>
+                            <option>4</option>
+                            <option>5</option>
+                            <option>6</option>
+                        </select>
+                        atendimentos diários, cuja frequência absoluta é
+                        <select id="ex16_fi" class="form-select d-inline w-auto mx-1">
+                            <option value="" disabled selected>?</option>
+                            <option>4</option>
+                            <option>5</option>
+                            <option>6</option>
+                        </select>,
+                        a frequência relativa é igual a
+                        <select id="ex16_fr" class="form-select d-inline w-auto mx-1">
+                            <option value="" disabled selected>?</option>
+                            <option>0,20 (20%)</option>
+                            <option>0,25 (25%)</option>
+                            <option>0,30 (30%)</option>
+                        </select>.
+                    </p>
+
+                    <button class="btn btn-outline-success btn-sm verify-btn">Verificar resposta</button>
+                    <button class="btn btn-outline-secondary btn-sm ms-2 toggle-explanation">Ver explicação</button>
+
+                    <div class="feedback mt-2"></div>
+
+                    <!-- EXPLICAÇÃO EXERCÍCIO 16 -->
+                    <div class="explanation mt-3 d-none">
+                        <div class="alert alert-secondary mb-0">
+                            <h5 class="text-success mb-3">Correção — Exercício 16</h5>
+
+                            <p>
+                                A <strong>frequência relativa (Fr)</strong> indica a proporção de vezes
+                                que um valor ocorre em relação ao total de observações da amostra.
+                                Ela pode ser expressa em forma decimal ou percentual.
+                            </p>
+
+                            <p class="fw-bold text-center">
+                                Fr = fi / n
+                            </p>
+
+                            <p class="mb-2">
+                                Na <strong>Tabela de Distribuição de Frequência (Resumo)</strong>,
+                                o total da amostra é <strong>n = 20 dias</strong>.
+                            </p>
+
+                            <ul class="mb-3">
+                                <li>
+                                    Para <strong>xi = 4</strong>, temos <strong>fi = 4</strong>.
+                                    <div class="mt-1">
+                                        Fr(4) = 4 / 20 = <strong>0,20 = 20%</strong>
+                                    </div>
+                                    <div class="small text-muted">
+                                        Em 20% dos dias, foram realizados 4 atendimentos.
+                                    </div>
+                                </li>
+
+                                <li>
+                                    Para <strong>xi = 5</strong>, temos <strong>fi = 5</strong>.
+                                    <div class="mt-1">
+                                        Fr(5) = 5 / 20 = <strong>0,25 = 25%</strong>
+                                    </div>
+                                    <div class="small text-muted">
+                                        Em 25% dos dias, foram realizados 5 atendimentos.
+                                    </div>
+                                </li>
+
+                                <li class="mb-0">
+                                    Para <strong>xi = 6</strong>, temos <strong>fi = 6</strong>.
+                                    <div class="mt-1">
+                                        Fr(6) = 6 / 20 = <strong>0,30 = 30%</strong>
+                                    </div>
+                                    <div class="small text-muted">
+                                        Em 30% dos dias, foram realizados 6 atendimentos.
+                                    </div>
+                                </li>
+                            </ul>
+
+                            <p class="mb-0">
+                                Assim, sempre que a informação estiver expressa em
+                                <strong>percentual</strong> ou <strong>proporção</strong>,
+                                estamos lidando com a <strong>frequência relativa</strong>.
+                            </p>
+                        </div>
+                    </div>
+
+                </div>
+            </div>
+
+            <!-- EXERCÍCIO 17 -->
+            <div class="card nivelamento-card mb-4 exercise-card" data-exercise="17">
+                <div class="card-body">
+                    <h4 class="mb-3">
+                        <i class="bi bi-pencil-square me-2 text-success"></i>
+                        Exercício 17 — Frequência Acumulada (Fac)
+                    </h4>
+
+                    <p>
+                        <strong>Considerando a Tabela de Distribuição de Frequência (Resumo)</strong>,
+                        responda corretamente à afirmação a seguir.
+                    </p>
+
+                    <p class="fw-bold">
+                        A frequência acumulada correspondente a até
+                        <select id="ex15_xi" class="form-select d-inline w-auto mx-1">
+                            <option value="" disabled selected>?</option>
+                            <option>4</option>
+                            <option>5</option>
+                            <option>6</option>
+                        </select>
+                        atendimentos diários é igual a
+                        <select id="ex15_fac" class="form-select d-inline w-auto mx-1">
+                            <option value="" disabled selected>?</option>
+                            <option>5</option>
+                            <option>10</option>
+                            <option>16</option>
+                        </select>.
+                    </p>
+
+                    <button class="btn btn-outline-success btn-sm verify-btn">Verificar resposta</button>
+                    <button class="btn btn-outline-secondary btn-sm ms-2 toggle-explanation">Ver explicação</button>
+
+                    <div class="feedback mt-2"></div>
+
+                    <!-- EXPLICAÇÃO EXERCÍCIO 17 -->
+                    <div class="explanation mt-3 d-none">
+                        <div class="alert alert-secondary mb-0">
+                            <h5 class="text-success mb-3">Correção — Exercício 17</h5>
+
+                            <p>
+                                A <strong>frequência acumulada (Fac)</strong> representa o somatório progressivo das
+                                frequências absolutas (<strong>fi</strong>) até um determinado valor
+                                <strong>xi</strong>.
+                                Em linguagem de prova: quando aparece <strong>“até”</strong>, significa
+                                <strong>menor ou igual</strong> (≤).
+                            </p>
+
+                            <p class="mb-2">
+                                Pela <strong>Tabela de Distribuição de Frequência (Resumo)</strong>:
+                            </p>
+
+                            <ul class="mb-3">
+                                <li>
+                                    <strong>Até 4 atendimentos</strong> (xi ≤ 4): somamos as frequências de
+                                    <strong>3</strong> e <strong>4</strong>.
+                                    <div class="mt-1">
+                                        Fac(4) = fi(3) + fi(4) = 1 + 4 = <strong>5</strong>
+                                    </div>
+                                    <div class="small text-muted">
+                                        Isso quer dizer: em <strong>5 dias</strong>, o técnico realizou <strong>3 ou
+                                            4</strong> atendimentos.
+                                    </div>
+                                </li>
+
+                                <li>
+                                    <strong>Até 5 atendimentos</strong> (xi ≤ 5): somamos as frequências de
+                                    <strong>3</strong>, <strong>4</strong> e <strong>5</strong>.
+                                    <div class="mt-1">
+                                        Fac(5) = fi(3) + fi(4) + fi(5) = 1 + 4 + 5 = <strong>10</strong>
+                                    </div>
+                                    <div class="small text-muted">
+                                        Isso quer dizer: em <strong>10 dias</strong>, o técnico realizou <strong>3,
+                                            4 ou
+                                            5</strong> atendimentos.
+                                    </div>
+                                </li>
+
+                                <li class="mb-0">
+                                    <strong>Até 6 atendimentos</strong> (xi ≤ 6): somamos as frequências de
+                                    <strong>3</strong>, <strong>4</strong>, <strong>5</strong> e <strong>6</strong>.
+                                    <div class="mt-1">
+                                        Fac(6) = fi(3) + fi(4) + fi(5) + fi(6) = 1 + 4 + 5 + 6 = <strong>16</strong>
+                                    </div>
+                                    <div class="small text-muted">
+                                        Isso quer dizer: em <strong>16 dias</strong>, o técnico realizou <strong>no
+                                            máximo
+                                            6</strong> atendimentos.
+                                    </div>
+                                </li>
+                            </ul>
+
+                            <p class="mb-0">
+                                Portanto, no exercício:
+                                <strong>até 4 → 5</strong>, <strong>até 5 → 10</strong>, <strong>até 6 →
+                                    16</strong>.
+                                Basta localizar o valor de <strong>Fac</strong> correspondente ao limite escolhido.
+                            </p>
+                        </div>
+                    </div>
+
+                </div>
+            </div>
+
+            <!-- EXERCÍCIO 18 — DESAFIO (com tabela Dia x Atendimentos + tabela de frequência) -->
+            <div class="card nivelamento-card mb-5 exercise-card" data-exercise="18">
+                <div class="card-body">
+                    <h4 class="mb-3 text-danger">
+                        <i class="bi bi-lightning-charge me-2"></i>
+                        Exercício 18 — Desafio: Identificação do Tipo de Frequência
+                    </h4>
+
+                    <p>
+                        Considere a situação hipotética a seguir.
+                    </p>
+
+                    <p>
+                        Um gestor registrou a quantidade de atendimentos diários realizados por um técnico de TI
+                        ao longo de <strong>30 dias</strong>, conforme a tabela abaixo.
+                    </p>
+
+                    <!-- TABELA HORIZONTAL: DIA x ATENDIMENTOS -->
+                    <div class="table-responsive mb-4">
+                        <table class="table table-bordered text-center align-middle">
+                            <thead class="table-light">
+                                <tr>
+                                    <th>Dia</th>
+                                    <th>1</th>
+                                    <th>2</th>
+                                    <th>3</th>
+                                    <th>4</th>
+                                    <th>5</th>
+                                    <th>6</th>
+                                    <th>7</th>
+                                    <th>8</th>
+                                    <th>9</th>
+                                    <th>10</th>
+                                    <th>11</th>
+                                    <th>12</th>
+                                    <th>13</th>
+                                    <th>14</th>
+                                    <th>15</th>
+                                    <th>16</th>
+                                    <th>17</th>
+                                    <th>18</th>
+                                    <th>19</th>
+                                    <th>20</th>
+                                    <th>21</th>
+                                    <th>22</th>
+                                    <th>23</th>
+                                    <th>24</th>
+                                    <th>25</th>
+                                    <th>26</th>
+                                    <th>27</th>
+                                    <th>28</th>
+                                    <th>29</th>
+                                    <th>30</th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr>
+                                    <th class="table-light">Atendimentos realizados</th>
+                                    <td>5</td>
+                                    <td>4</td>
+                                    <td>6</td>
+                                    <td>5</td>
+                                    <td>4</td>
+                                    <td>5</td>
+                                    <td>6</td>
+                                    <td>4</td>
+                                    <td>5</td>
+                                    <td>6</td>
+                                    <td>5</td>
+                                    <td>4</td>
+                                    <td>5</td>
+                                    <td>6</td>
+                                    <td>4</td>
+                                    <td>5</td>
+                                    <td>6</td>
+                                    <td>5</td>
+                                    <td>4</td>
+                                    <td>6</td>
+                                    <td>5</td>
+                                    <td>4</td>
+                                    <td>6</td>
+                                    <td>5</td>
+                                    <td>4</td>
+                                    <td>6</td>
+                                    <td>5</td>
+                                    <td>6</td>
+                                    <td>5</td>
+                                    <td>4</td>
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
+
+                    <p>
+                        A partir desses dados, o gestor construiu a seguinte <strong>tabela de distribuição de
+                            frequência</strong>:
+                    </p>
+
+                    <!-- TABELA DE FREQUÊNCIA (CONSISTENTE: n = 30) -->
+                    <div class="table-responsive mb-4">
+                        <table class="table table-bordered text-center align-middle">
+                            <thead class="table-light">
+                                <tr>
+                                    <th>Atendimentos diários (xi)</th>
+                                    <th>Frequência absoluta (fi)</th>
+                                    <th>Frequência relativa (Fr)</th>
+                                    <th>Frequência acumulada (Fac)</th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr>
+                                    <td>4</td>
+                                    <td>9</td>
+                                    <td>30%</td>
+                                    <td>9</td>
+                                </tr>
+                                <tr>
+                                    <td>5</td>
+                                    <td>12</td>
+                                    <td>40%</td>
+                                    <td>21</td>
+                                </tr>
+                                <tr>
+                                    <td>6</td>
+                                    <td>9</td>
+                                    <td>30%</td>
+                                    <td>30</td>
+                                </tr>
+                            </tbody>
+                            <tfoot>
+                                <tr class="fw-bold table-light">
+                                    <td>Total</td>
+                                    <td>30</td>
+                                    <td>100%</td>
+                                    <td>30</td>
+                                </tr>
+                            </tfoot>
+                        </table>
+                    </div>
+
+                    <p class="fw-bold">
+                        Ao afirmar que, em <strong>9 dias</strong>, o técnico realizou
+                        <strong>no máximo 4 atendimentos diários</strong>,
+                        o gestor está utilizando o conceito de
+                        <select id="ex18_a" class="form-select d-inline w-auto mx-1">
+                            <option value="" disabled selected>?</option>
+                            <option>frequência absoluta</option>
+                            <option>frequência relativa</option>
+                            <option>frequência acumulada</option>
+                        </select>.
+                    </p>
+
+                    <p class="fw-bold">
+                        Ao afirmar que <strong>40%</strong> dos dias apresentaram exatamente
+                        <strong>5 atendimentos</strong>,
+                        o gestor está utilizando o conceito de
+                        <select id="ex18_b" class="form-select d-inline w-auto mx-1">
+                            <option value="" disabled selected>?</option>
+                            <option>frequência absoluta</option>
+                            <option>frequência relativa</option>
+                            <option>frequência acumulada</option>
+                        </select>.
+                    </p>
+
+                    <p class="fw-bold">
+                        Ao afirmar que o valor <strong>6 atendimentos</strong> ocorreu em
+                        <strong>9 dias</strong>,
+                        o gestor está utilizando o conceito de
+                        <select id="ex18_c" class="form-select d-inline w-auto mx-1">
+                            <option value="" disabled selected>?</option>
+                            <option>frequência absoluta</option>
+                            <option>frequência relativa</option>
+                            <option>frequência acumulada</option>
+                        </select>.
+                    </p>
+                    <button class="btn btn-outline-success btn-sm verify-btn">Verificar resposta</button>
+
+                    <button class="btn btn-outline-secondary btn-sm ms-2 toggle-explanation">
+                        Ver explicação
+                    </button>
+
+                    <div class="feedback mt-2"></div>
+
+                    <!-- EXPLICAÇÃO (oculta por padrão) -->
+                    <div class="explanation mt-3 d-none">
+                        <div class="alert alert-secondary mb-0">
+                            <h5 class="text-success mb-3">Correção — Exercício 18</h5>
+
+                            <p>
+                                Para identificar corretamente o tipo de frequência utilizado em cada afirmação,
+                                é necessário observar atentamente as informações fornecidas na
+                                <strong>tabela de distribuição de frequência</strong>.
+                            </p>
+
+                            <hr>
+
+                            <p>
+                                <strong>1) “Em 9 dias, o técnico realizou no máximo 4 atendimentos diários”</strong>
+                            </p>
+
+                            <p>
+                                A expressão <em>“no máximo”</em> indica que estão sendo considerados
+                                <strong>todos os valores menores ou iguais a 4</strong>.
+                                Na tabela, a coluna de <strong>frequência acumulada (Fac)</strong>
+                                informa exatamente a quantidade de dias em que os atendimentos
+                                não ultrapassaram determinado valor.
+                            </p>
+
+                            <p>
+                                Observando a tabela, verificamos que até <strong>4 atendimentos</strong>,
+                                a frequência acumulada é igual a <strong>9 dias</strong>.
+                                Portanto, esse tipo de afirmação utiliza o conceito de
+                                <strong>frequência acumulada</strong>.
+                            </p>
+
+                            <hr>
+
+                            <p>
+                                <strong>2) “40% dos dias apresentaram exatamente 5 atendimentos”</strong>
+                            </p>
+
+                            <p>
+                                Nessa afirmação, o gestor está expressando a ocorrência de um valor
+                                em <strong>termos percentuais</strong>.
+                                A coluna de <strong>frequência relativa (Fr)</strong>
+                                indica a proporção ou percentual de vezes em que cada valor ocorreu
+                                em relação ao total de observações.
+                            </p>
+
+                            <p>
+                                Pela tabela, o valor <strong>5 atendimentos</strong> corresponde a
+                                <strong>40%</strong> dos dias analisados.
+                                Logo, essa afirmação está baseada na
+                                <strong>frequência relativa</strong>.
+                            </p>
+
+                            <hr>
+
+                            <p>
+                                <strong>3) “O valor 6 atendimentos ocorreu em 9 dias”</strong>
+                            </p>
+
+                            <p>
+                                Aqui, o gestor informa diretamente a
+                                <strong>quantidade exata de dias</strong>
+                                em que determinado valor foi observado,
+                                sem utilizar percentuais e sem considerar valores acumulados.
+                            </p>
+
+                            <p>
+                                Esse tipo de informação corresponde à
+                                <strong>frequência simples absoluta (fi)</strong>,
+                                que indica quantas vezes um valor aparece na amostra.
+                                Pela tabela, o valor <strong>6 atendimentos</strong>
+                                ocorreu em <strong>9 dias</strong>.
+                            </p>
+
+                            <p class="mb-0">
+                                Dessa forma, cada afirmação utiliza um tipo diferente de frequência,
+                                conforme o tipo de informação que está sendo analisada.
+                            </p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- EXERCÍCIO 19 — BÔNUS -->
+            <div class="card nivelamento-card mb-5 exercise-card" data-exercise="19">
+                <div class="card-body">
+                    <h4 class="mb-3 text-secondary">
+                        <i class="bi bi-stars me-2"></i>
+                        Exercício 19 — Bônus: Formas de Organização dos Dados
+                    </h4>
+
+                    <p>
+                        Considere os dados referentes à quantidade de atendimentos diários
+                        apresentados no exercício anterior.
+                    </p>
+
+                    <p>
+                        Um estudante organizou os dados na seguinte sequência:
+                    </p>
+
+                    <p class="fw-bold text-center">
+                        4, 4, 4, 4, 4, 4, 4, 4, 4,
+                        5, 5, 5, 5, 5, 5, 5, 5, 5, 5, 5, 5,
+                        6, 6, 6, 6, 6, 6, 6, 6, 6
+                    </p>
+
+                    <p class="fw-bold">
+                        Essa sequência de dados recebe o nome de
+                        <select id="ex19_a" class="form-select d-inline w-auto mx-1">
+                            <option value="" disabled selected>?</option>
+                            <option>dados brutos</option>
+                            <option>rol</option>
+                            <option>tabela de frequência</option>
+                            <option>frequência acumulada</option>
+                        </select>.
+                    </p>
+
+                    <hr>
+
+                    <p>
+                        Considere agora a seguinte sequência dos mesmos dados:
+                    </p>
+
+                    <p class="fw-bold text-center">
+                        5, 4, 6, 5, 4, 5, 6, 4, 5, 6,
+                        5, 4, 5, 6, 4, 5, 6, 5, 4, 6,
+                        5, 4, 6, 5, 4, 6, 5, 6, 5, 4
+                    </p>
+
+                    <p class="fw-bold">
+                        Essa forma de apresentação dos dados recebe o nome de
+                        <select id="ex19_b" class="form-select d-inline w-auto mx-1">
+                            <option value="" disabled selected>?</option>
+                            <option>rol</option>
+                            <option>dados brutos</option>
+                            <option>frequência relativa</option>
+                            <option>tabela estatística</option>
+                        </select>.
+                    </p>
+
+                    <hr>
+
+                    <p>
+                        Por fim, observe a sequência abaixo:
+                    </p>
+
+                    <p class="fw-bold text-center">
+                        6, 6, 6, 6, 6, 6, 6, 6, 6,
+                        5, 5, 5, 5, 5, 5, 5, 5, 5, 5, 5, 5,
+                        4, 4, 4, 4, 4, 4, 4, 4, 4
+                    </p>
+
+                    <p class="fw-bold">
+                        Essa sequência de dados recebe o nome de
+                        <select id="ex19_c" class="form-select d-inline w-auto mx-1">
+                            <option value="" disabled selected>?</option>
+                            <option>dados brutos</option>
+                            <option>rol</option>
+                            <option>frequência absoluta</option>
+                            <option>amostra</option>
+                        </select>.
+                    </p>
+
+                    <button class="btn btn-outline-success btn-sm verify-btn">Verificar resposta</button>
+                    <button class="btn btn-outline-secondary btn-sm ms-2 toggle-explanation">
+                        Ver explicação
+                    </button>
+
+                    <div class="feedback mt-2"></div>
+
+                    <!-- EXPLICAÇÃO (oculta por padrão) -->
+                    <div class="explanation mt-3 d-none">
+                        <div class="alert alert-secondary mb-0">
+                            <h5 class="text-success mb-3">Correção — Exercício 19</h5>
+
+                            <p>
+                                Os <strong>dados brutos</strong> são aqueles apresentados
+                                sem qualquer tipo de organização.
+                            </p>
+
+                            <p>
+                                Quando os dados são organizados em <strong>ordem crescente</strong>
+                                ou <strong>ordem decrescente</strong>, a sequência resultante
+                                recebe o nome de <strong>rol</strong>.
+                            </p>
+
+                            <ul>
+                                <li>
+                                    Primeira sequência (do menor para o maior) →
+                                    <strong>rol</strong>
+                                </li>
+                                <li>
+                                    Segunda sequência (sem ordenação) →
+                                    <strong>dados brutos</strong>
+                                </li>
+                                <li>
+                                    Terceira sequência (do maior para o menor) →
+                                    <strong>rol</strong>
+                                </li>
+                            </ul>
+
+                            <p class="mb-0">
+                                Portanto, tanto a organização crescente quanto a decrescente
+                                caracteriza um <strong>rol</strong>.
+                            </p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+
+            <!-- AMPLITUDE AMOSTRAL -->
+            <div class="card nivelamento-card mb-5">
+                <div class="card-body">
+                    <h4 class="mb-3">
+                        <i class="bi bi-arrows-expand me-2 text-success"></i>
+                        d) Amplitude Amostral (A)
+                    </h4>
+
+                    <p>
+                        A <strong>amplitude amostral</strong> é uma medida simples de dispersão
+                        que indica o quanto os dados estão espalhados,
+                        sendo definida pela diferença entre o
+                        <strong>maior</strong> e o <strong>menor</strong> valor observado na amostra.
+                    </p>
+
+                    <p>
+                        Considerando a <strong>Tabela de Distribuição de Frequência (Resumo)</strong>,
+                        o menor número de atendimentos observados foi <strong>3</strong>,
+                        e o maior foi <strong>7</strong>.
+                    </p>
+
+                    <p class="fw-bold">
+                        Assim, a amplitude amostral é calculada por:
+                    </p>
+
+                    <p class="fw-bold text-center mb-2">
+                        A = maior valor − menor valor
+                    </p>
+
+                    <p class="fw-bold text-center">
+                        A = 7 − 3 = <strong>4</strong>
+                    </p>
+
+                    <p class="mb-0">
+                        Isso significa que a variação entre o menor e o maior número
+                        de atendimentos diários observados na amostra é de
+                        <strong>4 atendimentos</strong>.
+                    </p>
+                </div>
+            </div>
+
+
+            <!-- EXERCÍCIO 20 -->
+            <div class="card nivelamento-card mb-5 exercise-card" data-exercise="20">
+                <div class="card-body">
+                    <h4 class="mb-3">
+                        <i class="bi bi-arrows-expand me-2 text-warning"></i>
+                        Exercício 20 — Amplitude Amostral
+                    </h4>
+
+                    <p>
+                        Um técnico de TI registrou a quantidade de chamados resolvidos em
+                        <strong>8 dias</strong>. Os valores observados foram:
+                    </p>
+
+                    <p class="fw-bold text-center mb-3">
+                        2, 4, 3, 6, 5, 4, 3, 5
+                    </p>
+
+                    <p class="fw-bold">
+                        A amplitude amostral dessa série é igual a
+                        <select id="ex20_amp" class="form-select d-inline w-auto mx-1">
+                            <option value="" disabled selected>?</option>
+                            <option>2</option>
+                            <option>3</option>
+                            <option>4</option>
+                            <option>5</option>
+                        </select>.
+                    </p>
+
+                    <button class="btn btn-outline-success btn-sm verify-btn" type="button">
+                        Verificar resposta
+                    </button>
+                    <button class="btn btn-outline-secondary btn-sm ms-2 toggle-explanation" type="button">
+                        Ver explicação
+                    </button>
+
+                    <div class="feedback mt-2"></div>
+
+                    <!-- EXPLICAÇÃO (oculta por padrão) -->
+                    <div class="explanation mt-3 d-none">
+                        <div class="alert alert-secondary mb-0">
+                            <h5 class="text-success mb-3">Correção — Exercício 20</h5>
+
+                            <p>
+                                A <strong>amplitude amostral</strong> é a diferença entre o
+                                <strong>maior</strong> e o <strong>menor</strong> valor observado na amostra.
+                            </p>
+
+                            <p class="mb-2">
+                                Observando os dados:
+                            </p>
+
+                            <ul class="mb-3">
+                                <li>O <strong>menor valor</strong> é <strong>2</strong>.</li>
+                                <li>O <strong>maior valor</strong> é <strong>6</strong>.</li>
+                            </ul>
+
+                            <p class="fw-bold text-center">
+                                A = 6 − 2 = 4
+                            </p>
+
+                            <p class="mb-2">
+                                Analisando as alternativas:
+                            </p>
+
+                            <ul class="mb-0">
+                                <li>
+                                    <strong>2</strong>: incorreta, pois não corresponde à diferença entre o maior e
+                                    o menor
+                                    valor.
+                                </li>
+                                <li>
+                                    <strong>3</strong>: incorreta, pois resultaria de 5 − 2, mas o maior valor da
+                                    amostra é
+                                    6.
+                                </li>
+                                <li>
+                                    <strong>4</strong>: correta, pois corresponde a 6 − 2.
+                                </li>
+                                <li>
+                                    <strong>5</strong>: incorreta, pois seria 7 − 2, mas 7 não aparece na amostra.
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </div>
+    </main>
+
+    <!-- SCRIPT: EXERCÍCIOS -->
+    <script>
+        function verificar(idSelect, idFeedback, correta) {
+            const resposta = document.getElementById(idSelect).value;
+            const feedback = document.getElementById(idFeedback);
+
+            if (resposta === correta) {
+                feedback.innerHTML = `
+                    <div class="alert alert-success">
+                        <strong>Correto!</strong> A classificação está adequada ao conceito estatístico apresentado.
+                    </div>
+                `;
+            } else if (resposta === "") {
+                feedback.innerHTML = `
+                    <div class="alert alert-warning">
+                        Selecione uma opção para verificar sua resposta.
+                    </div>
+                `;
+            } else {
+                feedback.innerHTML = `
+                    <div class="alert alert-danger">
+                        <strong>Incorreto.</strong> Revise os conceitos e observe se o texto descreve o conjunto total,
+                        apenas uma parte, ou o tipo de variável envolvida.
+                    </div>
+                `;
+            }
+        }
+
+        function verificarEx1() { verificar("ex1", "fb1", "populacao"); }
+        function verificarEx2() { verificar("ex2", "fb2", "populacao"); }
+        function verificarEx3() { verificar("ex3", "fb3", "amostra"); }
+        function verificarEx4() { verificar("ex4", "fb4", "amostra"); }
+        function verificarEx5() { verificar("ex5", "fb5", "censo"); }
+        function verificarEx6() { verificar("ex6", "fb6", "censo"); }
+
+        function verificarEx7() { verificar("ex7", "fb7", "brutos"); }
+        function verificarEx8() { verificar("ex8", "fb8", "rol"); }
+        function verificarEx9() { verificar("ex9", "fb9", "quantitativo"); }
+        function verificarEx10() { verificar("ex10", "fb10", "continuo"); }
+        function verificarEx11() { verificar("ex11", "fb11", "qualitativo"); }
+        function verificarEx12() { verificar("ex12", "fb12", "continuo"); }
+        function verificarEx13Reformulado() {
+            const a = document.getElementById("ex13a").value; // filhos
+            const b = document.getElementById("ex13b").value; // renda
+            const c = document.getElementById("ex13c").value; // estado civil
+            const feedback = document.getElementById("fb13");
+
+            // Respostas corretas:
+            // filhos: discreto (contagem)
+            // renda mensal: contínuo (medição/intervalo real)
+            // estado civil: qualitativo nominal (categorias sem ordem)
+            const okA = (a === "discreto");
+            const okB = (b === "continuo");
+            const okC = (c === "qualitativo-nominal");
+
+            if (a === "" || b === "" || c === "") {
+                feedback.innerHTML = `
+            <div class="alert alert-warning">
+                Selecione uma opção em <strong>todas</strong> as lacunas para verificar sua resposta.
+            </div>
+        `;
+                return;
+            }
+
+            if (okA && okB && okC) {
+                feedback.innerHTML = `
+            <div class="alert alert-success">
+                <strong>Correto!</strong>
+                <ul class="mb-0 mt-2">
+                    <li><strong>Número de filhos:</strong> quantitativo <strong>discreto</strong> (contagem).</li>
+                    <li><strong>Renda mensal:</strong> quantitativo <strong>contínuo</strong> (medição, pode variar em intervalos).</li>
+                    <li><strong>Estado civil:</strong> qualitativo <strong>nominal</strong> (categorias sem ordem natural).</li>
+                </ul>
+            </div>
+        `;
+                return;
+            }
+
+            // Feedback específico (bem didático)
+            const erros = [];
+            if (!okA) erros.push("Revise: <strong>número de filhos</strong> é contagem → <strong>discreto</strong>.");
+            if (!okB) erros.push("Revise: <strong>renda mensal</strong> é medida em um intervalo → <strong>contínuo</strong>.");
+            if (!okC) erros.push("Revise: <strong>estado civil</strong> não tem ordem natural → <strong>qualitativo nominal</strong>.");
+
+            feedback.innerHTML = `
+            <div class="alert alert-danger">
+                <strong>Incorreto.</strong>
+                <ul class="mb-0 mt-2">
+                    ${erros.map(e => `<li>${e}</li>`).join("")}
+                </ul>
+            </div>
+    `;
+        }
+
+        function verificarEx14() {
+            const a = document.getElementById("ex14a").value; // posição concurso
+            const b = document.getElementById("ex14b").value; // peso
+            const c = document.getElementById("ex14c").value; // veículos
+            const d = document.getElementById("ex14d").value; // cor
+            const feedback = document.getElementById("fb14");
+
+            const okA = (a === "qualitativo-postos");
+            const okB = (b === "continuo");
+            const okC = (c === "discreto");
+            const okD = (d === "qualitativo-nominal");
+
+            if (a === "" || b === "" || c === "" || d === "") {
+                feedback.innerHTML = `
+            <div class="alert alert-warning">
+                Preencha <strong>todas</strong> as lacunas para verificar sua resposta.
+            </div>
+        `;
+                return;
+            }
+
+            if (okA && okB && okC && okD) {
+                feedback.innerHTML = `
+            <div class="alert alert-success">
+                <strong>Correto!</strong>
+                <ul class="mb-0 mt-2">
+                    <li><strong>Posição em concurso:</strong> qualitativo <strong>por postos</strong> (há ordenação).</li>
+                    <li><strong>Peso corporal:</strong> quantitativo <strong>contínuo</strong> (medição).</li>
+                    <li><strong>Número de veículos:</strong> quantitativo <strong>discreto</strong> (contagem).</li>
+                    <li><strong>Cor do automóvel:</strong> qualitativo <strong>nominal</strong> (sem ordem).</li>
+                </ul>
+            </div>
+        `;
+                return;
+            }
+
+            const erros = [];
+            if (!okA) erros.push("A <strong>posição em concurso</strong> depende de ordenação → qualitativo <strong>por postos</strong>.");
+            if (!okB) erros.push("O <strong>peso corporal</strong> é uma medida contínua.");
+            if (!okC) erros.push("O <strong>número de veículos</strong> é uma contagem → discreto.");
+            if (!okD) erros.push("A <strong>cor do automóvel</strong> não possui ordem natural → qualitativo nominal.");
+
+            feedback.innerHTML = `
+        <div class="alert alert-danger">
+            <strong>Incorreto.</strong>
+            <ul class="mb-0 mt-2">
+                ${erros.map(e => `<li>${e}</li>`).join("")}
+            </ul>
+        </div>
+    `;
+        }
+    </script>
+    <script>
+        document.addEventListener("DOMContentLoaded", () => {
+
+            function setSelectState(select, ok) {
+                select.classList.remove("is-valid", "is-invalid");
+                select.classList.add(ok ? "is-valid" : "is-invalid");
+            }
+
+            function showFeedback(card, ok) {
+                const feedback = card.querySelector(".feedback");
+                feedback.innerHTML = ok
+                    ? `<div class="alert alert-success p-2 mb-0">
+                    <i class="bi bi-check-circle me-1"></i>
+                    Resposta correta! Muito bem.
+               </div>`
+                    : `<div class="alert alert-danger p-2 mb-0">
+                    <i class="bi bi-x-circle me-1"></i>
+                    Há erro(s) na resposta. Tente novamente.
+               </div>`;
+            }
+
+            function anyEmpty(values) {
+                return values.some(v => v === "" || v === null || typeof v === "undefined");
+            }
+
+            // Mapas baseados na tabela consolidada (Exs. 13 a 15)
+            const fiMap = { "3": 1, "4": 4, "5": 5, "6": 6, "7": 4 };
+            const frMap = { "4": "0,20 (20%)", "5": "0,25 (25%)", "6": "0,30 (30%)" };
+            const facMap = { "4": 5, "5": 10, "6": 16 };
+
+            document.querySelectorAll(".verify-btn").forEach(btn => {
+                btn.addEventListener("click", () => {
+                    const card = btn.closest(".exercise-card");
+                    const ex = card.dataset.exercise;
+
+                    /* ======================
+                       EXERCÍCIO 15
+                       ====================== */
+                    if (ex === "15") {
+                        const xi = card.querySelector("#ex15_xi").value;
+                        const fi = card.querySelector("#ex15_fi").value;
+
+                        if (anyEmpty([xi, fi])) {
+                            showFeedback(card, false);
+                            return;
+                        }
+
+                        const okXi = xi in fiMap;
+                        const okFi = okXi && Number(fi) === fiMap[xi];
+
+                        setSelectState(card.querySelector("#ex15_xi"), okXi);
+                        setSelectState(card.querySelector("#ex15_fi"), okFi);
+
+                        showFeedback(card, okXi && okFi);
+                        return;
+                    }
+
+                    /* ======================
+                       EXERCÍCIO 16
+                       ====================== */
+                    if (ex === "16") {
+                        const xi = card.querySelector("#ex16_xi").value;
+                        const fi = card.querySelector("#ex16_fi").value;
+                        const fr = card.querySelector("#ex16_fr").value;
+
+                        if (anyEmpty([xi, fi, fr])) {
+                            showFeedback(card, false);
+                            return;
+                        }
+
+                        const okXi = xi in fiMap && xi in frMap;
+                        const okFi = okXi && Number(fi) === fiMap[xi];
+                        const okFr = okXi && fr === frMap[xi];
+
+                        setSelectState(card.querySelector("#ex16_xi"), okXi);
+                        setSelectState(card.querySelector("#ex16_fi"), okFi);
+                        setSelectState(card.querySelector("#ex16_fr"), okFr);
+
+                        showFeedback(card, okXi && okFi && okFr);
+                        return;
+                    }
+
+                    /* ======================
+                       EXERCÍCIO 17
+                       ====================== */
+                    if (ex === "17") {
+                        const xi = card.querySelector("#ex15_xi").value;
+                        const fac = card.querySelector("#ex15_fac").value;
+
+                        if (anyEmpty([xi, fac])) {
+                            showFeedback(card, false);
+                            return;
+                        }
+
+                        const okXi = xi in facMap;
+                        const okFac = okXi && Number(fac) === facMap[xi];
+
+                        setSelectState(card.querySelector("#ex15_xi"), okXi);
+                        setSelectState(card.querySelector("#ex15_fac"), okFac);
+
+                        showFeedback(card, okXi && okFac);
+                        return;
+                    }
+
+                    /* ======================
+                       EXERCÍCIO 18 (DESAFIO)
+                       ====================== */
+                    if (ex === "18") {
+                        const a = card.querySelector("#ex186a").value;
+                        const b = card.querySelector("#ex186b").value;
+                        const c = card.querySelector("#ex186c").value;
+
+                        if (anyEmpty([a, b, c])) {
+                            showFeedback(card, false);
+                            return;
+                        }
+
+                        const okA = a === "frequência acumulada";
+                        const okB = b === "frequência relativa";
+                        const okC = c === "frequência absoluta";
+
+                        setSelectState(card.querySelector("#ex186a"), okA);
+                        setSelectState(card.querySelector("#ex186b"), okB);
+                        setSelectState(card.querySelector("#ex186c"), okC);
+
+                        showFeedback(card, okA && okB && okC);
+                        return;
+                    }
+                    /* ======================
+                    EXERCÍCIO 19 — BÔNUS
+                    ====================== */
+                    if (ex === "19") {
+                        const a = card.querySelector("#ex19_a").value;
+                        const b = card.querySelector("#ex19_b").value;
+                        const c = card.querySelector("#ex19_c").value;
+
+                        if (!a || !b || !c) {
+                            showFeedback(card, false);
+                            return;
+                        }
+
+                        const okA = a === "rol";
+                        const okB = b === "dados brutos";
+                        const okC = c === "rol";
+
+                        setSelectState(card.querySelector("#ex19_a"), okA);
+                        setSelectState(card.querySelector("#ex19_b"), okB);
+                        setSelectState(card.querySelector("#ex19_c"), okC);
+
+                        showFeedback(card, okA && okB && okC);
+                        return;
+                    }
+                    /* ======================
+                    EXERCÍCIO 20
+                    ====================== */
+                    if (ex === "20") {
+                        const amp = card.querySelector("#ex20_amp").value;
+
+                        if (!amp) {
+                            showFeedback(card, false);
+                            return;
+                        }
+
+                        const ok = amp === "4";
+
+                        setSelectState(card.querySelector("#ex20_amp"), ok);
+                        showFeedback(card, ok);
+                        return;
+                    }
+
+
+
+                });
+            });
+
+            /* Mostrar / ocultar explicação */
+            document.querySelectorAll(".toggle-explanation").forEach(btn => {
+                btn.addEventListener("click", () => {
+                    const card = btn.closest(".exercise-card");
+                    const explanation = card.querySelector(".explanation");
+
+                    explanation.classList.toggle("d-none");
+                    btn.textContent = explanation.classList.contains("d-none")
+                        ? "Ver explicação"
+                        : "Ocultar explicação";
+                });
+            });
+        });
+    </script>
+    <!-- FOOTER -->
+    <footer class="py-4 footer-cc mt-4">
+        <div class="container text-center small">
+            <div class="mb-2">
+                © <span id="year"></span> Cachorro Cafezeiro — Todos os direitos reservados.
+            </div>
+            <div class="muted">
+                Nivelamento de Estatística — Noções de Estatística
+            </div>
+        </div>
+    </footer>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="/assets/js/main.js"></script>
+    <script src="/assets/js/loadNavbar.js"></script>
+</body>
+
+</html>

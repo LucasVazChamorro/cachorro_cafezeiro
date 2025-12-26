@@ -45,7 +45,7 @@
             </section>
 
             <!-- CONTEÚDO TEÓRICO -->
-            <section class="col-md-10 col-lg-8 mx-auto mb-4">
+            <section class="mb-4">
                 <div class="card nivelamento-card mb-4">
                     <div class="card-body">
                         <p>
@@ -178,7 +178,7 @@
             </section>
 
             <!-- QUESTÕES INTERATIVAS -->
-            <section class="col-md-10 col-lg-8 mx-auto">
+            <section>
                 <h2 class="h5 fw-bold mb-3">Questões para Fixação</h2>
                 <div id="questions"></div>
             </section>
@@ -233,7 +233,8 @@
 
             questions.forEach((q, index) => {
                 const card = document.createElement("div");
-                card.className = "card shadow-sm mb-4";
+                card.className = "card nivelamento-card mb-4";
+
 
                 card.innerHTML = `
                     <div class="card-body">
