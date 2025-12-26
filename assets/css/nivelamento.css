@@ -329,6 +329,36 @@ html {
     display: block;
 }
 
+/* Quando a imagem tem TEXTO e não pode cortar (ex.: Big Data, slides, cartazes)
+   use no HTML: class="nivelamento-cover nivelamento-cover--contain" */
+.nivelamento-cover--contain {
+    object-fit: contain;
+    object-position: center;
+    background: #fff;
+    padding: 10px 12px;
+    height: 360px;
+}
+
+@media (max-width: 768px) {
+    .nivelamento-cover--contain {
+        height: 260px;
+    }
+}
+
+.nivelamento-cover--contain {
+    object-fit: contain !important;
+    background: #fff;
+    height: 360px;
+    /* AQUI está o ajuste principal */
+}
+
+/* Responsivo */
+@media (max-width: 768px) {
+    .nivelamento-cover--contain {
+        height: 260px;
+    }
+}
+
 /* Opcional: legenda curta abaixo da imagem */
 .nivelamento-media-caption {
     font-size: .95rem;
