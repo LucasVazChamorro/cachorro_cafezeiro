@@ -1,0 +1,209 @@
+/* ============================================================
+   PALETA DE CORES — TEMA CAFÉ
+   ============================================================ */
+
+:root {
+    --coffee: #5D4037;
+    /* Marrom café padrão */
+    --coffee-dark: #4E342E;
+    /* Hover / borda mais escura */
+    --coffee-light: #8D6E63;
+    /* Tons complementares suaves */
+    --text-dark: #333;
+    --text-muted: #666;
+    --bg-light: #f8f5f3;
+}
+
+/* Remove sublinhado dos links/botões */
+a,
+.btn-coffee,
+.btn-coffee-outline {
+    text-decoration: none !important;
+}
+
+/* ============================================================
+   HERO
+   ============================================================ */
+
+.hero {
+    padding-top: 5rem;
+    padding-bottom: 5rem;
+}
+
+.hero h1 {
+    font-weight: 700;
+    line-height: 1.25;
+}
+
+.hero p.lead {
+    color: var(--text-muted);
+    font-size: 1.15rem;
+}
+
+/* ============================================================
+   BOTÕES ESTILO CAFÉ
+   ============================================================ */
+
+.btn-coffee {
+    background-color: var(--coffee) !important;
+    border: 2px solid var(--coffee) !important;
+    color: #fff !important;
+    padding: 0.8rem 1.6rem;
+    border-radius: 12px;
+    font-weight: 600;
+    transition: 0.25s ease;
+}
+
+.btn-coffee:hover {
+    background-color: var(--coffee-dark) !important;
+    border-color: var(--coffee-dark) !important;
+    transform: translateY(-3px);
+}
+
+.btn-coffee-outline {
+    background-color: transparent !important;
+    border: 2px solid var(--coffee) !important;
+    color: var(--coffee) !important;
+    padding: 0.8rem 1.6rem;
+    border-radius: 12px;
+    font-weight: 600;
+    transition: 0.25s ease;
+}
+
+.btn-coffee-outline:hover {
+    background-color: var(--coffee) !important;
+    color: #fff !important;
+    transform: translateY(-3px);
+}
+
+/* ============================================================
+   CARDS — BENEFÍCIOS E COMO FUNCIONA
+   ============================================================ */
+
+.card {
+    border-radius: 16px;
+    border: none;
+    background: #fff;
+    box-shadow:
+        0 4px 10px rgba(0, 0, 0, 0.07),
+        0 2px 5px rgba(0, 0, 0, 0.04);
+    transition: 0.3s ease;
+}
+
+.card:hover {
+    transform: translateY(-5px);
+    box-shadow:
+        0 6px 14px rgba(0, 0, 0, 0.12),
+        0 3px 8px rgba(0, 0, 0, 0.06);
+}
+
+.card .muted {
+    color: var(--text-muted);
+}
+
+/* Badge numerada da seção “Como funciona” */
+.step-badge {
+    background: var(--coffee);
+    color: #fff;
+    border-radius: 50%;
+    width: 34px;
+    height: 34px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-weight: 700;
+}
+
+/* ============================================================
+   SEÇÕES
+   ============================================================ */
+
+#beneficios,
+#como-funciona,
+#planos,
+#cadastro {
+    scroll-margin-top: 90px;
+    /* melhora scroll da navbar */
+}
+
+#como-funciona {
+    background: var(--bg-light);
+}
+
+/* ============================================================
+   PLANOS
+   ============================================================ */
+
+#planos .card {
+    padding: 1rem;
+}
+
+#planos .display-6 {
+    color: var(--coffee);
+}
+
+#planos .border-primary {
+    border-color: var(--coffee) !important;
+}
+
+/* ============================================================
+   CTA / FORMULÁRIO FINAL
+   ============================================================ */
+
+#cadastro .form-control {
+    border-radius: 10px;
+    padding: 10px;
+}
+
+#cadastro label {
+    font-weight: 600;
+    color: var(--text-dark);
+}
+
+/* ============================================================
+   ANIMAÇÕES — REVEAL 
+   ============================================================ */
+
+.reveal {
+    opacity: 1;
+    transform: none;
+}
+
+/* Mantém a classe .show caso queira animar no futuro com JS */
+.reveal.show {
+    opacity: 1;
+    transform: none;
+}
+
+/* ============================================================
+   FOOTER
+   ============================================================ */
+
+.footer-cc {
+    background: var(--coffee-dark);
+    color: #fff;
+}
+
+.footer-cc a {
+    color: #fff !important;
+}
+
+/* ============================================================
+   RESPONSIVIDADE
+   ============================================================ */
+
+@media (max-width: 768px) {
+    .hero h1 {
+        font-size: 1.9rem;
+    }
+
+    .hero p.lead {
+        font-size: 1rem;
+    }
+
+    .btn-coffee,
+    .btn-coffee-outline {
+        width: 100%;
+        text-align: center;
+    }
+}

@@ -1,0 +1,1377 @@
+<!DOCTYPE html>
+<html lang="pt-br" data-theme="light">
+
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width,initial-scale=1" />
+    <title>BIG DATA</title>
+
+    <!-- Bootstrap -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css">
+
+    <!-- CSS Geral e Nivelamento -->
+    <link rel="stylesheet" href="/assets/css/base.css">
+    <link rel="stylesheet" href="/assets/css/layout.css">
+    <link rel="stylesheet" href="/assets/css/nivelamento.css">
+
+
+    <meta name="theme-color" content="#5D4037" id="meta-theme">
+</head>
+
+<body>
+
+    <!-- NAVBAR DINÂMICA -->
+    <div id="navbar-dashboard"></div>
+
+    <main class="nivelamento-main">
+        <div class="container">
+
+            <!-- BREADCRUMB -->
+            <nav class="breadcrumb-cc mt-3 mb-3">
+                <a href="/index.html">Início</a>
+                <span>›</span>
+                <a href="/dashboard.html">Dashboard</a>
+                <span>›</span>
+                <a href="/nivelamento/ti/">Tecnologia da Informação</a>
+                <span>›</span>
+                <span class="current">BIG DATA</span>
+            </nav>
+
+
+            <!-- TÍTULO GERAL -->
+            <section class="mb-4 text-center">
+                <h1 class="nivelamento-title">BIG DATA</h1>
+                <p class="nivelamento-subtitle">
+                    Resumo direto para prova, com foco em como a Cesgranrio costuma cobrar.
+                </p>
+            </section>
+
+            <div class="card nivelamento-card mb-4 nivelamento-media-card">
+                <img src="/nivelamento/ti/big-data.png" class="nivelamento-cover nivelamento-cover--contain"
+                    alt="Big Data">
+
+            </div>
+
+
+
+            <!-- CONTEÚDO TEÓRICO -->
+            <section class="mb-4">
+
+
+                <h3 id="sec-fundamentos" class="mb-4 mt-2 border-bottom pb-2">
+                    <i class="bi bi-database me-2"></i>1. Fundamentos de Big Data
+                </h3>
+
+                <!-- BIG DATA — CONCEITO -->
+                <div class="card nivelamento-card mb-4">
+                    <div class="card-body">
+                        <h4 class="mb-3">Big Data — Conceito</h4>
+                        <p>
+                            <strong>Big Data</strong> é um termo utilizado na área de tecnologia da informação para
+                            descrever um <strong>grande volume de dados variados</strong>, incluindo dados
+                            <strong>estruturados e não estruturados</strong>, que <strong>não podem ser processados
+                                de forma eficiente por ferramentas tradicionais</strong>.
+                        </p>
+
+                        <p class="mb-0">
+                            Em termos práticos, quando o modelo tradicional — baseado em
+                            <strong>um único servidor</strong> e <strong>bancos de dados relacionais</strong> —
+                            deixa de atender às necessidades de armazenamento e processamento, surge o
+                            cenário de <strong>processamento distribuído</strong>, característico do Big Data.
+                        </p>
+
+                        <p class="mb-0"><br>
+                            Em síntese, Big Data surge quando o volume, a variedade e a velocidade dos dados
+                            ultrapassam a capacidade das soluções tradicionais, exigindo arquiteturas
+                            distribuídas para armazenamento e processamento.
+                        </p>
+
+                    </div>
+                </div>
+
+                <!-- 5 V’s -->
+                <div class="card nivelamento-card mb-4">
+                    <div class="card-body">
+                        <h4 class="mb-3">Big Data — Os 5 V’s</h4>
+                        <ul class="mb-0">
+                            <li>
+                                <strong>Variedade:</strong> diversidade de tipos e formatos de dados, como textos,
+                                imagens, vídeos, áudios e logs.<br>
+                                Ou seja, os dados não seguem um único padrão ou formato.
+                            </li>
+
+                            <li>
+                                <strong>Valor:</strong> capacidade de extrair informações relevantes e úteis
+                                para apoio à tomada de decisão.<br>
+                                Ou seja, os dados devem possuir <strong>aplicabilidade</strong>.
+                            </li>
+
+                            <li>
+                                <strong>Veracidade:</strong> qualidade, confiabilidade e consistência dos dados,
+                                representando o grau de confiança que se pode ter nas informações analisadas.<br>
+                                Ou seja, nem todo dado disponível é confiável ou adequado para análise.
+                            </li>
+
+                            <li>
+                                <strong>Volume:</strong> grande quantidade de dados gerados e armazenados.<br>
+                                Ou seja, trata-se de massas de dados que ultrapassam a capacidade das soluções
+                                tradicionais.
+                            </li>
+
+                            <li>
+                                <strong>Velocidade:</strong> rapidez com que os dados são gerados, transmitidos
+                                e precisam ser processados.<br>
+                                Ou seja, os dados são produzidos continuamente e em alta taxa.
+                            </li>
+                        </ul>
+
+                        <p class="mt-2 mb-0">
+                            Os 5 V’s ajudam a explicar por que grandes volumes de dados não podem ser tratados
+                            por soluções tradicionais de armazenamento e processamento.
+                        </p>
+
+                        <p class="mt-2 mb-0">
+                            A <strong>variedade</strong> e a <strong>veracidade</strong> dos dados em Big Data
+                            resultam em alta <strong>complexidade das fontes de informação</strong>, exigindo
+                            processos de <strong>limpeza</strong>, <strong>integração</strong> e
+                            <strong>transformação</strong> antes da análise.
+                        </p>
+
+
+
+                    </div>
+                </div>
+
+                <!-- Dados Estruturados, Não Estruturados e Semi-Estruturados -->
+                <div class="card nivelamento-card mb-4">
+                    <div class="card-body">
+                        <h4 class="mb-3">Dados Estruturados, Não Estruturados e Semi-Estruturados</h4>
+
+                        <p class="mb-0">
+                            Uma parte fundamental do Big Data é compreender <strong>como os dados são
+                                organizados</strong>,
+                            isto é, se possuem estrutura rígida, flexível ou inexistente. Essa característica
+                            influencia
+                            diretamente as <strong>tecnologias utilizadas para armazenamento, processamento e
+                                análise.</strong>
+                        </p>
+                        <h5 class="mb-3"><br>Dados Estruturados</h5>
+
+                        <ul class="mb-0">
+                            <li>São organizados segundo um modelo previamente definido.</li>
+                            <li>Possuem estrutura rígida.</li>
+                            <li>Facilitam o acesso, a consulta e a recuperação das informações.</li>
+                            <li>São comuns em bancos de dados relacionais.</li>
+                            <li>
+                                <strong>Exemplos:</strong> tabelas de clientes, registros de vendas,
+                                cadastros em bancos de dados relacionais.
+                            </li>
+                        </ul>
+                        <h5 class="mb-3"><br>Dados Não Estruturados</h5>
+
+                        <ul class="mb-0">
+                            <li>Não seguem um modelo ou esquema predefinido.</li>
+                            <li>Não possuem estrutura fixa.</li>
+                            <li>São mais difíceis de armazenar, consultar e analisar.</li>
+                            <li>Exigem técnicas e ferramentas específicas no contexto de Big Data.</li>
+                            <li>
+                                <strong>Exemplos:</strong> textos livres, imagens, vídeos, áudios,
+                                postagens em redes sociais.
+                            </li>
+                        </ul>
+                        <h5 class="mb-3"><br>Dados Semi-Estruturados</h5>
+
+                        <ul class="mb-0">
+                            <li>Possuem estrutura flexível e heterogênea.</li>
+                            <li>Cada campo de dados possui organização própria.</li>
+                            <li>Não há imposição rígida de formato, como ocorre no modelo relacional.</li>
+                            <li>Situam-se entre os dados estruturados e os não estruturados.</li>
+                            <li>
+                                <strong>Exemplos:</strong> arquivos <strong>XML</strong>, <strong>JSON</strong>,
+                                logs estruturados e documentos com marcações.
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+
+                <h3 id="sec-tradicional-distribuido" class="mb-4 mt-5 border-bottom pb-2">
+                    <i class="bi bi-diagram-3 me-2"></i>2. Do Modelo Tradicional ao Processamento Distribuído
+                </h3>
+
+                <!-- SERVIDOR (CONTRASTE COM CLUSTER) -->
+                <div class="card nivelamento-card mb-4">
+                    <div class="card-body">
+                        <h4 class="mb-3">Servidor (Modelo Tradicional)</h4>
+
+                        <p>
+                            Antes do cenário distribuído característico do Big Data, o modelo predominante
+                            consistia em concentrar recursos computacionais em um
+                            <strong>servidor único e robusto</strong>.
+                        </p>
+
+                        <ul class="mb-0">
+                            <li>Servidor centralizado e confiável (alto desempenho).</li>
+                            <li>Escalabilidade vertical (upgrade de hardware).</li>
+                            <li>Sistema operacional (Windows, Linux).</li>
+                            <li>Sistema de arquivos (NTFS, EXT4).</li>
+                            <li>Banco de dados relacional (MySQL, SQL Server, PostgreSQL, Oracle).</li>
+                        </ul>
+                    </div>
+                </div>
+
+                <!-- CLUSTERS -->
+                <div class="card nivelamento-card mb-4">
+                    <div class="card-body">
+                        <h4 class="mb-3">Clusters</h4>
+
+                        <p>
+                            Em ambientes de <strong>Big Data</strong>, é comum o uso de <strong>clusters</strong>,
+                            que consistem em um conjunto de servidores interligados e trabalhando de forma
+                            cooperativa. Cada servidor do cluster é chamado de <strong>nó</strong>
+                            (<em>node</em>, <em>nodo</em>).
+                        </p>
+
+                        <h6 class="mb-2">Características</h6>
+                        <ul class="mb-0">
+                            <li>Alto desempenho.</li>
+                            <li>Alta disponibilidade.</li>
+                            <li>Balanceamento de carga (<em>load balancing</em>).</li>
+                            <li>Processamento em paralelo.</li>
+                            <li>Escalabilidade horizontal.</li>
+                        </ul>
+                    </div>
+                </div>
+
+                <h3 id="sec-hadoop" class="mb-4 mt-5 border-bottom pb-2">
+                    <i class="bi bi-boxes me-2"></i>3. Hadoop e o Processamento Distribuído
+                </h3>
+
+                <!-- HADOOP (VISÃO GERAL) -->
+                <div class="card nivelamento-card mb-4">
+                    <div class="card-body">
+                        <h4 class="mb-3">Hadoop — Visão Geral</h4>
+
+                        <p>
+                            O <strong>Hadoop</strong> é um <strong>framework</strong>, composto por um conjunto
+                            de ferramentas (um <strong>ecossistema</strong>), voltado ao
+                            <strong>armazenamento e processamento distribuído</strong> de
+                            grandes volumes de dados.
+                        </p>
+
+                        <h6 class="mb-2">Características</h6>
+                        <ul class="mb-0">
+                            <li>Open Source.</li>
+                            <li>Desenvolvido majoritariamente em <strong>Java</strong>.</li>
+                            <li>
+                                Permite o uso de outras linguagens, como <strong>Python</strong>,
+                                para a criação de tarefas de processamento de dados.
+                            </li>
+                            <li>
+                                Ecossistema composto por ferramentas como
+                                <strong>HDFS</strong> (armazenamento) e
+                                <strong>MapReduce</strong> (processamento).
+                            </li>
+                            <li>Processamento em paralelo.</li>
+                            <li>Baseado na utilização de clusters.</li>
+                        </ul>
+
+                        <p class="mt-3 mb-0">
+                            Embora o núcleo do Hadoop seja implementado em Java, linguagens como
+                            Python podem ser utilizadas para escrever <em>jobs</em> e scripts que
+                            executam sobre sua infraestrutura, sem modificar sua implementação interna.
+                        </p>
+                    </div>
+                </div>
+
+                <h3 id="sec-armazenamento" class="mb-4 mt-5 border-bottom pb-2">
+                    <i class="bi bi-hdd-network me-2"></i>4. Armazenamento Distribuído no Hadoop
+                </h3>
+
+
+                <!-- HDFS -->
+                <div class="card nivelamento-card mb-4">
+                    <div class="card-body">
+                        <h4 class="mb-3">Armazenamento no Hadoop — HDFS</h4>
+
+                        <p>
+                            O <strong>HDFS</strong> (<em>Hadoop Distributed File System</em>) é um sistema de
+                            arquivos distribuído, projetado para armazenar grandes volumes de dados
+                            de forma distribuída em um cluster, sendo otimizado para alto desempenho
+                            na leitura e escrita de arquivos de grande porte.
+                        </p>
+
+                        <ul class="mb-0">
+                            <li>
+                                <strong>NameNode:</strong> gerencia os <strong>metadados</strong> do sistema
+                                de arquivos, como nomes, localização e permissões dos arquivos.
+                            </li>
+                            <li>
+                                <strong>DataNode:</strong> armazena efetivamente os dados, mantendo
+                                os blocos de arquivos distribuídos pelo cluster.
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+
+                <!-- YARN -->
+                <div class="card nivelamento-card mb-4">
+                    <div class="card-body">
+                        <h4 class="mb-3">YARN</h4>
+
+                        <p>
+                            O <strong>YARN</strong> (<em>Yet Another Resource Negotiator</em>) é o componente
+                            do Hadoop responsável pelo <strong>gerenciamento e agendamento dos recursos
+                                computacionais</strong> do cluster.
+                        </p>
+
+                        <p class="mb-0">
+                            Ele separa o gerenciamento de recursos do processamento, permitindo que
+                            diferentes aplicações sejam executadas de forma eficiente sobre a
+                            infraestrutura do Hadoop.
+                        </p>
+                    </div>
+                </div>
+
+                <!-- NTFS, HDFS e YARN — Entendendo as Diferenças-->
+                <div class="card nivelamento-card mb-4">
+                    <div class="card-body">
+                        <h4 class="mb-3">NTFS, HDFS e YARN — Entendendo as Diferenças</h4>
+
+                        <p>
+                            O <strong>NTFS</strong> é um sistema de arquivos utilizado no sistema operacional
+                            Windows para organizar o disco rígido e permitir o armazenamento e a recuperação
+                            de arquivos em um <strong>computador único</strong>.
+                        </p>
+
+                        <p>
+                            De forma análoga, o <strong>HDFS</strong> (<em>Hadoop Distributed File System</em>)
+                            é um sistema de arquivos <strong>distribuído</strong>, projetado para organizar
+                            a estrutura de um <strong>cluster</strong> e permitir o armazenamento de grandes
+                            volumes de dados de forma distribuída.
+                        </p>
+
+                        <p>
+                            No HDFS, os arquivos são divididos em <strong>blocos</strong> e distribuídos entre
+                            diversos servidores (<strong>DataNodes</strong>), possibilitando o
+                            <strong>processamento paralelo e distribuído</strong>.
+                        </p>
+
+                        <p>
+                            A arquitetura do HDFS baseia-se principalmente em dois componentes:
+                        </p>
+
+                        <ul>
+                            <li>
+                                <strong>NameNode:</strong> responsável por gerenciar os
+                                <strong>metadados</strong> do sistema de arquivos, como nomes dos arquivos,
+                                localização dos blocos, permissões e fator de replicação.
+                                O NameNode <strong>não armazena os dados</strong>.
+                            </li>
+
+                            <li>
+                                <strong>DataNodes:</strong> responsáveis por armazenar
+                                <strong>efetivamente os dados</strong>, mantendo os blocos distribuídos
+                                pelo cluster e executando operações de leitura e escrita.
+                            </li>
+                        </ul>
+
+                        <p>
+                            O HDFS garante <strong>tolerância a falhas</strong> por meio da
+                            <strong>replicação dos blocos</strong> em diferentes DataNodes, permitindo que
+                            os dados permaneçam disponíveis mesmo quando um nó falha.
+                        </p>
+
+                        <p class="mb-0">
+                            O <strong>YARN</strong> não atua no armazenamento de dados. Ele é responsável
+                            pelo <strong>gerenciamento e agendamento dos recursos computacionais</strong>
+                            do cluster, como CPU e memória, viabilizando a execução eficiente das
+                            aplicações distribuídas.
+                        </p>
+                    </div>
+                </div>
+
+                <!-- Comparativo — NTFS × HDFS-->
+                <div class="card nivelamento-card mb-4">
+                    <div class="card-body">
+                        <h4 class="mb-3">Comparativo — NTFS × HDFS</h4>
+
+                        <div class="table-responsive">
+                            <table class="table table-bordered mb-0">
+                                <thead class="table-light">
+                                    <tr>
+                                        <th>Aspecto</th>
+                                        <th>NTFS</th>
+                                        <th>HDFS</th>
+                                    </tr>
+                                </thead>
+                                <tbody>
+                                    <tr>
+                                        <td><strong>Tipo</strong></td>
+                                        <td>Sistema de arquivos local</td>
+                                        <td>Sistema de arquivos distribuído</td>
+                                    </tr>
+
+                                    <tr>
+                                        <td><strong>Ambiente</strong></td>
+                                        <td>Computador único</td>
+                                        <td>Cluster de computadores</td>
+                                    </tr>
+
+                                    <tr>
+                                        <td><strong>Armazenamento</strong></td>
+                                        <td>Centralizado</td>
+                                        <td>Distribuído em vários nós</td>
+                                    </tr>
+
+                                    <tr>
+                                        <td><strong>Divisão de arquivos</strong></td>
+                                        <td>Não</td>
+                                        <td>Sim, em blocos</td>
+                                    </tr>
+
+                                    <tr>
+                                        <td><strong>Replicação de dados</strong></td>
+                                        <td>Não nativa</td>
+                                        <td>Sim, para tolerância a falhas</td>
+                                    </tr>
+
+                                    <tr>
+                                        <td><strong>Tolerância a falhas</strong></td>
+                                        <td>Limitada</td>
+                                        <td>Alta</td>
+                                    </tr>
+
+                                    <tr>
+                                        <td><strong>Processamento</strong></td>
+                                        <td>Sequencial</td>
+                                        <td>Paralelo e distribuído</td>
+                                    </tr>
+
+                                    <tr>
+                                        <td><strong>Uso típico</strong></td>
+                                        <td>Sistemas operacionais</td>
+                                        <td>Big Data / Hadoop</td>
+                                    </tr>
+                                </tbody>
+                            </table>
+                        </div>
+                    </div>
+                </div>
+
+                <h3 id="sec-componentes-hdfs" class="mb-4 mt-5 border-bottom pb-2">
+                    <i class="bi bi-diagram-2 me-2"></i>5. Componentes do HDFS
+                </h3>
+
+                <!-- NAMENODE -->
+                <div class="card nivelamento-card mb-4">
+                    <div class="card-body">
+                        <h5 class="mb-3">NameNode</h5>
+
+                        <p>
+                            O <strong>NameNode</strong> reside no nó mestre (<strong>Master Node</strong>) e é
+                            responsável por gerenciar os <strong>metadados</strong> do sistema de arquivos
+                            distribuído HDFS.
+                        </p>
+
+                        <ul class="mb-0">
+                            <li>Manter informações sobre nomes e permissões dos arquivos.</li>
+                            <li>Mapear a localização dos blocos de dados no cluster.</li>
+                            <li>Gerenciar a divisão dos arquivos em blocos.</li>
+                            <li>Controlar a política e a localização das réplicas.</li>
+                            <li>Coordenar a comunicação com os <em>DataNodes</em>.</li>
+                            <li>
+                                Mantém os metadados principalmente em memória para garantir alto desempenho,
+                                pois é constantemente acessado.
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+
+
+                <!-- DATANODES -->
+                <div class="card nivelamento-card mb-4">
+                    <div class="card-body">
+                        <h5 class="mb-3">DataNodes</h5>
+
+                        <p>
+                            Os <strong>DataNodes</strong> são responsáveis por armazenar
+                            <strong>efetivamente os dados</strong> nos nós do cluster.
+                            Como o HDFS é distribuído, os arquivos são divididos em
+                            <strong>blocos</strong> e replicados em diferentes máquinas,
+                            garantindo tolerância a falhas e disponibilidade.
+                        </p>
+
+                        <p class="mb-0">
+                            O <strong>NameNode</strong> mantém os <strong>metadados</strong>,
+                            como nome dos arquivos, quantidade de blocos, fator de replicação
+                            e localização dos blocos, permitindo a recuperação eficiente dos dados.
+                        </p>
+                    </div>
+                </div>
+
+                <h3 id="sec-mapreduce" class="mb-4 mt-5 border-bottom pb-2">
+                    <i class="bi bi-cpu me-2"></i>6. Processamento Distribuído com MapReduce
+                </h3>
+
+                <!-- MAPREDUCE (VISÃO GERAL) -->
+                <div class="card nivelamento-card mb-4">
+                    <div class="card-body">
+                        <h4 class="mb-3">Processamento no Hadoop — MapReduce</h4>
+
+                        <ul class="mb-0">
+                            <li>
+                                Modelo computacional e de programação para o
+                                <strong>processamento distribuído e paralelo</strong> de aplicações.
+                            </li>
+                            <li>
+                                Projetado para processar <strong>grandes volumes de dados</strong>,
+                                dividindo o trabalho em tarefas independentes executadas em um cluster.
+                            </li>
+                            <li>
+                                Baseia-se nas funções <strong>Map</strong> (mapeamento) e
+                                <strong>Reduce</strong> (agregação).
+                            </li>
+                            <li>
+                                O processamento ocorre por meio de <strong>jobs</strong>,
+                                que executam programas contendo as funções Map e Reduce.
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+
+
+                <!-- COMPOSIÇÃO DE UM JOB -->
+                <div class="card nivelamento-card mb-4">
+                    <div class="card-body">
+                        <h4 class="mb-3">Composição de um Job (Trabalho)</h4>
+
+                        <ul class="mb-0">
+                            <li>
+                                <strong>Map:</strong> etapa responsável por dividir e mapear os dados de entrada,
+                                gerando pares chave-valor.
+                            </li>
+                            <li>
+                                <strong>Shuffle:</strong> fase intermediária de embaralhamento e redistribuição
+                                dos dados entre as tarefas.
+                            </li>
+                            <li>
+                                <strong>Reduce:</strong> etapa responsável por agregar e consolidar os resultados
+                                produzidos na fase Map.
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+
+                <!-- MAPREDUCE (DETALHES) -->
+                <div class="card nivelamento-card mb-4">
+                    <div class="card-body">
+                        <h4 class="mb-3">MapReduce — Características</h4>
+
+                        <p>
+                            O <strong>MapReduce</strong> abstrai do programador a complexidade do
+                            <strong>processamento distribuído</strong>, permitindo o tratamento de grandes
+                            volumes de dados de forma paralela.
+                        </p>
+
+                        <ul class="mb-0">
+                            <li>Processamento de dados distribuído.</li>
+                            <li>Baseado no modelo de pares <strong>chave-valor</strong>.</li>
+                            <li>Modelo de processamento em <strong>batch</strong> (processamento em lote).</li>
+                            <li>Utilizado na execução de <strong>jobs</strong> no ecossistema Hadoop.</li>
+                            <li>
+                                <strong>Flexibilidade:</strong> permite processar dados independentemente
+                                do tipo e do formato.
+                            </li>
+                            <li>
+                                <strong>Confiabilidade:</strong> tarefas são executadas em paralelo e,
+                                em caso de falhas, podem ser reexecutadas automaticamente.
+                            </li>
+                            <li>
+                                <strong>Acessibilidade:</strong> suporte a múltiplas linguagens, como
+                                Java, C++, Python e Apache Pig.
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+
+                <!-- SUPORTE À EXECUÇÃO: JOBTRACKER / TASKTRACKER / SECONDARY NAMENODE -->
+                <div class="card nivelamento-card mb-4">
+                    <div class="card-body">
+                        <h4 class="mb-3">Suporte à Execução (MapReduce)</h4>
+
+                        <h6 class="mb-2">JobTracker</h6>
+                        <p>
+                            O <strong>JobTracker</strong> é responsável por receber as aplicações MapReduce,
+                            dividir o processamento em tarefas <strong>Map</strong> e <strong>Reduce</strong>
+                            e agendar sua execução no cluster. Também monitora o andamento das tarefas e,
+                            em caso de falhas, reprograma sua execução em outro nó.
+                        </p>
+
+                        <h6 class="mb-2">TaskTracker</h6>
+                        <p>
+                            O <strong>TaskTracker</strong> executa as tarefas Map e Reduce atribuídas pelo
+                            JobTracker e informa continuamente o status da execução. Há uma instância de
+                            TaskTracker em cada nó do cluster, responsável pela utilização dos recursos
+                            locais.
+                        </p>
+
+                        <h6 class="mb-2">SecondaryNameNode</h6>
+                        <p class="mb-0">
+                            O <strong>SecondaryNameNode</strong> auxilia o NameNode realizando
+                            <em>checkpoints</em> periódicos do sistema de arquivos, combinando informações
+                            de estado para facilitar a recuperação e reduzir o tempo de reinicialização
+                            do HDFS.
+                        </p>
+                    </div>
+                </div>
+
+                <h3 id="sec-ferramentas" class="mb-4 mt-5 border-bottom pb-2">
+                    <i class="bi bi-tools me-2"></i>7. Ferramentas de Alto Nível do Ecossistema Hadoop
+                </h3>
+
+                <!-- APACHE PIG -->
+                <div class="card nivelamento-card mb-4">
+                    <div class="card-body">
+                        <h4 class="mb-3">Apache Pig</h4>
+
+                        <ul class="mb-0">
+                            <li>
+                                Linguagem de <strong>alto nível</strong> voltada ao processamento de grandes
+                                volumes de dados.
+                            </li>
+                            <li>
+                                Utilizada para o desenvolvimento de programas
+                                <strong>MapReduce</strong> de forma mais simples e abstrata.
+                            </li>
+                            <li>
+                                Possui uma linguagem própria chamada <strong>Pig Latin</strong>.
+                            </li>
+                            <li>
+                                Os programas escritos em Pig são traduzidos automaticamente
+                                para <strong>MapReduce</strong>.
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+
+                <!-- HIVE / HIVEQL -->
+                <div class="card nivelamento-card mb-4">
+                    <div class="card-body">
+                        <h4 class="mb-3">Hive e HiveQL</h4>
+
+                        <ul class="mb-0">
+                            <li>
+                                O <strong>Hive</strong> é uma ferramenta do ecossistema Hadoop que
+                                permite realizar consultas sobre grandes volumes de dados armazenados no HDFS.
+                            </li>
+                            <li>
+                                O <strong>HiveQL</strong> é uma linguagem similar ao SQL, utilizada para
+                                definir consultas que são traduzidas para <strong>MapReduce</strong>.
+                            </li>
+                            <li>
+                                Trabalha com dados organizados em <strong>estruturas tabulares</strong>.
+                            </li>
+                            <li>
+                                <strong>Não é OLTP</strong>, sendo voltado ao processamento analítico
+                                (<em>batch</em>).
+                            </li>
+                            <li>
+                                Não oferece suporte completo a operações transacionais em nível de linha,
+                                como <strong>UPDATE</strong> e <strong>DELETE</strong>.
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+
+
+                <div class="card nivelamento-card mb-4">
+                    <div class="card-body">
+                        <h4 class="mb-3">Agora é com você</h4>
+                        <p class="mb-0">
+                            Resolva as questões a seguir para fixar os principais conceitos
+                            de Big Data cobrados pela banca CESGRANRIO.
+                        </p>
+                    </div>
+                </div>
+                <!-- QUESTÃO 1 -->
+                <div class="card nivelamento-card mb-4">
+                    <div class="card-body">
+                        <h5 class="mb-3">Questão 1 — CESGRANRIO (PETROBRAS / 2018)</h5>
+
+                        <p>
+                            A principal definição de Big Data parte de três características, conhecidas como
+                            <strong>3 V do Big Data</strong>, a saber: velocidade, variedade e volume.
+                            O termo <strong>velocidade</strong> refere-se, principalmente, à
+                        </p>
+
+                        <form class="questao">
+                            <div class="form-check">
+                                <input class="form-check-input" type="radio" name="q1" id="q1a">
+                                <label class="form-check-label" for="q1a">
+                                    A) necessidade das aplicações de gerar respostas rapidamente,
+                                    a partir de grandes massas de dados.
+                                </label>
+                            </div>
+
+                            <div class="form-check">
+                                <input class="form-check-input" type="radio" name="q1" id="q1b" data-correta="true">
+                                <label class="form-check-label" for="q1b">
+                                    B) existência de um alto fluxo de dados na entrada.
+                                </label>
+                            </div>
+
+                            <div class="form-check">
+                                <input class="form-check-input" type="radio" name="q1" id="q1c">
+                                <label class="form-check-label" for="q1c">
+                                    C) necessidade de gerar aplicações rapidamente, em função da
+                                    demanda do negócio.
+                                </label>
+                            </div>
+
+                            <div class="form-check">
+                                <input class="form-check-input" type="radio" name="q1" id="q1d">
+                                <label class="form-check-label" for="q1d">
+                                    D) importância da facilidade de manipular cubos de visualização
+                                    de dados, rapidamente.
+                                </label>
+                            </div>
+
+                            <div class="form-check mb-3">
+                                <input class="form-check-input" type="radio" name="q1" id="q1e">
+                                <label class="form-check-label" for="q1e">
+                                    E) rapidez com que os dados se tornam inválidos com o tempo.
+                                </label>
+                            </div>
+                        </form>
+
+                        <!-- GABARITO -->
+                        <div class="alert alert-success d-none gabarito">
+                            <strong>Gabarito:</strong> alternativa <strong>B</strong>.
+                        </div>
+
+                        <!-- COMENTÁRIO -->
+                        <div class="alert alert-secondary d-none comentario">
+                            <p class="mb-1">
+                                <strong>Comentário:</strong>
+                            </p>
+                            <p class="mb-0">
+                                No contexto do Big Data, o V de <strong>Velocidade</strong> está relacionado
+                                à <strong>taxa de geração e entrada dos dados</strong>, ou seja,
+                                ao alto fluxo com que os dados são produzidos e precisam ser processados.
+                            </p>
+                            <p class="mt-2 mb-0">
+                                A alternativa A trata de tempo de resposta das aplicações, o que se relaciona
+                                mais a desempenho de sistemas, e não ao conceito original de velocidade no Big Data.
+                            </p>
+                        </div>
+
+                        <button class="btn btn-outline-primary btn-sm mt-3 btn-ver-gabarito">
+                            Ver gabarito
+                        </button>
+                    </div>
+                </div>
+                <!-- QUESTÃO 2 -->
+                <div class="card nivelamento-card mb-4">
+                    <div class="card-body">
+                        <h5 class="mb-3">Questão 2 — CESGRANRIO (BB / 2023)</h5>
+
+                        <p>
+                            Organizações modernas estão sujeitas a uma grande quantidade de dados,
+                            principalmente se tratam com grandes quantidades de clientes. Muitas das demandas de
+                            tecnologia de informação a que essas organizações estão submetidas passaram a ser
+                            organizadas e tratadas dentro do conceito de Big Data.
+                        </p>
+
+                        <p>
+                            Além do grande volume de dados, o Big Data, em sua definição original, considera
+                            também a(s) seguinte(s) propriedade(s):
+                        </p>
+
+                        <form class="questao">
+                            <div class="form-check">
+                                <input class="form-check-input" type="radio" name="q2" id="q2a">
+                                <label class="form-check-label" for="q2a">
+                                    A) falta de qualidade, apenas
+                                </label>
+                            </div>
+
+                            <div class="form-check">
+                                <input class="form-check-input" type="radio" name="q2" id="q2b">
+                                <label class="form-check-label" for="q2b">
+                                    B) variedade, apenas
+                                </label>
+                            </div>
+
+                            <div class="form-check">
+                                <input class="form-check-input" type="radio" name="q2" id="q2c">
+                                <label class="form-check-label" for="q2c">
+                                    C) velocidade, apenas
+                                </label>
+                            </div>
+
+                            <div class="form-check">
+                                <input class="form-check-input" type="radio" name="q2" id="q2d" data-correta="true">
+                                <label class="form-check-label" for="q2d">
+                                    D) variedade e velocidade
+                                </label>
+                            </div>
+
+                            <div class="form-check mb-3">
+                                <input class="form-check-input" type="radio" name="q2" id="q2e">
+                                <label class="form-check-label" for="q2e">
+                                    E) velocidade e falta de qualidade
+                                </label>
+                            </div>
+                        </form>
+
+                        <!-- GABARITO -->
+                        <div class="alert alert-success d-none gabarito">
+                            <strong>Gabarito:</strong> alternativa <strong>D</strong>.
+                        </div>
+
+                        <!-- COMENTÁRIO -->
+                        <div class="alert alert-secondary d-none comentario">
+                            <p class="mb-1">
+                                <strong>Comentário:</strong>
+                            </p>
+                            <p class="mb-0">
+                                A definição original mais difundida de Big Data é baseada nos <strong>3
+                                    V’s</strong>:
+                                <strong>Volume</strong>, <strong>Variedade</strong> e <strong>Velocidade</strong>.
+                                Portanto, além do volume, entram <strong>variedade</strong> e
+                                <strong>velocidade</strong>.
+                            </p>
+                            <p class="mt-2 mb-0">
+                                A “falta de qualidade” se aproxima da ideia de <strong>Veracidade</strong>,
+                                que aparece quando a abordagem é ampliada para os <strong>5 V’s</strong>,
+                                mas não faz parte da definição original.
+                            </p>
+                        </div>
+
+                        <button class="btn btn-outline-primary btn-sm mt-3 btn-ver-gabarito">
+                            Ver gabarito
+                        </button>
+                    </div>
+                </div>
+                <!-- QUESTÃO 3 -->
+                <div class="card nivelamento-card mb-4">
+                    <div class="card-body">
+                        <h5 class="mb-3">Questão 3 — CESGRANRIO (TRANSPETRO / 2023)</h5>
+
+                        <p>
+                            O grande volume de dados gerados por sensores, máquinas e equipamentos na
+                            Indústria 4.0 é chamado, em sistemas de informação, de <strong>Big Data</strong>.
+                            Para funcionar de forma eficiente, o Big Data tem alguns atributos chamados
+                            de <strong>Vs do Big Data</strong>.
+                        </p>
+
+                        <p>
+                            Esses atributos são:
+                        </p>
+
+                        <form class="questao">
+                            <div class="form-check">
+                                <input class="form-check-input" type="radio" name="q3" id="q3a" data-correta="true">
+                                <label class="form-check-label" for="q3a">
+                                    A) Velocidade, Volume, Variedade, Veracidade, Valor
+                                </label>
+                            </div>
+
+                            <div class="form-check">
+                                <input class="form-check-input" type="radio" name="q3" id="q3b">
+                                <label class="form-check-label" for="q3b">
+                                    B) Velocidade, Volume, Variedade, Veracidade, Vigência
+                                </label>
+                            </div>
+
+                            <div class="form-check">
+                                <input class="form-check-input" type="radio" name="q3" id="q3c">
+                                <label class="form-check-label" for="q3c">
+                                    C) Velocidade, Volume, Variedade, Veracidade, Valor, Viabilidade
+                                </label>
+                            </div>
+
+                            <div class="form-check">
+                                <input class="form-check-input" type="radio" name="q3" id="q3d">
+                                <label class="form-check-label" for="q3d">
+                                    D) Velocidade, Volume, Variedade, Veracidade, Valor, Viabilidade, Vigência
+                                </label>
+                            </div>
+
+                            <div class="form-check mb-3">
+                                <input class="form-check-input" type="radio" name="q3" id="q3e">
+                                <label class="form-check-label" for="q3e">
+                                    E) Velocidade, Variedade, Veracidade, Valor, Viabilidade, Vigência
+                                </label>
+                            </div>
+                        </form>
+
+                        <!-- GABARITO -->
+                        <div class="alert alert-success d-none gabarito">
+                            <strong>Gabarito:</strong> alternativa <strong>A</strong>.
+                        </div>
+
+                        <!-- COMENTÁRIO -->
+                        <div class="alert alert-secondary d-none comentario">
+                            <p class="mb-1">
+                                <strong>Comentário:</strong>
+                            </p>
+                            <p class="mb-0">
+                                A abordagem mais difundida do Big Data considera os <strong>5 V’s</strong>:
+                                <strong>Volume</strong>, <strong>Velocidade</strong>, <strong>Variedade</strong>,
+                                <strong>Veracidade</strong> e <strong>Valor</strong>.
+                            </p>
+                            <p class="mt-2 mb-0">
+                                Termos como <em>vigência</em> e <em>viabilidade</em> não fazem parte do conjunto
+                                clássico dos V’s do Big Data e são utilizados pela banca como alternativas
+                                distratoras.
+                            </p>
+                        </div>
+
+                        <button class="btn btn-outline-primary btn-sm mt-3 btn-ver-gabarito">
+                            Ver gabarito
+                        </button>
+                    </div>
+                </div>
+                <!-- QUESTÃO 4 -->
+                <div class="card nivelamento-card mb-4">
+                    <div class="card-body">
+                        <h5 class="mb-3">Questão 4 — CESGRANRIO (PETROBRAS / 2018)</h5>
+
+                        <p>
+                            O termo Big Data é bastante conhecido pelos profissionais de tecnologia da informação,
+                            especialmente aqueles envolvidos com bancos de dados, inteligência de negócios,
+                            sistemas de informações e sistemas de apoio à decisão. Uma característica inerente a
+                            esse conceito é a da
+                        </p>
+
+                        <form class="questao">
+                            <div class="form-check">
+                                <input class="form-check-input" type="radio" name="q4" id="q4a" data-correta="true">
+                                <label class="form-check-label" for="q4a">
+                                    A) complexidade das suas fontes de informação, o que demanda a necessidade de
+                                    sua
+                                    prévia limpeza, integração e transformação.
+                                </label>
+                            </div>
+
+                            <div class="form-check">
+                                <input class="form-check-input" type="radio" name="q4" id="q4b">
+                                <label class="form-check-label" for="q4b">
+                                    B) estabilidade da taxa de geração desses dados, o que garante sua utilização
+                                    confiável
+                                    na geração analítica de informação com independência temporal.
+                                </label>
+                            </div>
+
+                            <div class="form-check">
+                                <input class="form-check-input" type="radio" name="q4" id="q4c">
+                                <label class="form-check-label" for="q4c">
+                                    C) heterogeneidade do conjunto de dados, empregada em dados originalmente
+                                    estruturados
+                                    ou semiestruturados.
+                                </label>
+                            </div>
+
+                            <div class="form-check">
+                                <input class="form-check-input" type="radio" name="q4" id="q4d">
+                                <label class="form-check-label" for="q4d">
+                                    D) qualidade das fontes de dados, por conta dos padrões de expansão e de
+                                    retenção
+                                    reveladores da ordem existente nos dados.
+                                </label>
+                            </div>
+
+                            <div class="form-check mb-3">
+                                <input class="form-check-input" type="radio" name="q4" id="q4e">
+                                <label class="form-check-label" for="q4e">
+                                    E) escalabilidade, que, na sua forma original, possui alto valor granular quando
+                                    comparado ao de seu volume.
+                                </label>
+                            </div>
+                        </form>
+
+                        <!-- GABARITO -->
+                        <div class="alert alert-success d-none gabarito">
+                            <strong>Gabarito:</strong> alternativa <strong>A</strong>.
+                        </div>
+
+                        <!-- COMENTÁRIO -->
+                        <div class="alert alert-secondary d-none comentario">
+                            <p class="mb-1">
+                                <strong>Comentário:</strong>
+                            </p>
+                            <p class="mb-0">
+                                A banca considerou como característica inerente ao Big Data a
+                                <strong>complexidade das fontes de informação</strong>, já que os dados
+                                são originados de múltiplas fontes, em diferentes formatos, o que
+                                exige processos de <strong>limpeza, integração e transformação</strong>
+                                antes da análise.
+                            </p>
+                            <p class="mt-2 mb-0">
+                                Embora a <strong>heterogeneidade</strong> esteja relacionada ao conceito
+                                de Big Data, a alternativa C foi considerada incorreta por restringir os
+                                dados apenas aos tipos estruturados e semiestruturados, eliminando os dados não
+                                estruturados, o que torna a
+                                afirmação incompleta.
+                            </p>
+                        </div>
+
+
+                        <button class="btn btn-outline-primary btn-sm mt-3 btn-ver-gabarito">
+                            Ver gabarito
+                        </button>
+                    </div>
+                </div>
+                <!-- QUESTÃO 5 -->
+                <div class="card nivelamento-card mb-4">
+                    <div class="card-body">
+                        <h5 class="mb-3">Questão 5 — CESGRANRIO (INNOVA / 2012)</h5>
+
+                        <p>
+                            Os clusters de computadores podem ser vistos como dois ou mais computadores que
+                            trabalham de maneira conjunta para realizar algum processamento. Esses clusters
+                            apresentam a seguinte característica:
+                        </p>
+
+                        <form class="questao">
+                            <div class="form-check">
+                                <input class="form-check-input" type="radio" name="q5" id="q5a">
+                                <label class="form-check-label" for="q5a">
+                                    A) impossibilidade do balanceamento de carga entre os nós do cluster,
+                                    o que é compensado pelo alto poder de processamento obtido.
+                                </label>
+                            </div>
+
+                            <div class="form-check">
+                                <input class="form-check-input" type="radio" name="q5" id="q5b">
+                                <label class="form-check-label" for="q5b">
+                                    B) necessidade de três computadores para controlar o processamento
+                                    dos dados: o <em>failover</em>, o <em>domain</em> e o <em>controller</em>.
+                                </label>
+                            </div>
+
+                            <div class="form-check">
+                                <input class="form-check-input" type="radio" name="q5" id="q5c">
+                                <label class="form-check-label" for="q5c">
+                                    C) necessidade de um controle distribuído e implementação baseada em
+                                    hardware especializado, o que leva à dependência de fabricantes.
+                                </label>
+                            </div>
+
+                            <div class="form-check">
+                                <input class="form-check-input" type="radio" name="q5" id="q5d" data-correta="true">
+                                <label class="form-check-label" for="q5d">
+                                    D) possibilidade de que novos componentes sejam adicionados à medida
+                                    que cresça a carga de trabalho, o que permite escalabilidade.
+                                </label>
+                            </div>
+
+                            <div class="form-check mb-3">
+                                <input class="form-check-input" type="radio" name="q5" id="q5e">
+                                <label class="form-check-label" for="q5e">
+                                    E) redução da confiabilidade do sistema como um todo, caso alguma parte
+                                    falhe, e necessidade de software proprietário para sua implementação.
+                                </label>
+                            </div>
+                        </form>
+
+                        <!-- GABARITO -->
+                        <div class="alert alert-success d-none gabarito">
+                            <strong>Gabarito:</strong> alternativa <strong>D</strong>.
+                        </div>
+
+                        <!-- COMENTÁRIO -->
+                        <div class="alert alert-secondary d-none comentario">
+                            <p class="mb-1">
+                                <strong>Comentário:</strong>
+                            </p>
+                            <p class="mb-0">
+                                Uma das principais características dos <strong>clusters</strong> é a
+                                <strong>escalabilidade horizontal</strong>, isto é, a possibilidade de
+                                adicionar novos nós ao sistema conforme a carga de trabalho aumenta.
+                            </p>
+                            <p class="mt-2 mb-0">
+                                As demais alternativas contradizem conceitos fundamentais de clusters,
+                                como o <strong>balanceamento de carga</strong>, a
+                                <strong>tolerância a falhas</strong> e o uso de
+                                <strong>hardware comum</strong>.
+                            </p>
+                        </div>
+
+                        <button class="btn btn-outline-primary btn-sm mt-3 btn-ver-gabarito">
+                            Ver gabarito
+                        </button>
+                    </div>
+                </div>
+                <!-- QUESTÃO 6 -->
+                <div class="card nivelamento-card mb-4">
+                    <div class="card-body">
+                        <h5 class="mb-3">Questão 6 — CESGRANRIO (BB / 2018)</h5>
+
+                        <p>
+                            Um modelo teórico do <strong>MapReduce</strong> pode ser resumido em duas funções,
+                            <strong>map</strong> e <strong>reduce</strong>. Essas funções são representadas,
+                            genericamente, com uma notação na forma:
+                        </p>
+
+                        <p class="text-center">
+                            <em>Entrada genérica → Saída genérica</em>
+                        </p>
+
+                        <p>
+                            A proposta original de MapReduce considerava que a função <strong>reduce</strong>
+                            teria o modelo:
+                        </p>
+
+                        <p class="text-center">
+                            <em>reduce(k2, list(v2)) → list(v3)</em>
+                        </p>
+
+                        <p>
+                            Enquanto implementações de terceiros usam o modelo:
+                        </p>
+
+                        <p class="text-center">
+                            <em>reduce(k2, list(v2)) → list(k3, v3)</em>
+                        </p>
+
+                        <p>
+                            O modelo para a função <strong>map</strong>, porém, é sempre o mesmo.
+                            Qual é esse modelo?
+                        </p>
+
+                        <form class="questao">
+                            <div class="form-check">
+                                <input class="form-check-input" type="radio" name="q6" id="q6a">
+                                <label class="form-check-label" for="q6a">
+                                    A) map(v1) → list(k2, v2)
+                                </label>
+                            </div>
+
+                            <div class="form-check">
+                                <input class="form-check-input" type="radio" name="q6" id="q6b">
+                                <label class="form-check-label" for="q6b">
+                                    B) map(v1) → k2, list(v2)
+                                </label>
+                            </div>
+
+                            <div class="form-check">
+                                <input class="form-check-input" type="radio" name="q6" id="q6c">
+                                <label class="form-check-label" for="q6c">
+                                    C) map(k1, v1) → k2, list(v2)
+                                </label>
+                            </div>
+
+                            <div class="form-check">
+                                <input class="form-check-input" type="radio" name="q6" id="q6d">
+                                <label class="form-check-label" for="q6d">
+                                    D) map(k1, v1) → k2, v2
+                                </label>
+                            </div>
+
+                            <div class="form-check mb-3">
+                                <input class="form-check-input" type="radio" name="q6" id="q6e" data-correta="true">
+                                <label class="form-check-label" for="q6e">
+                                    E) map(k1, v1) → list(k2, v2)
+                                </label>
+                            </div>
+                        </form>
+
+                        <!-- GABARITO -->
+                        <div class="alert alert-success d-none gabarito">
+                            <strong>Gabarito:</strong> alternativa <strong>E</strong>.
+                        </div>
+
+                        <!-- COMENTÁRIO -->
+                        <div class="alert alert-secondary d-none comentario">
+                            <p class="mb-1">
+                                <strong>Comentário:</strong>
+                            </p>
+                            <p class="mb-0">
+                                A função <strong>map</strong> recebe um par
+                                <strong>(k1, v1)</strong> como entrada e produz uma
+                                <strong>lista de pares (k2, v2)</strong> como saída.
+                                Esse modelo é fixo e independente da implementação utilizada.
+                            </p>
+                            <p class="mt-2 mb-0">
+                                Já a função <strong>reduce</strong> pode variar conforme a implementação,
+                                mas a função <strong>map</strong> sempre segue o mesmo padrão teórico,
+                                o que torna a alternativa E a correta.
+                            </p>
+                        </div>
+
+                        <button class="btn btn-outline-primary btn-sm mt-3 btn-ver-gabarito">
+                            Ver gabarito
+                        </button>
+                    </div>
+                </div>
+
+
+            </section>
+
+        </div>
+    </main>
+
+    <!-- Bootstrap JS (opcional, mas recomendado) -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
+    <script>
+        (function () {
+            const style = document.createElement("style");
+            style.textContent = `
+    .questao .form-check.correta { outline: 2px solid rgba(25,135,84,.35); border-radius: .5rem; padding: .5rem; }
+    .questao .form-check.errada  { outline: 2px solid rgba(220,53,69,.35); border-radius: .5rem; padding: .5rem; }
+    .questao .form-check.selecionada { background: rgba(13,110,253,.06); border-radius: .5rem; padding: .5rem; }
+    .questao-feedback { margin-top: .75rem; }
+  `;
+            document.head.appendChild(style);
+
+            function findQuestionCard(btn) {
+                // cada botão vive dentro do card
+                return btn.closest(".nivelamento-card") || btn.closest(".card") || document;
+            }
+
+            function clearHighlights(formEl) {
+                const checks = formEl.querySelectorAll(".form-check");
+                checks.forEach(chk => chk.classList.remove("correta", "errada", "selecionada"));
+            }
+
+            function highlight(formEl) {
+                clearHighlights(formEl);
+
+                const correctInput = formEl.querySelector('input[type="radio"][data-correta="true"]');
+                const selectedInput = formEl.querySelector('input[type="radio"]:checked');
+
+                // Marca alternativa selecionada (se existir)
+                if (selectedInput) {
+                    const selectedWrap = selectedInput.closest(".form-check");
+                    if (selectedWrap) selectedWrap.classList.add("selecionada");
+                }
+
+                // Marca alternativa correta
+                if (correctInput) {
+                    const correctWrap = correctInput.closest(".form-check");
+                    if (correctWrap) correctWrap.classList.add("correta");
+                }
+
+                // Se selecionou e existe correta, marca errada quando não bate
+                if (selectedInput && correctInput && selectedInput !== correctInput) {
+                    const selectedWrap = selectedInput.closest(".form-check");
+                    if (selectedWrap) selectedWrap.classList.add("errada");
+                }
+
+                return { selectedInput, correctInput };
+            }
+
+            function ensureFeedback(cardEl) {
+                let feedback = cardEl.querySelector(".questao-feedback");
+                if (!feedback) {
+                    feedback = document.createElement("div");
+                    feedback.className = "alert alert-info d-none questao-feedback";
+                    // coloca antes do botão (ou no fim do card-body)
+                    const btn = cardEl.querySelector(".btn-ver-gabarito");
+                    if (btn && btn.parentElement) {
+                        btn.parentElement.insertBefore(feedback, btn);
+                    } else {
+                        cardEl.appendChild(feedback);
+                    }
+                }
+                return feedback;
+            }
+
+            function setFeedback(feedbackEl, selectedInput, correctInput) {
+                // Reset classes de alert
+                feedbackEl.classList.remove("d-none", "alert-info", "alert-success", "alert-danger");
+
+                if (!selectedInput) {
+                    feedbackEl.classList.add("alert-info");
+                    feedbackEl.textContent = "Marque uma alternativa para conferir se você acertou.";
+                    return;
+                }
+
+                if (!correctInput) {
+                    feedbackEl.classList.add("alert-info");
+                    feedbackEl.textContent = "Gabarito não definido (adicione data-correta=\"true\" na alternativa correta).";
+                    return;
+                }
+
+                if (selectedInput === correctInput) {
+                    feedbackEl.classList.add("alert-success");
+                    feedbackEl.textContent = "✅ Você acertou!";
+                } else {
+                    feedbackEl.classList.add("alert-danger");
+                    feedbackEl.textContent = "❌ Você errou. A alternativa correta foi destacada.";
+                }
+            }
+
+            function toggleGabarito(cardEl, show) {
+                const gabarito = cardEl.querySelector(".gabarito");
+                const comentario = cardEl.querySelector(".comentario");
+
+                if (gabarito) gabarito.classList.toggle("d-none", !show);
+                if (comentario) comentario.classList.toggle("d-none", !show);
+            }
+
+            // Delegação de eventos: um listener para toda a página
+            document.addEventListener("click", function (ev) {
+                const btn = ev.target.closest(".btn-ver-gabarito");
+                if (!btn) return;
+
+                const cardEl = findQuestionCard(btn);
+                const formEl = cardEl.querySelector("form.questao");
+                const feedbackEl = ensureFeedback(cardEl);
+
+                const isOpen = btn.getAttribute("data-open") === "true";
+                const willOpen = !isOpen;
+
+                if (willOpen && formEl) {
+                    const { selectedInput, correctInput } = highlight(formEl);
+                    setFeedback(feedbackEl, selectedInput, correctInput);
+                    feedbackEl.classList.remove("d-none");
+                } else {
+                    // fechando: limpa destaques e feedback
+                    if (formEl) clearHighlights(formEl);
+                    feedbackEl.classList.add("d-none");
+                }
+
+                toggleGabarito(cardEl, willOpen);
+
+                btn.setAttribute("data-open", String(willOpen));
+                btn.textContent = willOpen ? "Ocultar gabarito" : "Ver gabarito";
+            });
+
+            // Se o usuário mudar a alternativa com gabarito aberto, atualiza destaque e feedback
+            document.addEventListener("change", function (ev) {
+                const input = ev.target;
+                if (!input.matches('input[type="radio"]')) return;
+
+                const cardEl = input.closest(".nivelamento-card") || input.closest(".card");
+                if (!cardEl) return;
+
+                const btn = cardEl.querySelector(".btn-ver-gabarito");
+                if (!btn || btn.getAttribute("data-open") !== "true") return;
+
+                const formEl = cardEl.querySelector("form.questao");
+                if (!formEl) return;
+
+                const feedbackEl = ensureFeedback(cardEl);
+                const { selectedInput, correctInput } = highlight(formEl);
+                setFeedback(feedbackEl, selectedInput, correctInput);
+                feedbackEl.classList.remove("d-none");
+            });
+        })();
+    </script>
+    <script src="/assets/js/main.js"></script>
+    <script src="/assets/js/loadNavbar.js"></script>
+
+    <footer class="py-4 footer-cc mt-4">
+        <div class="container text-center small">
+            <div class="mb-2">© <span id="year"></span> Cachorro Cafezeiro — Todos os direitos reservados.</div>
+            <div class="muted">Nivelamento — BIG DATA</div>
+        </div>
+    </footer>
+
+</body>
+
+</html>

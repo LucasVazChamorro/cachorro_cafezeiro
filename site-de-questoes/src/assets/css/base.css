@@ -1,0 +1,81 @@
+:root {
+    --bg: #ffffff;
+    --text: #333333;
+    --card: #f3f3f3;
+    --accent: #6F4E37;
+    /* marrom café */
+    --accent-hover: #4E3526;
+    /* marrom mais escuro */
+}
+
+[data-theme="dark"] {
+    --bg: #0f0f0f;
+    --text: #e5e5e5;
+    --card: #1a1a1a;
+    --accent: #A67B5B;
+    --accent-hover: #8B6449;
+}
+
+/* Reset simples */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: system-ui, -apple-system, "Segoe UI", Roboto, sans-serif;
+}
+
+body {
+    background: var(--bg);
+    color: var(--text);
+    transition: background 0.3s ease, color 0.3s ease;
+}
+
+.muted {
+    color: #666666;
+}
+
+body.dark .muted {
+    color: #bdbdbd;
+}
+
+/* ====== DROPDOWN NIVELAMENTO (MULTI-NÍVEL) ====== */
+
+/* Mostrar o primeiro nível ao passar o mouse (desktop) */
+@media (min-width: 992px) {
+    .navbar .dropdown:hover>.dropdown-menu {
+        display: block;
+    }
+}
+
+/* Submenu (segundo nível) */
+.dropdown-submenu {
+    position: relative;
+}
+
+.dropdown-submenu>.dropdown-menu {
+    top: 0;
+    left: 100%;
+    margin-left: .1rem;
+}
+
+/* Deixar os itens com seta visual (opcional) */
+.dropdown-submenu>.dropdown-item.dropdown-toggle::after {
+    content: "›";
+    float: right;
+    font-size: .8rem;
+}
+
+/* Dark mode para dropdown */
+body.dark .dropdown-menu {
+    background-color: var(--card);
+    color: var(--text);
+    border-color: rgba(255, 255, 255, 0.06);
+}
+
+body.dark .dropdown-menu .dropdown-item {
+    color: var(--text);
+}
+
+body.dark .dropdown-menu .dropdown-item:hover {
+    background-color: rgba(255, 255, 255, 0.06);
+}

@@ -1,0 +1,150 @@
+/* ==========================================================
+   DROPDOWN MULTINÍVEL — NÃO CORTA E NÃO SAI DA TELA
+   ========================================================== */
+
+.dropdown-submenu {
+    position: relative;
+}
+
+/* Submenu padrão abre à direita */
+.dropdown-submenu>.dropdown-menu {
+    top: 0;
+    left: 100%;
+    margin-left: 4px;
+    border-radius: 10px;
+    min-width: 260px;
+    white-space: normal;
+}
+
+/* Mantém menu visível antes de JS corrigir direção */
+.dropdown-submenu:hover>.dropdown-menu {
+    display: block;
+}
+
+/* Força submenus grandes a serem completamente visíveis */
+.dropdown-menu {
+    overflow: visible;
+    /* garante que não corte o conteúdo */
+}
+
+/* Quando o JS detectar falta de espaço, aplica esta classe */
+.dropdown-menu.open-left {
+    left: auto !important;
+    right: 100% !important;
+    margin-right: 4px;
+    margin-left: 0 !important;
+}
+
+/* Estética */
+.dropdown-menu>li>a {
+    padding: 10px 18px;
+    color: var(--text);
+}
+
+.dropdown-menu>li>a:hover {
+    background: rgba(93, 64, 55, 0.12);
+    color: var(--accent);
+}
+
+/* Indicador de submenu */
+.dropdown-submenu>a::after {
+    content: "›";
+    float: right;
+    opacity: 0.5;
+}
+
+/* Mobile: abre empilhado */
+@media (max-width: 992px) {
+
+    .dropdown-submenu>.dropdown-menu,
+    .dropdown-menu.open-left {
+        position: static;
+        width: 100%;
+        margin: 0;
+    }
+}
+
+/* =========================================================
+   Cachorro Cafezeiro — Logo interactions (suave e leve)
+========================================================= */
+
+.cc-logo {
+    display: inline-block;
+    transform: translateZ(0);
+    transition:
+        transform 220ms ease,
+        filter 220ms ease,
+        opacity 220ms ease;
+}
+
+/* Logo pequeno da navbar */
+.cc-logo--sm {
+    border-radius: 10px;
+    filter: drop-shadow(0 2px 8px rgba(0, 0, 0, 0.08));
+}
+
+/* Logo grande do hero */
+.cc-logo--hero {
+    filter: drop-shadow(0 10px 25px rgba(0, 0, 0, 0.12));
+}
+
+/* Hover/focus (desktop) */
+.cc-logo:hover,
+.cc-logo:focus-visible {
+    transform: translateY(-2px) scale(1.02);
+    filter: drop-shadow(0 14px 28px rgba(0, 0, 0, 0.16));
+    opacity: 0.98;
+}
+
+/* Clique: efeito “pressionado” */
+.cc-logo:active {
+    transform: translateY(0) scale(0.99);
+    filter: drop-shadow(0 8px 18px rgba(0, 0, 0, 0.14));
+}
+
+/* Acessibilidade: respeita quem prefere menos animação */
+@media (prefers-reduced-motion: reduce) {
+    .cc-logo {
+        transition: none;
+    }
+}
+
+/* =========================================================
+   Paleta Café — Cachorro Cafezeiro
+========================================================= */
+
+:root {
+    --cafe-100: #efebe9;
+    --cafe-300: #d7ccc8;
+    --cafe-600: #6d4c41;
+    --cafe-700: #5d4037;
+    --cafe-800: #4e342e;
+}
+
+/* Fundo geral do site */
+body {
+    background-color: #ffffff;
+}
+
+/* Navbar café claro */
+.cc-navbar {
+    background-color: var(--cafe-100);
+    border-bottom: 1px solid var(--cafe-300);
+}
+
+/* Botão principal café */
+.cc-btn-cafe {
+    background-color: var(--cafe-600);
+    color: #fff;
+    border: none;
+}
+
+.cc-btn-cafe:hover,
+.cc-btn-cafe:focus {
+    background-color: var(--cafe-700);
+    color: #fff;
+}
+
+.cc-btn-cafe:active {
+    background-color: var(--cafe-800);
+}

@@ -1,0 +1,2185 @@
+<!DOCTYPE html>
+<html lang="pt-br" data-theme="light">
+
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width,initial-scale=1" />
+    <title>Data Wirehouse</title>
+
+    <!-- Bootstrap -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css">
+
+    <!-- CSS Geral e Nivelamento -->
+    <link rel="stylesheet" href="/assets/css/base.css">
+    <link rel="stylesheet" href="/assets/css/layout.css">
+    <link rel="stylesheet" href="/assets/css/nivelamento.css">
+
+    <meta name="theme-color" content="#5D4037" id="meta-theme">
+</head>
+
+<body>
+
+    <!-- NAVBAR DINÂMICA -->
+    <div id="navbar-dashboard"></div>
+
+    <main class="nivelamento-main">
+        <div class="container">
+
+            <!-- BREADCRUMB -->
+            <nav class="breadcrumb-cc mt-3 mb-3">
+                <a href="/index.html">Início</a>
+                <span>›</span>
+                <a href="/dashboard.html">Dashboard</a>
+                <span>›</span>
+                <a href="/nivelamento/ti/">Tecnologia da Informação</a>
+                <span>›</span>
+                <span class="current">Data Wirehouse</span>
+            </nav>
+
+            <!-- WRAPPER CENTRAL (mesma largura dos cards) -->
+            <div class="col-md-10 col-lg-8 mx-auto">
+
+                <!-- HERO / BANNER TOPO (opção 03) -->
+                <div class="card nivelamento-card mb-4 overflow-hidden">
+                    <div class="position-relative nivelamento-hero">
+                        <img src="DataWarehouse.png" alt="Data Warehouse" class="nivelamento-hero-img">
+
+                        <div class="position-absolute bottom-0 start-0 w-100 p-3 p-md-4">
+                            <div class="hero-text-box">
+                                <h1 class="nivelamento-title mb-1">Data Wirehouse</h1>
+                                <p class="nivelamento-subtitle mb-0">
+                                    Resumo direto para prova, com foco em como a Cesgranrio costuma cobrar.
+                                </p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+
+            <!-- CONTEÚDO TEÓRICO (SEU TEXTO, INTACTO) -->
+            <section class="col-md-10 col-lg-8 mx-auto mb-4">
+
+                <!-- INTRODUÇÃO -->
+                <div class="card nivelamento-card mb-4">
+                    <div class="card-body">
+                        <p>
+                            Em ambientes organizacionais modernos, os dados assumem papel central no
+                            apoio à tomada de decisão. De forma geral, esses dados podem ser classificados
+                            em dados transacionais e dados analíticos, sendo essa distinção fundamental
+                            para a compreensão do conceito de Data Warehouse, tema recorrente nas provas
+                            da banca Cesgranrio.
+                        </p>
+                    </div>
+                </div>
+
+                <!-- DADOS TRANSACIONAIS E ANALÍTICOS -->
+                <div class="card nivelamento-card mb-4">
+                    <div class="card-body">
+                        <h4 class="mb-3">Dados Transacionais e Dados Analíticos</h4>
+
+                        <p>
+                            Os <strong>dados transacionais</strong> são aqueles gerados a partir das transações e das
+                            operações rotineiras da organização. Eles representam eventos individuais do negócio, como
+                            uma venda
+                            realizada, um pagamento efetuado ou um produto cadastrado. Esses dados registram informações
+                            detalhadas, como data e hora da transação, valores, produtos, clientes e formas de
+                            pagamento, refletindo o estado
+                            operacional corrente do sistema. Por essa razão, são frequentemente atualizados e
+                            caracterizam os
+                            sistemas operacionais, também chamados de sistemas OLTP.
+                        </p>
+
+
+                        <p>
+                            Já os <strong>dados analíticos</strong> surgem a partir do processamento dos dados
+                            transacionais. Eles
+                            resultam de cálculos, consolidações e agregações e têm como finalidade apoiar decisões
+                            gerenciais e estratégicas. Diferentemente dos dados operacionais, os dados analíticos são
+                            orientados à análise e à consulta, permitindo análises históricas, comparações entre
+                            períodos e identificação de tendências de longo prazo.
+                        </p>
+
+                        <div class="tip-box mt-3">
+                            <strong>Resumo:</strong><br><br>
+
+                            <strong>Dados transacionais (OLTP)</strong><br>
+                            evento individual, alto nível de detalhe, atualização constante.<br><br>
+
+                            <strong>Dados analíticos (OLAP / DW)</strong><br>
+                            dados históricos, agregados, voltados à análise, à consulta e à tomada de decisão.
+                        </div>
+
+
+
+                    </div>
+                </div>
+
+                <!-- CONCEITO DE DATA WAREHOUSE -->
+                <div class="card nivelamento-card mb-4">
+                    <div class="card-body">
+                        <h4 class="mb-3">Conceito de Data Warehouse</h4>
+
+                        <p>
+                            O <strong>Data Warehouse (DW)</strong> pode ser entendido como um grande <strong>repositório
+                                (armazém) de dados</strong>
+                            destinado ao <strong>apoio à tomada de decisão</strong>. Segundo a definição clássica de
+                            Inmon, um Data Warehouse é uma
+                            coleção de dados <strong>orientada por assunto</strong>, <strong>integrada</strong>,
+                            <strong>variante no tempo</strong> e
+                            <strong>não volátil</strong>, cujo objetivo é dar suporte aos processos decisórios das
+                            organizações.
+                        </p>
+
+                        <p>
+                            Em termos práticos, o Data Warehouse funciona como um depósito de <strong>dados
+                                consolidados</strong>, reunindo informações de
+                            <strong>diferentes fontes</strong> (por exemplo: bancos de dados transacionais, planilhas e
+                            sistemas externos) e
+                            organizando-as para <strong>consultas analíticas</strong>. Por ser não volátil, o Data
+                            Warehouse não é projetado para exclusões ou atualizações frequentes, mantendo o histórico
+                            completo dos dados. Sua alimentação ocorre periodicamente a partir dos sistemas
+                            operacionais, permitindo análises históricas e estratégicas.
+                        </p>
+
+                        <div class="tip-box mt-3">
+                            <strong>Palavras-chave (Inmon):</strong><br><br>
+
+                            <strong>Orientado por assunto</strong><br>
+                            dados organizados por temas do negócio (ex.: vendas, clientes, produtos).<br><br>
+
+                            <strong>Integrado</strong><br>
+                            reúne dados de múltiplas fontes (OLTP, planilhas, sistemas externos, ouvidoria).<br><br>
+
+                            <strong>Variante no tempo</strong><br>
+                            mantém <strong>histórico</strong> e permite comparações entre períodos e análise de
+                            tendências.<br><br>
+
+                            <strong>Não volátil</strong><br>
+                            <em>não significa que nunca recebe dados</em>.<br>
+                            ❌ não sofre <strong>atualizações frequentes</strong><br>
+                            ❌ não é usado para <strong>INSERT/UPDATE/DELETE operacionais</strong><br>
+                            ✔️ é <strong>estável</strong> e <strong>orientado à leitura/consulta</strong><br><br>
+
+                            <strong>Carga de dados:</strong><br>
+                            OLTP atualiza continuamente; o DW é <strong>alimentado periodicamente</strong> (ex.: via
+                            <strong>ETL</strong>).
+                        </div>
+                    </div>
+                </div>
+
+                <!-- CARACTERÍSTICAS DO DATA WAREHOUSE -->
+                <div class="card nivelamento-card mb-4">
+                    <div class="card-body">
+                        <h4 class="mb-3">Características do Data Warehouse</h4>
+
+                        <p>
+                            Uma das principais características do <strong>Data Warehouse</strong> é a
+                            <strong>não volatilidade</strong>. Isso não significa que o Data Warehouse nunca
+                            receba dados, mas que os dados, uma vez carregados, <strong>não sofrem atualizações
+                                frequentes nem exclusões operacionais</strong>, sendo disponibilizados
+                            predominantemente para <strong>consulta</strong>. Essa característica garante a
+                            estabilidade das informações e é frequentemente explorada pela banca
+                            <strong>CESGRANRIO</strong>.
+                        </p>
+
+                        <p>
+                            Outra característica essencial é a <strong>integração</strong>. Como os dados são
+                            oriundos de <strong>múltiplas fontes</strong>, torna-se necessário padronizar
+                            formatos, códigos e unidades de medida, garantindo uma <strong>representação única
+                                da informação</strong>. Assim, dados equivalentes, mesmo provenientes de sistemas
+                            distintos, podem ser analisados de forma consistente.
+                        </p>
+
+                        <p>
+                            O Data Warehouse também é <strong>orientado por assunto</strong>, organizando os
+                            dados em torno de temas relevantes para o negócio, como <strong>clientes</strong>,
+                            <strong>produtos</strong>, <strong>vendas</strong> ou <strong>tempo</strong>. Essa
+                            abordagem difere dos sistemas transacionais, que são orientados a
+                            <strong>processos</strong>.
+                        </p>
+
+                        <p>
+                            Por fim, o Data Warehouse é <strong>histórico</strong>, ou
+                            <strong>variante no tempo</strong>. Cada registro possui um componente temporal,
+                            permitindo análises comparativas ao longo dos anos e possibilitando a identificação
+                            de <strong>tendências</strong>, algo que não é viável em sistemas operacionais
+                            tradicionais.
+                        </p>
+
+                        <div class="tip-box mt-3">
+                            <strong>Resumo — Características do DW:</strong><br><br>
+
+                            <strong>Não volátil</strong><br>
+                            dados estáveis, orientados à consulta, sem atualizações operacionais frequentes.<br><br>
+
+                            <strong>Integrado</strong><br>
+                            dados consolidados e padronizados a partir de múltiplas fontes.<br><br>
+
+                            <strong>Orientado por assunto</strong><br>
+                            organização por temas do negócio, não por processos.<br><br>
+
+                            <strong>Variante no tempo</strong><br>
+                            dados históricos com possibilidade de comparação entre períodos e análise de tendências.
+                        </div>
+                    </div>
+                </div>
+
+
+                <!-- ETL -->
+                <div class="card nivelamento-card mb-4">
+                    <div class="card-body">
+                        <h4 class="mb-3">ETL – Extração, Transformação e Carga</h4>
+
+                        <p>
+                            Para que os dados sejam armazenados no <strong>Data Warehouse</strong> de forma
+                            adequada, utiliza-se o processo conhecido como <strong>ETL</strong>, sigla para
+                            <strong>Extração</strong>, <strong>Transformação</strong> e <strong>Carga</strong>.
+                            Esse processo é responsável por alimentar periodicamente o Data Warehouse,
+                            respeitando suas características de integração, não volatilidade e orientação à
+                            consulta.
+                        </p>
+
+                        <p>
+                            Durante o processo de <strong>ETL</strong>, é comum a utilização de uma área intermediária
+                            chamada <strong>Staging Area</strong>. Essa área funciona como um <strong>repositório
+                                temporário</strong>,
+                            no qual os dados extraídos são armazenados antes das etapas de transformação e carga,
+                            evitando impacto direto nos sistemas operacionais e facilitando o tratamento dos dados.
+                        </p>
+
+
+                        <p>
+                            Na etapa de <strong>extração</strong>, os dados são coletados a partir dos
+                            <strong>sistemas de origem</strong>, como bancos de dados transacionais (OLTP),
+                            planilhas, sistemas legados ou fontes externas. Nessa fase, os dados ainda se
+                            encontram no formato original em que foram gerados.
+                        </p>
+
+                        <p>
+                            A <strong>transformação</strong> é considerada a etapa mais crítica do processo.
+                            Nela, os dados passam por atividades de <strong>limpeza</strong>,
+                            <strong>validação</strong>, <strong>padronização</strong> e
+                            <strong>consolidação</strong>. É nesse momento que se garante a
+                            <strong>qualidade</strong>, a <strong>consistência</strong> e a
+                            <strong>integração</strong> das informações provenientes de múltiplas fontes.
+                        </p>
+
+                        <p>
+                            Por fim, a etapa de <strong>carga</strong> consiste na inserção física dos dados já
+                            tratados no <strong>Data Warehouse</strong>, seguindo o modelo adotado pela
+                            organização. A carga ocorre de forma <strong>periódica</strong>, e não em tempo
+                            real, reforçando a característica de <strong>não volatilidade</strong> do DW.
+                        </p>
+
+                        <div class="tip-box mt-3">
+                            <strong>Resumo — ETL:</strong><br><br>
+
+                            <strong>Extração</strong><br>
+                            coleta de dados a partir de sistemas de origem (OLTP e fontes externas).<br><br>
+
+                            <strong>Staging Area</strong><br>
+                            área intermediária temporária para armazenamento dos dados extraídos, reduzindo impacto
+                            nos sistemas operacionais e facilitando o tratamento dos dados.<br><br>
+
+                            <strong>Transformação</strong><br>
+                            limpeza, validação, padronização e consolidação dos dados.<br><br>
+
+                            <strong>Carga</strong><br>
+                            inserção periódica dos dados tratados no Data Warehouse.<br><br>
+
+                            <strong>Relação com o DW:</strong><br>
+                            o ETL garante dados integrados, históricos, estáveis e orientados à consulta.
+                        </div>
+                    </div>
+                </div>
+
+
+                <!-- ELT E DATA LAKE -->
+                <div class="card nivelamento-card mb-4">
+                    <div class="card-body">
+                        <h4 class="mb-3">ELT e Data Lake</h4>
+
+                        <p>
+                            Em arquiteturas modernas, especialmente associadas a ambientes de
+                            <strong>Big Data</strong> e computação em nuvem, pode-se utilizar a abordagem
+                            <strong>ELT</strong> (Extract, Load, Transform). Diferentemente do ETL tradicional,
+                            nessa abordagem os dados são <strong>extraídos</strong> das fontes de origem,
+                            <strong>carregados</strong> diretamente no ambiente de destino e
+                            <strong>transformados posteriormente</strong>, utilizando o próprio poder de
+                            processamento desse ambiente.
+                        </p>
+
+                        <p>
+                            A abordagem ELT tornou-se viável devido ao aumento da capacidade de armazenamento e
+                            processamento dos sistemas modernos, permitindo que grandes volumes de dados sejam
+                            carregados rapidamente e transformados conforme a necessidade das análises.
+                        </p>
+
+                        <p>
+                            Nesse contexto, surge o <strong>Data Lake</strong>, um repositório destinado ao
+                            armazenamento de <strong>grandes volumes de dados</strong> em formato
+                            <strong>bruto</strong>, incluindo dados estruturados, semiestruturados e não
+                            estruturados. Diferentemente do Data Warehouse, o Data Lake adota o conceito de
+                            <strong>esquema na leitura</strong> (<em>schema-on-read</em>).
+                        </p>
+
+                        <p>
+                            No <strong>Data Lake</strong>, a <strong>lógica de negócios</strong> e a
+                            <strong>transformação dos dados</strong> são aplicadas <strong>no momento do acesso</strong>
+                            às informações, geralmente por meio de consultas <strong>ad hoc</strong> e de forma
+                            <strong>temporária</strong>. Essas transformações são realizadas para atender a
+                            análises específicas e, em regra, <strong>não são persistidas</strong> no banco de
+                            dados, diferentemente do que ocorre no Data Warehouse.
+                        </p>
+
+                        <div class="tip-box mt-3">
+                            <strong>Resumo — ELT e Data Lake:</strong><br><br>
+
+                            <strong>ELT</strong><br>
+                            extrai, carrega os dados no destino e transforma posteriormente.<br><br>
+
+                            <strong>Data Lake</strong><br>
+                            dados brutos, esquema na leitura e transformações <strong>ad hoc</strong> aplicadas no
+                            acesso.<br><br>
+
+                            <strong>Lógica de negócios</strong><br>
+                            aplicada durante a leitura dos dados, de forma temporária e sem persistência no
+                            SGBD.<br><br>
+
+                            <strong>Diferença em relação ao DW</strong><br>
+                            o DW transforma e armazena dados tratados; o Data Lake armazena dados brutos.
+                        </div>
+                    </div>
+                </div>
+
+                <!-- DATA WAREHOUSE x DATA LAKE x DATA MART -->
+                <div class="card nivelamento-card mb-4">
+                    <div class="card-body">
+                        <h4 class="mb-3">Data Warehouse × Data Lake × Data Mart</h4>
+
+                        <p>
+                            No contexto de Business Intelligence e Analytics, é fundamental compreender as
+                            diferenças entre <strong>Data Warehouse</strong>, <strong>Data Lake</strong> e
+                            <strong>Data Mart</strong>. Embora todos sejam repositórios de dados, eles possuem
+                            finalidades, características e níveis de granularidade distintos.
+                        </p>
+
+                        <p>
+                            O <strong>Data Warehouse</strong> é um repositório corporativo centralizado, voltado
+                            ao <strong>apoio à tomada de decisão</strong>. Ele armazena dados
+                            <strong>históricos</strong>, <strong>integrados</strong> e
+                            <strong>pré-tratados</strong>, organizados segundo um <strong>esquema na escrita</strong>
+                            (<em>schema-on-write</em>). Sua principal característica é a estabilidade, sendo
+                            orientado à consulta e à análise.
+                        </p>
+
+                        <p>
+                            O <strong>Data Lake</strong>, por sua vez, armazena grandes volumes de dados em seu
+                            <strong>formato bruto</strong>, incluindo dados estruturados, semiestruturados e não
+                            estruturados. Ele utiliza a abordagem de <strong>esquema na leitura</strong>
+                            (<em>schema-on-read</em>), na qual a <strong>lógica de negócios</strong> e as
+                            <strong>transformações</strong> são aplicadas <strong>no momento do acesso</strong>,
+                            geralmente por meio de consultas <strong>ad hoc</strong>, de forma temporária e sem
+                            persistência no SGBD.
+                        </p>
+
+                        <p>
+                            O <strong>Data Mart</strong> é um subconjunto do Data Warehouse, voltado a uma
+                            <strong>área específica do negócio</strong>, como vendas, finanças ou marketing.
+                            Seu objetivo é fornecer acesso mais rápido e direcionado às informações relevantes
+                            para determinado departamento ou unidade organizacional.
+                        </p>
+
+                        <div class="tip-box mt-3">
+                            <strong>Resumo comparativo:</strong><br><br>
+
+                            <strong>Data Warehouse</strong><br>
+                            dados históricos, integrados e tratados; esquema na escrita; foco em decisão
+                            estratégica.<br><br>
+
+                            <strong>Data Lake</strong><br>
+                            dados brutos, estruturados e não estruturados; esquema na leitura; transformações
+                            <strong>ad hoc</strong> no acesso.<br><br>
+
+                            <strong>Data Mart</strong><br>
+                            subconjunto do DW; foco em um tema ou departamento específico; acesso direcionado.
+                        </div>
+                    </div>
+                </div>
+
+
+
+                <!-- MODELAGEM DIMENSIONAL -->
+                <div class="card nivelamento-card mb-4">
+                    <div class="card-body">
+                        <h4 class="mb-3">Modelagem Dimensional</h4>
+
+                        <p>
+                            A <strong>modelagem dimensional</strong> é a abordagem mais utilizada em
+                            <strong>Data Warehouses</strong>, sendo voltada especificamente ao
+                            <strong>processamento analítico</strong>. Ela é composta por
+                            <strong>tabelas fato</strong> e <strong>tabelas dimensão</strong>.
+                            As tabelas fato armazenam as <strong>medidas quantitativas</strong> do negócio,
+                            enquanto as tabelas dimensão armazenam <strong>dados descritivos</strong> que
+                            contextualizam essas medidas.
+                        </p>
+
+                        <p>
+                            O <strong>esquema estrela</strong> é o modelo mais comum, no qual a tabela fato
+                            ocupa a posição central e se conecta diretamente às tabelas dimensão. Esse modelo
+                            oferece <strong>melhor desempenho</strong> por exigir menos junções.
+                        </p>
+
+                        <p>
+                            Já o <strong>esquema floco de neve</strong> é uma extensão do modelo estrela, com
+                            dimensões normalizadas, o que reduz redundâncias, mas aumenta a
+                            <strong>complexidade</strong> e o custo das consultas.
+                        </p>
+
+                        <p>
+                            A partir da modelagem dimensional, pode-se construir o chamado
+                            <strong>Cubo de Dados</strong>, uma estrutura lógica utilizada em sistemas
+                            <strong>OLAP</strong>. O cubo organiza os dados da tabela fato segundo múltiplas
+                            <strong>dimensões</strong> (como tempo, produto e localização), permitindo
+                            análises multidimensionais e operações como <em>drill-down</em>,
+                            <em>roll-up</em>, <em>slice</em> e <em>dice</em>.
+                        </p>
+
+                        <!-- CUBO OLAP (VISUAL) + PIVOT (ROTATION) + DIMENSÕES DINÂMICAS + MINI-TABELA -->
+                        <div class="card nivelamento-card mb-4">
+                            <div class="card-body">
+                                <h4 class="mb-3">Cubo de Dados (OLAP) — Pivot, Dimensões e Visão em Tabela</h4>
+
+                                <p class="mb-3">
+                                    O <strong>pivot</strong> em OLAP é a reorganização das dimensões
+                                    (linhas/colunas/filtro),
+                                    mudando a perspectiva da análise. A rotação do cubo abaixo representa essa mudança,
+                                    e a
+                                    mini-tabela simula a “visão” resultante.
+                                </p>
+
+                                <div class="row g-3 align-items-start">
+                                    <!-- CUBO -->
+                                    <div class="col-12 col-lg-6">
+                                        <div class="olap-scene" aria-label="Cubo OLAP demonstrativo">
+                                            <div id="olapCube2" class="olap-cube">
+                                                <div class="face front">
+                                                    <div class="face-title">FRONT</div>
+                                                    <div class="face-sub" data-face="front"></div>
+                                                </div>
+                                                <div class="face back">
+                                                    <div class="face-title">BACK</div>
+                                                    <div class="face-sub" data-face="back"></div>
+                                                </div>
+                                                <div class="face right">
+                                                    <div class="face-title">RIGHT</div>
+                                                    <div class="face-sub" data-face="right"></div>
+                                                </div>
+                                                <div class="face left">
+                                                    <div class="face-title">LEFT</div>
+                                                    <div class="face-sub" data-face="left"></div>
+                                                </div>
+                                                <div class="face top">
+                                                    <div class="face-title">TOP</div>
+                                                    <div class="face-sub" data-face="top"></div>
+                                                </div>
+                                                <div class="face bottom">
+                                                    <div class="face-title">BOTTOM</div>
+                                                    <div class="face-sub" data-face="bottom"></div>
+                                                </div>
+                                            </div>
+                                        </div>
+
+                                        <div class="d-flex flex-wrap gap-2 justify-content-center mt-3">
+                                            <button type="button" class="btn btn-outline-primary btn-sm"
+                                                data-olap-rotate="left">⟲ Pivot (esq)</button>
+                                            <button type="button" class="btn btn-outline-primary btn-sm"
+                                                data-olap-rotate="right">⟳ Pivot (dir)</button>
+                                            <button type="button" class="btn btn-outline-primary btn-sm"
+                                                data-olap-rotate="up">↑ Pivot (cima)</button>
+                                            <button type="button" class="btn btn-outline-primary btn-sm"
+                                                data-olap-rotate="down">↓ Pivot (baixo)</button>
+                                            <button type="button" class="btn btn-outline-secondary btn-sm"
+                                                data-olap-rotate="reset">Reset</button>
+                                        </div>
+
+                                        <small class="text-muted d-block text-center mt-2">
+                                            A rotação é uma metáfora visual: <strong>pivot</strong> = trocar a
+                                            perspectiva (dimensões).
+                                        </small>
+                                    </div>
+
+                                    <!-- DIMENSÕES + TABELA -->
+                                    <div class="col-12 col-lg-6">
+                                        <div class="tip-box mb-3">
+                                            <strong>Configuração atual (pivot):</strong><br><br>
+                                            <strong>Linhas:</strong> <span id="olapRows">—</span><br>
+                                            <strong>Colunas:</strong> <span id="olapCols">—</span><br>
+                                            <strong>Filtro:</strong> <span id="olapFilter">—</span><br>
+                                            <small class="text-muted d-block mt-2">
+                                                Exemplo: Linhas = Produto, Colunas = Tempo, Filtro = Região.
+                                            </small>
+                                        </div>
+
+                                        <div class="table-responsive">
+                                            <table class="table table-sm table-bordered align-middle mb-0">
+                                                <thead>
+                                                    <tr>
+                                                        <th style="min-width: 140px;" id="olapCorner">—</th>
+                                                        <th id="olapColH1">—</th>
+                                                        <th id="olapColH2">—</th>
+                                                        <th id="olapColH3">—</th>
+                                                    </tr>
+                                                </thead>
+                                                <tbody id="olapBody">
+                                                    <!-- preenchido via JS -->
+                                                </tbody>
+                                            </table>
+                                        </div>
+
+                                        <div class="tip-box mt-3">
+                                            <strong>Leitura rápida (prova):</strong><br><br>
+                                            <strong>Drill-down</strong> → mais detalhe (↑ granularidade)<br>
+                                            <strong>Roll-up</strong> → mais agregação (↓ granularidade)<br>
+                                            <strong>Slice/Dice</strong> → “recortes” do cubo<br>
+                                            <strong>Pivot</strong> → reorganiza dimensões (linhas/colunas)
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                        <style>
+                            /* === Cubo OLAP (visual) === */
+                            .olap-scene {
+                                width: 100%;
+                                max-width: 360px;
+                                aspect-ratio: 1 / 1;
+                                margin: 0 auto;
+                                perspective: 900px;
+                                display: grid;
+                                place-items: center;
+                            }
+
+                            .olap-cube {
+                                width: 240px;
+                                height: 240px;
+                                position: relative;
+                                transform-style: preserve-3d;
+                                transform: rotateX(-20deg) rotateY(30deg);
+                                transition: transform 280ms ease;
+                            }
+
+                            .olap-cube .face {
+                                position: absolute;
+                                width: 240px;
+                                height: 240px;
+                                display: grid;
+                                place-items: center;
+                                border-radius: 14px;
+                                border: 1px solid rgba(0, 0, 0, .18);
+                                background: rgba(255, 255, 255, .88);
+                                box-shadow: 0 10px 25px rgba(0, 0, 0, .12);
+                                text-align: center;
+                                padding: 14px;
+                                backface-visibility: hidden;
+                            }
+
+                            .olap-cube .face-title {
+                                font-weight: 800;
+                                letter-spacing: .06em;
+                            }
+
+                            .olap-cube .face-sub {
+                                font-size: .95rem;
+                                opacity: .9;
+                                max-width: 90%;
+                                line-height: 1.2;
+                            }
+
+                            /* 3D positioning */
+                            .olap-cube .front {
+                                transform: translateZ(120px);
+                            }
+
+                            .olap-cube .back {
+                                transform: rotateY(180deg) translateZ(120px);
+                            }
+
+                            .olap-cube .right {
+                                transform: rotateY(90deg) translateZ(120px);
+                            }
+
+                            .olap-cube .left {
+                                transform: rotateY(-90deg) translateZ(120px);
+                            }
+
+                            .olap-cube .top {
+                                transform: rotateX(90deg) translateZ(120px);
+                            }
+
+                            .olap-cube .bottom {
+                                transform: rotateX(-90deg) translateZ(120px);
+                            }
+
+                            /* Responsivo */
+                            @media (max-width: 420px) {
+
+                                .olap-cube,
+                                .olap-cube .face {
+                                    width: 210px;
+                                    height: 210px;
+                                }
+
+                                .olap-cube .front {
+                                    transform: translateZ(105px);
+                                }
+
+                                .olap-cube .back {
+                                    transform: rotateY(180deg) translateZ(105px);
+                                }
+
+                                .olap-cube .right {
+                                    transform: rotateY(90deg) translateZ(105px);
+                                }
+
+                                .olap-cube .left {
+                                    transform: rotateY(-90deg) translateZ(105px);
+                                }
+
+                                .olap-cube .top {
+                                    transform: rotateX(90deg) translateZ(105px);
+                                }
+
+                                .olap-cube .bottom {
+                                    transform: rotateX(-90deg) translateZ(105px);
+                                }
+                            }
+                        </style>
+
+                        <script>
+                            (function () {
+                                const cube = document.getElementById("olapCube2");
+                                if (!cube) return;
+
+                                // UI refs
+                                const ui = {
+                                    rows: document.getElementById("olapRows"),
+                                    cols: document.getElementById("olapCols"),
+                                    filter: document.getElementById("olapFilter"),
+                                    corner: document.getElementById("olapCorner"),
+                                    colH: [
+                                        document.getElementById("olapColH1"),
+                                        document.getElementById("olapColH2"),
+                                        document.getElementById("olapColH3"),
+                                    ],
+                                    body: document.getElementById("olapBody"),
+                                    faces: {
+                                        front: document.querySelector('[data-face="front"]'),
+                                        back: document.querySelector('[data-face="back"]'),
+                                        right: document.querySelector('[data-face="right"]'),
+                                        left: document.querySelector('[data-face="left"]'),
+                                        top: document.querySelector('[data-face="top"]'),
+                                        bottom: document.querySelector('[data-face="bottom"]'),
+                                    }
+                                };
+
+                                // Estados (metáfora): cada estado define "Linhas/Colunas/Filtro"
+                                // Você pode editar os nomes das dimensões aqui (Tempo, Produto, Região, Canal etc.)
+                                const states = [
+                                    {
+                                        name: "Tempo × Produto | Filtro: Região",
+                                        rows: "Produto",
+                                        cols: "Tempo",
+                                        filter: "Região (SP)",
+                                        colsValues: ["2023", "2024", "2025"],
+                                        rowsValues: ["Café", "Chá", "Suco"],
+                                        // valores ilustrativos (3x3)
+                                        values: [
+                                            [120, 140, 160],
+                                            [80, 90, 110],
+                                            [60, 75, 95]
+                                        ],
+                                        // rótulos do cubo (só didático)
+                                        faces: {
+                                            front: "Tempo × Produto",
+                                            back: "Tempo × Canal",
+                                            right: "Produto × Região",
+                                            left: "Produto × Canal",
+                                            top: "Região × Canal",
+                                            bottom: "Tempo × Região"
+                                        }
+                                    },
+                                    {
+                                        name: "Região × Produto | Filtro: Tempo",
+                                        rows: "Produto",
+                                        cols: "Região",
+                                        filter: "Tempo (2025)",
+                                        colsValues: ["SP", "RJ", "MG"],
+                                        rowsValues: ["Café", "Chá", "Suco"],
+                                        values: [
+                                            [160, 120, 90],
+                                            [110, 80, 70],
+                                            [95, 60, 55]
+                                        ],
+                                        faces: {
+                                            front: "Região × Produto",
+                                            back: "Região × Canal",
+                                            right: "Produto × Tempo",
+                                            left: "Produto × Canal",
+                                            top: "Tempo × Canal",
+                                            bottom: "Tempo × Região"
+                                        }
+                                    },
+                                    {
+                                        name: "Tempo × Região | Filtro: Produto",
+                                        rows: "Região",
+                                        cols: "Tempo",
+                                        filter: "Produto (Café)",
+                                        colsValues: ["2023", "2024", "2025"],
+                                        rowsValues: ["SP", "RJ", "MG"],
+                                        values: [
+                                            [120, 140, 160],
+                                            [90, 100, 120],
+                                            [70, 85, 95]
+                                        ],
+                                        faces: {
+                                            front: "Tempo × Região",
+                                            back: "Tempo × Canal",
+                                            right: "Região × Produto",
+                                            left: "Região × Canal",
+                                            top: "Produto × Canal",
+                                            bottom: "Produto × Tempo"
+                                        }
+                                    },
+                                    {
+                                        name: "Canal × Tempo | Filtro: Região",
+                                        rows: "Canal",
+                                        cols: "Tempo",
+                                        filter: "Região (SP)",
+                                        colsValues: ["2023", "2024", "2025"],
+                                        rowsValues: ["Loja", "Online", "Parceiros"],
+                                        values: [
+                                            [55, 60, 70],
+                                            [40, 55, 65],
+                                            [25, 30, 35]
+                                        ],
+                                        faces: {
+                                            front: "Canal × Tempo",
+                                            back: "Canal × Produto",
+                                            right: "Tempo × Região",
+                                            left: "Tempo × Produto",
+                                            top: "Região × Produto",
+                                            bottom: "Região × Canal"
+                                        }
+                                    }
+                                ];
+
+                                // Rotação visual (apenas metáfora)
+                                let rotX = -20;
+                                let rotY = 30;
+                                const step = 20;
+
+                                // Estado atual (índice)
+                                let idx = 0;
+
+                                function renderCubeRotation() {
+                                    cube.style.transform = `rotateX(${rotX}deg) rotateY(${rotY}deg)`;
+                                }
+
+                                function renderState() {
+                                    const s = states[idx];
+
+                                    // atualizar resumo
+                                    ui.rows.textContent = s.rows;
+                                    ui.cols.textContent = s.cols;
+                                    ui.filter.textContent = s.filter;
+
+                                    // atualizar faces
+                                    Object.entries(s.faces).forEach(([k, v]) => {
+                                        if (ui.faces[k]) ui.faces[k].textContent = v;
+                                    });
+
+                                    // atualizar tabela
+                                    ui.corner.textContent = s.rows;
+                                    ui.colH.forEach((th, i) => th.textContent = s.colsValues[i] ?? "—");
+
+                                    ui.body.innerHTML = "";
+                                    s.rowsValues.forEach((rName, r) => {
+                                        const tr = document.createElement("tr");
+                                        const th = document.createElement("th");
+                                        th.scope = "row";
+                                        th.textContent = rName;
+                                        tr.appendChild(th);
+
+                                        for (let c = 0; c < 3; c++) {
+                                            const td = document.createElement("td");
+                                            td.textContent = String(s.values[r][c]);
+                                            tr.appendChild(td);
+                                        }
+
+                                        ui.body.appendChild(tr);
+                                    });
+                                }
+
+                                function pivot(dir) {
+                                    // rotação visual
+                                    switch (dir) {
+                                        case "left": rotY -= step; break;
+                                        case "right": rotY += step; break;
+                                        case "up": rotX -= step; break;
+                                        case "down": rotX += step; break;
+                                        case "reset": rotX = -20; rotY = 30; idx = 0; break;
+                                        default: return;
+                                    }
+                                    renderCubeRotation();
+
+                                    // mudar o "estado" (metáfora de pivot)
+                                    if (dir !== "reset") {
+                                        idx = (idx + 1) % states.length;
+                                    }
+                                    renderState();
+                                }
+
+                                // Click nos botões (escopo específico para não conflitar com outros cards)
+                                document.addEventListener("click", (e) => {
+                                    const btn = e.target.closest("[data-olap-rotate]");
+                                    if (!btn) return;
+                                    pivot(btn.getAttribute("data-olap-rotate"));
+                                });
+
+                                // Inicial
+                                renderCubeRotation();
+                                renderState();
+                            })();
+                        </script>
+
+
+
+
+                        <div class="tip-box mt-3">
+                            <strong>Resumo — Modelagem Dimensional:</strong><br><br>
+
+                            <strong>Tabela Fato</strong><br>
+                            armazena medidas quantitativas e chaves estrangeiras das dimensões.<br><br>
+
+                            <strong>Tabela Dimensão</strong><br>
+                            armazena atributos descritivos que contextualizam os fatos.<br><br>
+
+                            <strong>Esquema Estrela</strong><br>
+                            simples, poucas junções, melhor desempenho.<br><br>
+
+                            <strong>Esquema Floco de Neve</strong><br>
+                            dimensões normalizadas, menos redundância, maior complexidade.<br><br>
+
+                            <strong>Cubo de Dados (OLAP)</strong><br>
+                            estrutura multidimensional que permite análises por diferentes perspectivas.
+                        </div>
+                    </div>
+                </div>
+
+                <!-- OLAP -->
+                <div class="card nivelamento-card mb-4">
+                    <div class="card-body">
+                        <h4 class="mb-3">OLAP, Granularidade e Soluções DW</h4>
+
+                        <p>
+                            A análise dos dados do <strong>Data Warehouse</strong> é realizada por meio de
+                            <strong>operações OLAP</strong>, que permitem diferentes formas de visualização,
+                            agregação e detalhamento das informações. Essas operações estão diretamente
+                            relacionadas ao conceito de <strong>granularidade</strong>, que define o nível de
+                            detalhe dos dados armazenados.
+                        </p>
+
+                        <p>
+                            O <strong>drill-down</strong> permite aumentar o nível de detalhamento dos dados,
+                            passando de uma visão mais agregada para uma mais detalhada (por exemplo, de ano
+                            para mês ou de mês para dia). Já o <strong>roll-up</strong> realiza o movimento
+                            inverso, consolidando os dados em níveis mais agregados.
+                        </p>
+
+                        <p>
+                            A operação <strong>slice</strong> consiste em selecionar um único valor de uma
+                            dimensão, gerando uma visão parcial do cubo de dados (por exemplo, analisar as
+                            vendas de um único ano). Já o <strong>dice</strong> permite selecionar múltiplos
+                            valores em uma ou mais dimensões, produzindo um subcubo com critérios específicos
+                            (por exemplo, vendas de determinados produtos em regiões específicas).
+                        </p>
+
+                        <p>
+                            Além disso, a operação <strong>pivot</strong> possibilita a reorganização das
+                            dimensões do cubo de dados, alterando a forma de visualização das informações sem
+                            modificar os dados em si.
+                        </p>
+
+                        <p>
+                            Quanto às soluções de <strong>Data Warehouse</strong>, destacam-se o
+                            <strong>ROLAP</strong>, baseado em bancos de dados relacionais, o
+                            <strong>MOLAP</strong>, que utiliza estruturas multidimensionais, e o
+                            <strong>HOLAP</strong>, que combina características das duas abordagens. Essas
+                            classificações são recorrentes nas provas da <strong>CESGRANRIO</strong>.
+                        </p>
+
+                        <div class="tip-box mt-3">
+                            <strong>Resumo — Operações OLAP:</strong><br><br>
+
+                            <strong>Drill-down</strong><br>
+                            aumenta o nível de detalhe (mais granular).<br><br>
+
+                            <strong>Roll-up</strong><br>
+                            reduz o nível de detalhe, consolidando os dados.<br><br>
+
+                            <strong>Slice</strong><br>
+                            seleciona um único valor de uma dimensão.<br><br>
+
+                            <strong>Dice</strong><br>
+                            seleciona múltiplos valores em uma ou mais dimensões.<br><br>
+
+                            <strong>Pivot</strong><br>
+                            reorganiza a visualização das dimensões.
+                        </div>
+                    </div>
+                </div>
+
+                <!-- OLTP x OLAP -->
+                <div class="card nivelamento-card mb-4">
+                    <div class="card-body">
+                        <h4 class="mb-3">OLTP × OLAP</h4>
+
+                        <p>
+                            Os sistemas <strong>OLTP</strong> (Online Transaction Processing) e
+                            <strong>OLAP</strong> (Online Analytical Processing) possuem finalidades distintas
+                            dentro da arquitetura de dados de uma organização. Enquanto o OLTP está voltado
+                            às <strong>operações do dia a dia</strong>, o OLAP é direcionado à
+                            <strong>análise de dados</strong> e ao <strong>apoio à tomada de decisão</strong>.
+                        </p>
+
+                        <p>
+                            Os sistemas <strong>OLTP</strong> lidam com um grande volume de
+                            <strong>transações curtas</strong>, envolvendo operações frequentes de
+                            <strong>inserção</strong>, <strong>atualização</strong> e <strong>remoção</strong>
+                            de dados. Já os sistemas <strong>OLAP</strong> realizam
+                            <strong>consultas complexas</strong>, com múltiplas agregações, acessando dados
+                            históricos armazenados em <strong>Data Warehouses</strong>.
+                        </p>
+
+                        <p>
+                            Outra diferença relevante está na estrutura dos dados. O <strong>OLTP</strong>
+                            utiliza modelos altamente <strong>normalizados</strong>, visando integridade e
+                            desempenho transacional. O <strong>OLAP</strong>, por sua vez, utiliza
+                            <strong>modelagem dimensional</strong>, com tabelas fato e dimensão, otimizadas
+                            para consultas analíticas.
+                        </p>
+
+                        <div class="tip-box mt-3">
+                            <strong>Resumo comparativo — OLTP × OLAP:</strong><br><br>
+
+                            <strong>OLTP</strong><br>
+                            foco operacional; dados atuais; transações frequentes; muitas operações
+                            INSERT/UPDATE/DELETE; modelo normalizado.<br><br>
+
+                            <strong>OLAP</strong><br>
+                            foco analítico; dados históricos; consultas complexas; poucas alterações;
+                            modelagem dimensional.<br><br>
+
+                            <strong>Objetivo principal</strong><br>
+                            OLTP → executar operações do negócio – transações (<em>transactions</em>)<br>
+                            OLAP → apoiar decisões gerenciais e estratégicas – análises (<em>analytics</em>)
+
+                        </div>
+                    </div>
+                </div>
+
+                <!-- RESUMO FINAL — DATA WAREHOUSE -->
+                <div class="card nivelamento-card mb-5">
+                    <div class="card-body">
+                        <h4 class="mb-3">Resumo Final — Data Warehouse (Checklist de Prova)</h4>
+
+                        <div class="tip-box">
+                            <strong>1️⃣ Dados Transacionais (OLTP)</strong><br>
+                            eventos individuais do negócio; dados atuais; alto nível de detalhe; muitas
+                            operações INSERT/UPDATE/DELETE; foco operacional.<br><br>
+
+                            <strong>2️⃣ Dados Analíticos (OLAP)</strong><br>
+                            dados históricos; consolidados e agregados; foco em análise, consulta e tomada
+                            de decisão.<br><br>
+
+                            <strong>3️⃣ Data Warehouse (DW)</strong><br>
+                            repositório de apoio à decisão; dados históricos, integrados, orientados à consulta;
+                            esquema na escrita (<em>schema-on-write</em>).<br><br>
+
+                            <strong>Características do DW (Inmon)</strong><br>
+                            • Orientado por assunto<br>
+                            • Integrado<br>
+                            • Variante no tempo (histórico)<br>
+                            • Não volátil (estável, sem atualizações operacionais frequentes)<br><br>
+
+                            <strong>4️⃣ ETL</strong><br>
+                            processo de alimentação do DW: Extração → Staging Area → Transformação → Carga;
+                            carga periódica; garante integração, qualidade e histórico.<br><br>
+
+                            <strong>5️⃣ Staging Area</strong><br>
+                            área intermediária temporária no ETL; reduz impacto no OLTP; facilita limpeza,
+                            padronização e reprocessamento.<br><br>
+
+                            <strong>6️⃣ ELT</strong><br>
+                            extrai, carrega os dados no destino e transforma posteriormente; comum em ambientes
+                            modernos e Big Data.<br><br>
+
+                            <strong>7️⃣ Data Lake</strong><br>
+                            armazena dados brutos (estruturados e não estruturados); esquema na leitura
+                            (<em>schema-on-read</em>); transformações e lógica de negócios aplicadas no acesso,
+                            geralmente de forma <strong>ad hoc</strong> e não persistida.<br><br>
+
+                            <strong>8️⃣ Data Mart</strong><br>
+                            subconjunto do Data Warehouse; foco em uma área ou departamento específico do
+                            negócio.<br><br>
+
+                            <strong>9️⃣ Modelagem Dimensional</strong><br>
+                            composta por tabelas fato (medidas) e dimensão (atributos); esquemas estrela e
+                            floco de neve; base para OLAP.<br><br>
+
+                            <strong>🔟 Cubo de Dados</strong><br>
+                            estrutura multidimensional que organiza fatos por dimensões; permite análises OLAP.<br><br>
+
+                            <strong>1️⃣1️⃣ Operações OLAP</strong><br>
+                            • Drill-down → mais detalhe<br>
+                            • Roll-up → mais agregação<br>
+                            • Slice → um valor de uma dimensão<br>
+                            • Dice → múltiplos valores/dimensões<br>
+                            • Pivot → reorganização da visualização<br><br>
+
+                            <strong>1️⃣2️⃣ OLTP × OLAP</strong><br>
+                            OLTP → operações do negócio – transações (<em>transactions</em>)<br>
+                            OLAP → apoio à decisão – análises (<em>analytics</em>)
+                        </div>
+                    </div>
+                </div>
+
+            </section>
+
+            <!-- ======================================================
+                 QUESTÕES INTERATIVAS (TODAS AQUI DENTRO)
+            ======================================================= -->
+            <section class="col-md-10 col-lg-8 mx-auto">
+
+                <!-- ==========================
+                     QUIZZES INTERATIVOS — DW/ETL/OLAP (REUTILIZÁVEL)
+                ========================== -->
+                <div class="card nivelamento-card mb-4" id="quiz-pack-dw">
+                    <div class="card-body">
+                        <h4 class="mb-2">Questões Interativas — Data Warehouse, ETL e OLAP</h4>
+                        <p class="mb-0 text-muted">
+                            Marque a alternativa, clique em <strong>Corrigir</strong> e, se quiser, abra o
+                            <strong>Gabarito
+                                comentado</strong>.
+                        </p>
+                    </div>
+                </div>
+
+                <!-- Q1 -->
+                <div class="card nivelamento-card mb-4 quiz-card">
+                    <div class="card-body">
+                        <h5 class="mb-2">Questão 1 — Conceito de Data Warehouse</h5>
+                        <p>Um <strong>Data Warehouse</strong> pode ser corretamente definido como uma coleção de dados:
+                        </p>
+
+                        <form class="quiz-form" data-answer="B">
+                            <div class="quiz-options">
+                                <label class="quiz-option"><input type="radio" name="q1" value="A"><span>A) orientada
+                                        por
+                                        processos, integrada, não variante no tempo e volátil</span></label>
+                                <label class="quiz-option"><input type="radio" name="q1" value="B"><span>B) orientada
+                                        por
+                                        assunto, integrada, variante no tempo e não volátil</span></label>
+                                <label class="quiz-option"><input type="radio" name="q1" value="C"><span>C) orientada
+                                        por
+                                        assunto, descentralizada, não variante no tempo e volátil</span></label>
+                                <label class="quiz-option"><input type="radio" name="q1" value="D"><span>D) orientada
+                                        por
+                                        processos, integrada, variante no tempo e volátil</span></label>
+                                <label class="quiz-option"><input type="radio" name="q1" value="E"><span>E) orientada
+                                        por
+                                        assunto, não integrada, variante no tempo e volátil</span></label>
+                            </div>
+
+                            <div class="d-flex flex-wrap gap-2 mt-3">
+                                <button type="button" class="btn btn-primary btn-sm"
+                                    data-action="check">Corrigir</button>
+                                <button type="button" class="btn btn-outline-secondary btn-sm"
+                                    data-action="toggle">Gabarito
+                                    comentado</button>
+                                <button type="button" class="btn btn-outline-danger btn-sm"
+                                    data-action="reset">Limpar</button>
+                            </div>
+
+                            <div class="quiz-feedback mt-3" aria-live="polite"></div>
+
+                            <div class="tip-box mt-3 quiz-solution d-none">
+                                <strong>Gabarito: B</strong><br><br>
+                                <strong>Comentário:</strong> Pela definição clássica (Inmon), DW é <strong>orientado por
+                                    assunto</strong>,
+                                <strong>integrado</strong>, <strong>variante no tempo</strong> (histórico) e <strong>não
+                                    volátil</strong>
+                                (estável, voltado à consulta, sem atualizações operacionais frequentes). As alternativas
+                                com
+                                “volátil”
+                                e/ou “não variante no tempo” contrariam essas características.
+                            </div>
+                        </form>
+                    </div>
+                </div>
+
+                <!-- Q2 -->
+                <div class="card nivelamento-card mb-4 quiz-card">
+                    <div class="card-body">
+                        <h5 class="mb-2">Questão 2 — Dados Analíticos</h5>
+                        <p>Assinale a alternativa que <strong>corretamente caracteriza os dados analíticos</strong>:</p>
+
+                        <form class="quiz-form" data-answer="B">
+                            <div class="quiz-options">
+                                <label class="quiz-option"><input type="radio" name="q2" value="A"><span>A) Dados
+                                        detalhados, atualizados em tempo real e orientados à operação</span></label>
+                                <label class="quiz-option"><input type="radio" name="q2" value="B"><span>B) Dados
+                                        históricos, agregados e orientados à tomada de decisão</span></label>
+                                <label class="quiz-option"><input type="radio" name="q2" value="C"><span>C) Dados
+                                        normalizados, com foco em integridade referencial</span></label>
+                                <label class="quiz-option"><input type="radio" name="q2" value="D"><span>D) Dados
+                                        voláteis,
+                                        sujeitos a frequentes operações de atualização</span></label>
+                                <label class="quiz-option"><input type="radio" name="q2" value="E"><span>E) Dados
+                                        gerados
+                                        diretamente por transações operacionais</span></label>
+                            </div>
+
+                            <div class="d-flex flex-wrap gap-2 mt-3">
+                                <button type="button" class="btn btn-primary btn-sm"
+                                    data-action="check">Corrigir</button>
+                                <button type="button" class="btn btn-outline-secondary btn-sm"
+                                    data-action="toggle">Gabarito
+                                    comentado</button>
+                                <button type="button" class="btn btn-outline-danger btn-sm"
+                                    data-action="reset">Limpar</button>
+                            </div>
+
+                            <div class="quiz-feedback mt-3" aria-live="polite"></div>
+
+                            <div class="tip-box mt-3 quiz-solution d-none">
+                                <strong>Gabarito: B</strong><br><br>
+                                <strong>Comentário:</strong> Dados analíticos (OLAP/DW) são tipicamente
+                                <strong>históricos</strong>,
+                                <strong>consolidados</strong> e/ou <strong>agregados</strong>, usados para
+                                <strong>análise</strong> e
+                                <strong>decisão</strong>. As alternativas A, D e E descrevem cenário operacional (OLTP).
+                                A
+                                alternativa C
+                                trata de normalização, mais típica de bancos transacionais.
+                            </div>
+                        </form>
+                    </div>
+                </div>
+
+                <!-- Q3 -->
+                <div class="card nivelamento-card mb-4 quiz-card">
+                    <div class="card-body">
+                        <h5 class="mb-2">Questão 3 — Não Volatilidade</h5>
+                        <p>No contexto de Data Warehouse, o termo <strong>não volátil</strong> significa que os dados:
+                        </p>
+
+                        <form class="quiz-form" data-answer="C">
+                            <div class="quiz-options">
+                                <label class="quiz-option"><input type="radio" name="q3" value="A"><span>A) nunca
+                                        recebem
+                                        novos registros</span></label>
+                                <label class="quiz-option"><input type="radio" name="q3" value="B"><span>B) são
+                                        descartados
+                                        após determinado período</span></label>
+                                <label class="quiz-option"><input type="radio" name="q3" value="C"><span>C) não sofrem
+                                        atualizações operacionais frequentes e são orientados à consulta</span></label>
+                                <label class="quiz-option"><input type="radio" name="q3" value="D"><span>D) são
+                                        armazenados
+                                        apenas temporariamente</span></label>
+                                <label class="quiz-option"><input type="radio" name="q3" value="E"><span>E) existem
+                                        somente
+                                        durante o processamento analítico</span></label>
+                            </div>
+
+                            <div class="d-flex flex-wrap gap-2 mt-3">
+                                <button type="button" class="btn btn-primary btn-sm"
+                                    data-action="check">Corrigir</button>
+                                <button type="button" class="btn btn-outline-secondary btn-sm"
+                                    data-action="toggle">Gabarito
+                                    comentado</button>
+                                <button type="button" class="btn btn-outline-danger btn-sm"
+                                    data-action="reset">Limpar</button>
+                            </div>
+
+                            <div class="quiz-feedback mt-3" aria-live="polite"></div>
+
+                            <div class="tip-box mt-3 quiz-solution d-none">
+                                <strong>Gabarito: C</strong><br><br>
+                                <strong>Comentário:</strong> “Não volátil” <strong>não</strong> quer dizer “nunca recebe
+                                dados”, e sim que
+                                o DW não é usado para <strong>operações transacionais frequentes</strong>
+                                (INSERT/UPDATE/DELETE operacionais).
+                                Ele é <strong>estável</strong> e <strong>orientado à leitura</strong>, recebendo cargas
+                                periódicas (ETL/ELT).
+                            </div>
+                        </form>
+                    </div>
+                </div>
+
+                <!-- Q4 -->
+                <div class="card nivelamento-card mb-4 quiz-card">
+                    <div class="card-body">
+                        <h5 class="mb-2">Questão 4 — ETL</h5>
+                        <p>No processo <strong>ETL</strong>, a etapa considerada mais crítica é a de:</p>
+
+                        <form class="quiz-form" data-answer="C">
+                            <div class="quiz-options">
+                                <label class="quiz-option"><input type="radio" name="q4" value="A"><span>A) extração,
+                                        pois
+                                        acessa diretamente os sistemas OLTP</span></label>
+                                <label class="quiz-option"><input type="radio" name="q4" value="B"><span>B) carga, pois
+                                        grava dados no Data Warehouse</span></label>
+                                <label class="quiz-option"><input type="radio" name="q4" value="C"><span>C)
+                                        transformação,
+                                        pois garante qualidade, padronização e integração</span></label>
+                                <label class="quiz-option"><input type="radio" name="q4" value="D"><span>D) staging,
+                                        pois
+                                        armazena dados de forma definitiva</span></label>
+                                <label class="quiz-option"><input type="radio" name="q4" value="E"><span>E)
+                                        consolidação,
+                                        pois elimina completamente redundâncias</span></label>
+                            </div>
+
+                            <div class="d-flex flex-wrap gap-2 mt-3">
+                                <button type="button" class="btn btn-primary btn-sm"
+                                    data-action="check">Corrigir</button>
+                                <button type="button" class="btn btn-outline-secondary btn-sm"
+                                    data-action="toggle">Gabarito
+                                    comentado</button>
+                                <button type="button" class="btn btn-outline-danger btn-sm"
+                                    data-action="reset">Limpar</button>
+                            </div>
+
+                            <div class="quiz-feedback mt-3" aria-live="polite"></div>
+
+                            <div class="tip-box mt-3 quiz-solution d-none">
+                                <strong>Gabarito: C</strong><br><br>
+                                <strong>Comentário:</strong> A <strong>transformação</strong> é crítica porque nela
+                                ocorre
+                                <strong>limpeza</strong>, <strong>validação</strong>, <strong>padronização</strong> e
+                                <strong>consolidação</strong>,
+                                garantindo <strong>qualidade</strong> e <strong>integração</strong>. “Staging
+                                definitivo”
+                                (D) está errado: staging é temporário.
+                            </div>
+                        </form>
+                    </div>
+                </div>
+
+                <!-- Q5 -->
+                <div class="card nivelamento-card mb-4 quiz-card">
+                    <div class="card-body">
+                        <h5 class="mb-2">Questão 5 — Staging Area</h5>
+                        <p>A <strong>Staging Area</strong>, no contexto de ETL, é corretamente caracterizada como:</p>
+
+                        <form class="quiz-form" data-answer="B">
+                            <div class="quiz-options">
+                                <label class="quiz-option"><input type="radio" name="q5" value="A"><span>A) o
+                                        repositório
+                                        definitivo do Data Warehouse</span></label>
+                                <label class="quiz-option"><input type="radio" name="q5" value="B"><span>B) uma área
+                                        temporária para armazenamento intermediário dos dados extraídos</span></label>
+                                <label class="quiz-option"><input type="radio" name="q5" value="C"><span>C) um banco de
+                                        dados transacional</span></label>
+                                <label class="quiz-option"><input type="radio" name="q5" value="D"><span>D) uma
+                                        estrutura
+                                        exclusiva de Data Lakes</span></label>
+                                <label class="quiz-option"><input type="radio" name="q5" value="E"><span>E) um conjunto
+                                        de
+                                        cubos OLAP</span></label>
+                            </div>
+
+                            <div class="d-flex flex-wrap gap-2 mt-3">
+                                <button type="button" class="btn btn-primary btn-sm"
+                                    data-action="check">Corrigir</button>
+                                <button type="button" class="btn btn-outline-secondary btn-sm"
+                                    data-action="toggle">Gabarito
+                                    comentado</button>
+                                <button type="button" class="btn btn-outline-danger btn-sm"
+                                    data-action="reset">Limpar</button>
+                            </div>
+
+                            <div class="quiz-feedback mt-3" aria-live="polite"></div>
+
+                            <div class="tip-box mt-3 quiz-solution d-none">
+                                <strong>Gabarito: B</strong><br><br>
+                                <strong>Comentário:</strong> Staging é uma área <strong>intermediária e
+                                    temporária</strong>
+                                usada para
+                                armazenar dados extraídos antes/entre transformações e carga, reduzindo impacto no OLTP
+                                e
+                                facilitando reprocessamento.
+                            </div>
+                        </form>
+                    </div>
+                </div>
+
+                <!-- Q6 -->
+                <div class="card nivelamento-card mb-4 quiz-card">
+                    <div class="card-body">
+                        <h5 class="mb-2">Questão 6 — ELT</h5>
+                        <p>A abordagem <strong>ELT</strong> diferencia-se do ETL tradicional porque:</p>
+
+                        <form class="quiz-form" data-answer="C">
+                            <div class="quiz-options">
+                                <label class="quiz-option"><input type="radio" name="q6" value="A"><span>A) elimina a
+                                        etapa
+                                        de transformação</span></label>
+                                <label class="quiz-option"><input type="radio" name="q6" value="B"><span>B) realiza a
+                                        transformação antes da extração</span></label>
+                                <label class="quiz-option"><input type="radio" name="q6" value="C"><span>C) carrega os
+                                        dados
+                                        no destino antes de transformá-los</span></label>
+                                <label class="quiz-option"><input type="radio" name="q6" value="D"><span>D) dispensa o
+                                        uso
+                                        de bancos de dados</span></label>
+                                <label class="quiz-option"><input type="radio" name="q6" value="E"><span>E) é
+                                        incompatível
+                                        com Data Warehouses</span></label>
+                            </div>
+
+                            <div class="d-flex flex-wrap gap-2 mt-3">
+                                <button type="button" class="btn btn-primary btn-sm"
+                                    data-action="check">Corrigir</button>
+                                <button type="button" class="btn btn-outline-secondary btn-sm"
+                                    data-action="toggle">Gabarito
+                                    comentado</button>
+                                <button type="button" class="btn btn-outline-danger btn-sm"
+                                    data-action="reset">Limpar</button>
+                            </div>
+
+                            <div class="quiz-feedback mt-3" aria-live="polite"></div>
+
+                            <div class="tip-box mt-3 quiz-solution d-none">
+                                <strong>Gabarito: C</strong><br><br>
+                                <strong>Comentário:</strong> No <strong>ELT</strong> a carga vem antes da transformação:
+                                extrai → <strong>carrega</strong> (no destino) → transforma. Isso aproveita o
+                                processamento
+                                do ambiente de destino (DW/Lake/engine).
+                            </div>
+                        </form>
+                    </div>
+                </div>
+
+                <!-- Q7 -->
+                <div class="card nivelamento-card mb-4 quiz-card">
+                    <div class="card-body">
+                        <h5 class="mb-2">Questão 7 — Data Lake e Ad hoc</h5>
+                        <p>No <strong>Data Lake</strong>, a lógica de negócios e as transformações dos dados:</p>
+
+                        <form class="quiz-form" data-answer="C">
+                            <div class="quiz-options">
+                                <label class="quiz-option"><input type="radio" name="q7" value="A"><span>A) são
+                                        aplicadas
+                                        antes da carga</span></label>
+                                <label class="quiz-option"><input type="radio" name="q7" value="B"><span>B) são
+                                        permanentemente persistidas no SGBD</span></label>
+                                <label class="quiz-option"><input type="radio" name="q7" value="C"><span>C) ocorrem no
+                                        momento do acesso, de forma <em>ad hoc</em></span></label>
+                                <label class="quiz-option"><input type="radio" name="q7" value="D"><span>D) seguem
+                                        exclusivamente esquema na escrita</span></label>
+                                <label class="quiz-option"><input type="radio" name="q7" value="E"><span>E) são
+                                        idênticas às
+                                        do Data Warehouse</span></label>
+                            </div>
+
+                            <div class="d-flex flex-wrap gap-2 mt-3">
+                                <button type="button" class="btn btn-primary btn-sm"
+                                    data-action="check">Corrigir</button>
+                                <button type="button" class="btn btn-outline-secondary btn-sm"
+                                    data-action="toggle">Gabarito
+                                    comentado</button>
+                                <button type="button" class="btn btn-outline-danger btn-sm"
+                                    data-action="reset">Limpar</button>
+                            </div>
+
+                            <div class="quiz-feedback mt-3" aria-live="polite"></div>
+
+                            <div class="tip-box mt-3 quiz-solution d-none">
+                                <strong>Gabarito: C</strong><br><br>
+                                <strong>Comentário:</strong> Em Data Lake, os dados costumam estar em formato bruto e a
+                                transformação/lógica de negócio é aplicada <strong>na leitura</strong>, frequentemente
+                                em
+                                consultas
+                                <strong><em>ad hoc</em></strong> (temporárias, não necessariamente persistidas).
+                            </div>
+                        </form>
+                    </div>
+                </div>
+
+                <!-- Q8 -->
+                <div class="card nivelamento-card mb-4 quiz-card">
+                    <div class="card-body">
+                        <h5 class="mb-2">Questão 8 — Schema-on-read</h5>
+                        <p>O conceito de <strong>schema-on-read</strong> está diretamente associado:</p>
+
+                        <form class="quiz-form" data-answer="D">
+                            <div class="quiz-options">
+                                <label class="quiz-option"><input type="radio" name="q8" value="A"><span>A) ao Data
+                                        Warehouse</span></label>
+                                <label class="quiz-option"><input type="radio" name="q8" value="B"><span>B) ao
+                                        OLTP</span></label>
+                                <label class="quiz-option"><input type="radio" name="q8" value="C"><span>C) ao Data
+                                        Mart</span></label>
+                                <label class="quiz-option"><input type="radio" name="q8" value="D"><span>D) ao Data
+                                        Lake</span></label>
+                                <label class="quiz-option"><input type="radio" name="q8" value="E"><span>E) à
+                                        normalização
+                                        de dados</span></label>
+                            </div>
+
+                            <div class="d-flex flex-wrap gap-2 mt-3">
+                                <button type="button" class="btn btn-primary btn-sm"
+                                    data-action="check">Corrigir</button>
+                                <button type="button" class="btn btn-outline-secondary btn-sm"
+                                    data-action="toggle">Gabarito
+                                    comentado</button>
+                                <button type="button" class="btn btn-outline-danger btn-sm"
+                                    data-action="reset">Limpar</button>
+                            </div>
+
+                            <div class="quiz-feedback mt-3" aria-live="polite"></div>
+
+                            <div class="tip-box mt-3 quiz-solution d-none">
+                                <strong>Gabarito: D</strong><br><br>
+                                <strong>Comentário:</strong> <strong>Schema-on-read</strong> é típico de Data Lake: os
+                                dados
+                                ficam em bruto
+                                e o esquema é interpretado/definido quando se consulta. Já o DW usa
+                                <strong>schema-on-write</strong> (dados tratados e modelados antes).
+                            </div>
+                        </form>
+                    </div>
+                </div>
+
+                <!-- Q9 -->
+                <div class="card nivelamento-card mb-4 quiz-card">
+                    <div class="card-body">
+                        <h5 class="mb-2">Questão 9 — Data Mart</h5>
+                        <p>Um <strong>Data Mart</strong> pode ser corretamente definido como:</p>
+
+                        <form class="quiz-form" data-answer="B">
+                            <div class="quiz-options">
+                                <label class="quiz-option"><input type="radio" name="q9" value="A"><span>A) um Data
+                                        Warehouse corporativo centralizado</span></label>
+                                <label class="quiz-option"><input type="radio" name="q9" value="B"><span>B) um
+                                        subconjunto
+                                        do Data Warehouse voltado a uma área específica</span></label>
+                                <label class="quiz-option"><input type="radio" name="q9" value="C"><span>C) um
+                                        repositório
+                                        de dados não estruturados</span></label>
+                                <label class="quiz-option"><input type="radio" name="q9" value="D"><span>D) um banco de
+                                        dados transacional</span></label>
+                                <label class="quiz-option"><input type="radio" name="q9" value="E"><span>E) uma área
+                                        intermediária do ETL</span></label>
+                            </div>
+
+                            <div class="d-flex flex-wrap gap-2 mt-3">
+                                <button type="button" class="btn btn-primary btn-sm"
+                                    data-action="check">Corrigir</button>
+                                <button type="button" class="btn btn-outline-secondary btn-sm"
+                                    data-action="toggle">Gabarito
+                                    comentado</button>
+                                <button type="button" class="btn btn-outline-danger btn-sm"
+                                    data-action="reset">Limpar</button>
+                            </div>
+
+                            <div class="quiz-feedback mt-3" aria-live="polite"></div>
+
+                            <div class="tip-box mt-3 quiz-solution d-none">
+                                <strong>Gabarito: B</strong><br><br>
+                                <strong>Comentário:</strong> Data Mart é um recorte (subconjunto) do DW, focado em um
+                                tema/departamento
+                                (ex.: vendas, finanças). Não é staging (E) nem repositório bruto não estruturado (C).
+                            </div>
+                        </form>
+                    </div>
+                </div>
+
+                <!-- Q10 -->
+                <div class="card nivelamento-card mb-4 quiz-card">
+                    <div class="card-body">
+                        <h5 class="mb-2">Questão 10 — Modelagem Dimensional</h5>
+                        <p>Na <strong>modelagem dimensional</strong>, é correto afirmar que:</p>
+
+                        <form class="quiz-form" data-answer="C">
+                            <div class="quiz-options">
+                                <label class="quiz-option"><input type="radio" name="q10" value="A"><span>A) tabelas
+                                        fato
+                                        armazenam atributos descritivos</span></label>
+                                <label class="quiz-option"><input type="radio" name="q10" value="B"><span>B) tabelas
+                                        dimensão armazenam medidas quantitativas</span></label>
+                                <label class="quiz-option"><input type="radio" name="q10" value="C"><span>C) tabelas
+                                        fato
+                                        armazenam medidas e chaves das dimensões</span></label>
+                                <label class="quiz-option"><input type="radio" name="q10" value="D"><span>D) o modelo é
+                                        altamente normalizado</span></label>
+                                <label class="quiz-option"><input type="radio" name="q10" value="E"><span>E) não é
+                                        utilizado
+                                        em OLAP</span></label>
+                            </div>
+
+                            <div class="d-flex flex-wrap gap-2 mt-3">
+                                <button type="button" class="btn btn-primary btn-sm"
+                                    data-action="check">Corrigir</button>
+                                <button type="button" class="btn btn-outline-secondary btn-sm"
+                                    data-action="toggle">Gabarito
+                                    comentado</button>
+                                <button type="button" class="btn btn-outline-danger btn-sm"
+                                    data-action="reset">Limpar</button>
+                            </div>
+
+                            <div class="quiz-feedback mt-3" aria-live="polite"></div>
+
+                            <div class="tip-box mt-3 quiz-solution d-none">
+                                <strong>Gabarito: C</strong><br><br>
+                                <strong>Comentário:</strong> A tabela fato guarda <strong>medidas</strong> (ex.:
+                                quantidade,
+                                valor)
+                                e chaves para dimensões; dimensões guardam <strong>atributos</strong> (ex.: produto,
+                                tempo,
+                                região).
+                                Modelagem dimensional é típica de OLAP/DW e não é “altamente normalizada” como OLTP.
+                            </div>
+                        </form>
+                    </div>
+                </div>
+
+                <!-- Q11 -->
+                <div class="card nivelamento-card mb-4 quiz-card">
+                    <div class="card-body">
+                        <h5 class="mb-2">Questão 11 — Esquema Estrela</h5>
+                        <p>O <strong>esquema estrela</strong> caracteriza-se por:</p>
+
+                        <form class="quiz-form" data-answer="C">
+                            <div class="quiz-options">
+                                <label class="quiz-option"><input type="radio" name="q11" value="A"><span>A) dimensões
+                                        normalizadas e consultas mais complexas</span></label>
+                                <label class="quiz-option"><input type="radio" name="q11" value="B"><span>B) maior
+                                        número de
+                                        junções e menor desempenho</span></label>
+                                <label class="quiz-option"><input type="radio" name="q11" value="C"><span>C) tabela fato
+                                        central conectada diretamente às dimensões</span></label>
+                                <label class="quiz-option"><input type="radio" name="q11" value="D"><span>D) ausência de
+                                        tabelas dimensão</span></label>
+                                <label class="quiz-option"><input type="radio" name="q11" value="E"><span>E) uso
+                                        exclusivo
+                                        em Data Lakes</span></label>
+                            </div>
+
+                            <div class="d-flex flex-wrap gap-2 mt-3">
+                                <button type="button" class="btn btn-primary btn-sm"
+                                    data-action="check">Corrigir</button>
+                                <button type="button" class="btn btn-outline-secondary btn-sm"
+                                    data-action="toggle">Gabarito
+                                    comentado</button>
+                                <button type="button" class="btn btn-outline-danger btn-sm"
+                                    data-action="reset">Limpar</button>
+                            </div>
+
+                            <div class="quiz-feedback mt-3" aria-live="polite"></div>
+
+                            <div class="tip-box mt-3 quiz-solution d-none">
+                                <strong>Gabarito: C</strong><br><br>
+                                <strong>Comentário:</strong> No estrela, a fato fica no centro e se liga diretamente às
+                                dimensões
+                                (menos joins, melhor desempenho). “Dimensões normalizadas” é mais típico do floco de
+                                neve.
+                            </div>
+                        </form>
+                    </div>
+                </div>
+
+                <!-- Q12 -->
+                <div class="card nivelamento-card mb-4 quiz-card">
+                    <div class="card-body">
+                        <h5 class="mb-2">Questão 12 — Cubo de Dados</h5>
+                        <p>O <strong>cubo de dados</strong> em OLAP é uma estrutura que:</p>
+
+                        <form class="quiz-form" data-answer="C">
+                            <div class="quiz-options">
+                                <label class="quiz-option"><input type="radio" name="q12" value="A"><span>A) substitui o
+                                        Data Warehouse</span></label>
+                                <label class="quiz-option"><input type="radio" name="q12" value="B"><span>B) representa
+                                        dados apenas bidimensionais</span></label>
+                                <label class="quiz-option"><input type="radio" name="q12" value="C"><span>C) organiza
+                                        dados
+                                        segundo múltiplas dimensões</span></label>
+                                <label class="quiz-option"><input type="radio" name="q12" value="D"><span>D) é utilizada
+                                        apenas em OLTP</span></label>
+                                <label class="quiz-option"><input type="radio" name="q12" value="E"><span>E) elimina a
+                                        necessidade de ETL</span></label>
+                            </div>
+
+                            <div class="d-flex flex-wrap gap-2 mt-3">
+                                <button type="button" class="btn btn-primary btn-sm"
+                                    data-action="check">Corrigir</button>
+                                <button type="button" class="btn btn-outline-secondary btn-sm"
+                                    data-action="toggle">Gabarito
+                                    comentado</button>
+                                <button type="button" class="btn btn-outline-danger btn-sm"
+                                    data-action="reset">Limpar</button>
+                            </div>
+
+                            <div class="quiz-feedback mt-3" aria-live="polite"></div>
+
+                            <div class="tip-box mt-3 quiz-solution d-none">
+                                <strong>Gabarito: C</strong><br><br>
+                                <strong>Comentário:</strong> O cubo OLAP é uma forma de representar e consultar fatos
+                                por
+                                múltiplas dimensões
+                                (tempo, produto, região etc.), permitindo operações como
+                                drill-down/roll-up/slice/dice/pivot. Não substitui DW nem elimina ETL.
+                            </div>
+                        </form>
+                    </div>
+                </div>
+
+                <!-- Q13 -->
+                <div class="card nivelamento-card mb-4 quiz-card">
+                    <div class="card-body">
+                        <h5 class="mb-2">Questão 13 — Drill-down</h5>
+                        <p>A operação <strong>drill-down</strong> corresponde a:</p>
+
+                        <form class="quiz-form" data-answer="C">
+                            <div class="quiz-options">
+                                <label class="quiz-option"><input type="radio" name="q13" value="A"><span>A) aumento do
+                                        nível de agregação</span></label>
+                                <label class="quiz-option"><input type="radio" name="q13" value="B"><span>B) redução do
+                                        nível de detalhe</span></label>
+                                <label class="quiz-option"><input type="radio" name="q13" value="C"><span>C) aumento do
+                                        nível de detalhe</span></label>
+                                <label class="quiz-option"><input type="radio" name="q13" value="D"><span>D) troca de
+                                        eixos
+                                        de visualização</span></label>
+                                <label class="quiz-option"><input type="radio" name="q13" value="E"><span>E) seleção de
+                                        um
+                                        único valor</span></label>
+                            </div>
+
+                            <div class="d-flex flex-wrap gap-2 mt-3">
+                                <button type="button" class="btn btn-primary btn-sm"
+                                    data-action="check">Corrigir</button>
+                                <button type="button" class="btn btn-outline-secondary btn-sm"
+                                    data-action="toggle">Gabarito
+                                    comentado</button>
+                                <button type="button" class="btn btn-outline-danger btn-sm"
+                                    data-action="reset">Limpar</button>
+                            </div>
+
+                            <div class="quiz-feedback mt-3" aria-live="polite"></div>
+
+                            <div class="tip-box mt-3 quiz-solution d-none">
+                                <strong>Gabarito: C</strong><br><br>
+                                <strong>Comentário:</strong> Drill-down = ir para um nível mais detalhado (ex.: ano →
+                                trimestre → mês → dia),
+                                ou seja, <strong>mais granularidade</strong>. “Troca de eixos” é pivot/rotation.
+                            </div>
+                        </form>
+                    </div>
+                </div>
+
+                <!-- Q14 -->
+                <div class="card nivelamento-card mb-4 quiz-card">
+                    <div class="card-body">
+                        <h5 class="mb-2">Questão 14 — Slice × Dice</h5>
+                        <p>A diferença entre <strong>slice</strong> e <strong>dice</strong> está no fato de que:</p>
+
+                        <form class="quiz-form" data-answer="B">
+                            <div class="quiz-options">
+                                <label class="quiz-option"><input type="radio" name="q14" value="A"><span>A) slice
+                                        seleciona
+                                        múltiplas dimensões e dice apenas uma</span></label>
+                                <label class="quiz-option"><input type="radio" name="q14" value="B"><span>B) slice
+                                        seleciona
+                                        um valor de uma dimensão, enquanto dice seleciona múltiplos
+                                        valores/dimensões</span></label>
+                                <label class="quiz-option"><input type="radio" name="q14" value="C"><span>C) slice
+                                        aumenta a
+                                        granularidade e dice reduz</span></label>
+                                <label class="quiz-option"><input type="radio" name="q14" value="D"><span>D) dice
+                                        reorganiza
+                                        eixos e slice agrega dados</span></label>
+                                <label class="quiz-option"><input type="radio" name="q14" value="E"><span>E) não há
+                                        diferença conceitual</span></label>
+                            </div>
+
+                            <div class="d-flex flex-wrap gap-2 mt-3">
+                                <button type="button" class="btn btn-primary btn-sm"
+                                    data-action="check">Corrigir</button>
+                                <button type="button" class="btn btn-outline-secondary btn-sm"
+                                    data-action="toggle">Gabarito
+                                    comentado</button>
+                                <button type="button" class="btn btn-outline-danger btn-sm"
+                                    data-action="reset">Limpar</button>
+                            </div>
+
+                            <div class="quiz-feedback mt-3" aria-live="polite"></div>
+
+                            <div class="tip-box mt-3 quiz-solution d-none">
+                                <strong>Gabarito: B</strong><br><br>
+                                <strong>Comentário:</strong> Slice = “fatia” com <strong>um valor</strong> de uma
+                                dimensão
+                                (ex.: ano=2025).
+                                Dice = subcubo com <strong>vários valores</strong> e/ou múltiplas dimensões (ex.: anos
+                                2024–2025 e regiões SP/RJ).
+                            </div>
+                        </form>
+                    </div>
+                </div>
+
+                <!-- Q15 -->
+                <div class="card nivelamento-card mb-4 quiz-card">
+                    <div class="card-body">
+                        <h5 class="mb-2">Questão 15 — OLTP × OLAP</h5>
+                        <p>Assinale a alternativa correta:</p>
+
+                        <form class="quiz-form" data-answer="C">
+                            <div class="quiz-options">
+                                <label class="quiz-option"><input type="radio" name="q15" value="A"><span>A) OLTP →
+                                        análises
+                                        históricas | OLAP → transações</span></label>
+                                <label class="quiz-option"><input type="radio" name="q15" value="B"><span>B) OLTP →
+                                        dados
+                                        agregados | OLAP → dados detalhados</span></label>
+                                <label class="quiz-option"><input type="radio" name="q15" value="C"><span>C) OLTP →
+                                        operações do negócio – transações (<em>transactions</em>) | OLAP → apoio à
+                                        decisão –
+                                        análises (<em>analytics</em>)</span></label>
+                                <label class="quiz-option"><input type="radio" name="q15" value="D"><span>D) OLTP →
+                                        apoio à
+                                        decisão | OLAP → operação</span></label>
+                                <label class="quiz-option"><input type="radio" name="q15" value="E"><span>E) OLTP e OLAP
+                                        possuem a mesma finalidade</span></label>
+                            </div>
+
+                            <div class="d-flex flex-wrap gap-2 mt-3">
+                                <button type="button" class="btn btn-primary btn-sm"
+                                    data-action="check">Corrigir</button>
+                                <button type="button" class="btn btn-outline-secondary btn-sm"
+                                    data-action="toggle">Gabarito
+                                    comentado</button>
+                                <button type="button" class="btn btn-outline-danger btn-sm"
+                                    data-action="reset">Limpar</button>
+                            </div>
+
+                            <div class="quiz-feedback mt-3" aria-live="polite"></div>
+
+                            <div class="tip-box mt-3 quiz-solution d-none">
+                                <strong>Gabarito: C</strong><br><br>
+                                <strong>Comentário:</strong> OLTP (Online Transaction Processing) foca em
+                                <strong>transações</strong> do dia a dia
+                                (INSERT/UPDATE/DELETE, baixa latência). OLAP (Online Analytical Processing) foca em
+                                <strong>análises</strong>
+                                com consultas mais complexas, histórico, agregações e suporte à decisão.
+                            </div>
+                        </form>
+                    </div>
+                </div>
+
+                <!-- Q16 (Cesgranrio - Tabelas T, X, Y) -->
+                <div class="card nivelamento-card mb-5 quiz-card" id="quiz-olap-cesgranrio">
+                    <div class="card-body">
+                        <h4 class="mb-3">Questão 16 — Operações OLAP (Interativa)</h4>
+
+                        <p>
+                            Considere as tabelas a seguir, elaboradas a partir do controle de consumo de material
+                            de expediente de uma agência bancária no ano de 2017.
+                        </p>
+
+                        <!-- TABELA T -->
+                        <h5 class="mt-4">Tabela T — Consumo por Produto e Trimestre (2017)</h5>
+                        <div class="table-responsive mb-4">
+                            <table class="table table-bordered table-sm align-middle text-center">
+                                <thead>
+                                    <tr>
+                                        <th rowspan="2">Produto</th>
+                                        <th colspan="4">Trimestres 2017</th>
+                                        <th rowspan="2">Total</th>
+                                    </tr>
+                                    <tr>
+                                        <th>1</th>
+                                        <th>2</th>
+                                        <th>3</th>
+                                        <th>4</th>
+                                    </tr>
+                                </thead>
+                                <tbody>
+                                    <tr>
+                                        <td>Papel A4 (rm)</td>
+                                        <td>40</td>
+                                        <td>25</td>
+                                        <td>32</td>
+                                        <td>56</td>
+                                        <td>153</td>
+                                    </tr>
+                                    <tr>
+                                        <td>Esferográfica azul (dz)</td>
+                                        <td>35</td>
+                                        <td>20</td>
+                                        <td>15</td>
+                                        <td>20</td <td>20</td>
+                                        <td>90</td>
+                                    </tr>
+                                    <tr>
+                                        <td>Grampo (cx)</td>
+                                        <td>10</td>
+                                        <td>15</td>
+                                        <td>12</td>
+                                        <td>18</td>
+                                        <td>55</td>
+                                    </tr>
+                                    <tr>
+                                        <td>Clips (cx)</td>
+                                        <td>8</td>
+                                        <td>6</td>
+                                        <td>9</td>
+                                        <td>7</td>
+                                        <td>30</td>
+                                    </tr>
+                                    <tr class="table-light fw-semibold">
+                                        <td>Total</td>
+                                        <td>93</td>
+                                        <td>66</td>
+                                        <td>68</td>
+                                        <td>101</td>
+                                        <td>328</td>
+                                    </tr>
+                                </tbody>
+                            </table>
+                        </div>
+
+                        <p class="mt-3">
+                            O chefe solicitou que o funcionário montasse mais duas tabelas com formas diferentes de
+                            apresentação desses dados. O resultado foi consolidado nas Tabelas <strong>X</strong> e
+                            <strong>Y</strong>.
+                        </p>
+
+                        <!-- TABELA X (ROLL-UP) -->
+                        <h5 class="mt-4">Tabela X — Consumo por Produto e Semestre (2017)</h5>
+                        <div class="table-responsive mb-4">
+                            <table class="table table-bordered table-sm align-middle text-center">
+                                <thead>
+                                    <tr>
+                                        <th>Produto</th>
+                                        <th>1º Semestre (T1+T2)</th>
+                                        <th>2º Semestre (T3+T4)</th>
+                                        <th>Total</th>
+                                    </tr>
+                                </thead>
+                                <tbody>
+                                    <tr>
+                                        <td>Papel A4 (rm)</td>
+                                        <td>65</td>
+                                        <td>88</td>
+                                        <td>153</td>
+                                    </tr>
+                                    <tr>
+                                        <td>Esferográfica azul (dz)</td>
+                                        <td>55</td>
+                                        <td>35</td>
+                                        <td>90</td>
+                                    </tr>
+                                    <tr>
+                                        <td>Grampo (cx)</td>
+                                        <td>25</td>
+                                        <td>30</td>
+                                        <td>55</td>
+                                    </tr>
+                                    <tr>
+                                        <td>Clips (cx)</td>
+                                        <td>14</td>
+                                        <td>16</td>
+                                        <td>30</td>
+                                    </tr>
+                                    <tr class="table-light fw-semibold">
+                                        <td>Total</td>
+                                        <td>159</td>
+                                        <td>169</td>
+                                        <td>328</td>
+                                    </tr>
+                                </tbody>
+                            </table>
+                        </div>
+
+                        <!-- TABELA Y (ROTATION/PIVOT) -->
+                        <h5 class="mt-4">Tabela Y — Consumo por Trimestre e Produto (2017)</h5>
+                        <div class="table-responsive mb-4">
+                            <table class="table table-bordered table-sm align-middle text-center">
+                                <thead>
+                                    <tr>
+                                        <th>Trimestre</th>
+                                        <th>Papel A4 (rm)</th>
+                                        <th>Esferográfica azul (dz)</th>
+                                        <th>Grampo (cx)</th>
+                                        <th>Clips (cx)</th>
+                                        <th>Total</th>
+                                    </tr>
+                                </thead>
+                                <tbody>
+                                    <tr>
+                                        <td>1</td>
+                                        <td>40</td>
+                                        <td>35</td>
+                                        <td>10</td>
+                                        <td>8</td>
+                                        <td>93</td>
+                                    </tr>
+                                    <tr>
+                                        <td>2</td>
+                                        <td>25</td>
+                                        <td>20</td>
+                                        <td>15</td>
+                                        <td>6</td>
+                                        <td>66</td>
+                                    </tr>
+                                    <tr>
+                                        <td>3</td>
+                                        <td>32</td>
+                                        <td>15</td>
+                                        <td>12</td>
+                                        <td>9</td>
+                                        <td>68</td>
+                                    </tr>
+                                    <tr>
+                                        <td>4</td>
+                                        <td>56</td>
+                                        <td>20</td>
+                                        <td>18</td>
+                                        <td>7</td>
+                                        <td>101</td>
+                                    </tr>
+                                    <tr class="table-light fw-semibold">
+                                        <td>Total</td>
+                                        <td>153</td>
+                                        <td>90</td>
+                                        <td>55</td>
+                                        <td>30</td>
+                                        <td>328</td>
+                                    </tr>
+                                </tbody>
+                            </table>
+                        </div>
+
+                        <p class="mt-3">
+                            Considerando-se o conceito de <strong>OLAP</strong>, quais foram as operações realizadas de
+                            <strong>T</strong> para <strong>X</strong> e de <strong>T</strong> para <strong>Y</strong>,
+                            respectivamente?
+                        </p>
+
+                        <!-- FORM QUIZ -->
+                        <form class="quiz-form" data-answer="E">
+                            <div class="quiz-options">
+                                <label class="quiz-option">
+                                    <input type="radio" name="q16" value="A">
+                                    <span>A) Drill Down e Roll-Up</span>
+                                </label>
+                                <label class="quiz-option">
+                                    <input type="radio" name="q16" value="B">
+                                    <span>B) Drill Down e Rotation</span>
+                                </label>
+                                <label class="quiz-option">
+                                    <input type="radio" name="q16" value="C">
+                                    <span>C) Slice e Roll-Up</span>
+                                </label>
+                                <label class="quiz-option">
+                                    <input type="radio" name="q16" value="D">
+                                    <span>D) Roll-Up e Drill Down</span>
+                                </label>
+                                <label class="quiz-option">
+                                    <input type="radio" name="q16" value="E">
+                                    <span>E) Roll-Up e Rotation</span>
+                                </label>
+                            </div>
+
+                            <div class="d-flex flex-wrap gap-2 mt-3">
+                                <button type="button" class="btn btn-primary btn-sm"
+                                    data-action="check">Corrigir</button>
+                                <button type="button" class="btn btn-outline-secondary btn-sm"
+                                    data-action="toggle">Gabarito
+                                    comentado</button>
+                                <button type="button" class="btn btn-outline-danger btn-sm"
+                                    data-action="reset">Limpar</button>
+                            </div>
+
+                            <div class="quiz-feedback mt-3" aria-live="polite"></div>
+
+                            <div class="tip-box mt-3 quiz-solution d-none">
+                                <strong>Gabarito: E</strong><br><br>
+                                <strong>Comentário (bem CESGRANRIO):</strong><br>
+                                • De <strong>T → X</strong>, os dados passaram de <strong>trimestres</strong> para
+                                <strong>semestres</strong>, ou seja, houve <strong>maior agregação</strong> e
+                                <strong>menos detalhe</strong> (redução de granularidade) — isso é
+                                <strong>Roll-Up</strong>.<br><br>
+                                • De <strong>T → Y</strong>, os mesmos dados foram apresentados com os eixos
+                                reorganizados (o que era “Produto nas linhas” vira “Produto nas colunas”, e o
+                                “Trimestre” passa a orientar as linhas), ou seja, houve <strong>Rotation/Pivot</strong>
+                                (troca de perspectiva das dimensões), sem alterar os valores.
+                            </div>
+                        </form>
+
+                    </div>
+                </div>
+
+            </section>
+
+        </div>
+    </main>
+
+    <!-- ==========================
+         QUIZ — estilos (escopados)
+    ========================== -->
+    <style>
+        .quiz-card .quiz-options {
+            display: grid;
+            gap: .5rem;
+        }
+
+        .quiz-card .quiz-option {
+            display: flex;
+            gap: .6rem;
+            align-items: center;
+            padding: .55rem .7rem;
+            border: 1px solid rgba(0, 0, 0, .12);
+            border-radius: .75rem;
+            cursor: pointer;
+            user-select: none;
+            background: rgba(255, 255, 255, .55);
+        }
+
+        .quiz-card .quiz-option input[type="radio"] {
+            margin-top: 0;
+            transform: translateY(1px);
+        }
+
+        .quiz-card .quiz-option.is-correct {
+            border-color: rgba(25, 135, 84, .55);
+            box-shadow: 0 0 0 .2rem rgba(25, 135, 84, .10);
+        }
+
+        .quiz-card .quiz-option.is-wrong {
+            border-color: rgba(220, 53, 69, .55);
+            box-shadow: 0 0 0 .2rem rgba(220, 53, 69, .10);
+        }
+
+        .quiz-card .quiz-feedback {
+            padding: .75rem .9rem;
+            border-radius: .75rem;
+            border: 1px solid rgba(0, 0, 0, .12);
+            background: rgba(255, 255, 255, .65);
+            display: none;
+        }
+
+        .quiz-card .quiz-feedback.show {
+            display: block;
+        }
+    </style>
+
+    <!-- ==========================
+         QUIZ — JS (reutilizável)
+    ========================== -->
+    <script>
+        (function () {
+            const cards = document.querySelectorAll(".quiz-card");
+            if (!cards.length) return;
+
+            cards.forEach((card) => {
+                const form = card.querySelector(".quiz-form");
+                if (!form) return;
+
+                const options = Array.from(card.querySelectorAll(".quiz-option"));
+                const feedback = card.querySelector(".quiz-feedback");
+                const solution = card.querySelector(".quiz-solution");
+                const answer = form.getAttribute("data-answer");
+
+                function getSelected() {
+                    const checked = form.querySelector('input[type="radio"]:checked');
+                    return checked ? checked.value : null;
+                }
+
+                function clearStyles() {
+                    options.forEach(o => o.classList.remove("is-correct", "is-wrong"));
+                    if (feedback) {
+                        feedback.classList.remove("show");
+                        feedback.innerHTML = "";
+                    }
+                }
+
+                function showFeedback(html) {
+                    if (!feedback) return;
+                    feedback.innerHTML = html;
+                    feedback.classList.add("show");
+                }
+
+                function markSelected(selected, ok) {
+                    options.forEach((label) => {
+                        const input = label.querySelector('input[type="radio"]');
+                        if (input && input.value === selected) {
+                            label.classList.add(ok ? "is-correct" : "is-wrong");
+                        }
+                    });
+                }
+
+                function check() {
+                    clearStyles();
+                    const selected = getSelected();
+                    if (!selected) {
+                        showFeedback("<strong>Selecione uma alternativa</strong> para corrigir.");
+                        return;
+                    }
+
+                    const ok = selected === answer;
+                    markSelected(selected, ok);
+
+                    if (ok) {
+                        showFeedback(`✅ <strong>Correto!</strong> Você marcou <strong>${selected}</strong>.`);
+                    } else {
+                        showFeedback(`❌ <strong>Incorreto.</strong> Você marcou <strong>${selected}</strong>.`);
+                    }
+                }
+
+                function toggle() {
+                    if (!solution) return;
+                    solution.classList.toggle("d-none");
+                }
+
+                function reset() {
+                    clearStyles();
+                    const checked = form.querySelector('input[type="radio"]:checked');
+                    if (checked) checked.checked = false;
+                    if (solution) solution.classList.add("d-none");
+                }
+
+                card.addEventListener("click", (e) => {
+                    const btn = e.target.closest("[data-action]");
+                    if (!btn) return;
+
+                    const action = btn.getAttribute("data-action");
+                    if (action === "check") check();
+                    if (action === "toggle") toggle();
+                    if (action === "reset") reset();
+                });
+            });
+        })();
+    </script>
+
+    <!-- Bootstrap JS (opcional, mas recomendado) -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
+
+</body>
+
+</html>

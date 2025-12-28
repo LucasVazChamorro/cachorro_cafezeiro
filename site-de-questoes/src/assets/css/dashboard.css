@@ -1,0 +1,65 @@
+/* =========================
+   Dashboard — Cachorro Cafezeiro
+========================= */
+
+.dashboard-header {
+    display: flex;
+    align-items: flex-start;
+    justify-content: space-between;
+    gap: 16px;
+}
+
+.metric-card {
+    border: 1px solid rgba(0, 0, 0, 0.06);
+    border-radius: 14px;
+    box-shadow: 0 8px 22px rgba(0, 0, 0, 0.06);
+}
+
+.metric-label {
+    margin: 0;
+    font-size: .9rem;
+    color: rgba(0, 0, 0, 0.55);
+}
+
+.metric-value {
+    margin: 6px 0 0;
+    font-size: 2rem;
+    font-weight: 800;
+    letter-spacing: -0.02em;
+}
+
+.metric-sub {
+    margin: 2px 0 0;
+    font-size: .9rem;
+}
+
+.progress-cc {
+    height: 10px;
+    border-radius: 999px;
+    background: rgba(0, 0, 0, 0.08);
+}
+
+.progress-bar-cc {
+    border-radius: 999px;
+    background: var(--cafe-600, #6d4c41);
+}
+
+.topic-pill {
+    border: 1px solid rgba(0, 0, 0, 0.06);
+    background: #fff;
+    border-radius: 14px;
+    padding: 14px;
+    box-shadow: 0 8px 22px rgba(0, 0, 0, 0.06);
+}
+
+.topic-title {
+    font-weight: 700;
+}
+
+.topic-sub {
+    font-size: .92rem;
+}
+
+.footer-cc {
+    color: rgba(0, 0, 0, 0.65);
+}

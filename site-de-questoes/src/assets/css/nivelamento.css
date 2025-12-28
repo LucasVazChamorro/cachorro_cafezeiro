@@ -1,0 +1,392 @@
+/* =======================================
+   NIVELAMENTO — ESTILO GERAL DAS PÁGINAS
+   (Matemática, Estatística, TI, etc.)
+   PADRÃO: estilo limpo (cards brancos),
+   igual ao Noções de Estatística
+======================================= */
+
+:root {
+    /* Mantém a paleta do site via variáveis do base.css */
+    --nivelamento-card-bg: #ffffff;
+    /* cards sempre brancos */
+    --nivelamento-card-border: rgba(0, 0, 0, .08);
+    /* borda suave */
+    --nivelamento-card-shadow: 0 8px 20px rgba(0, 0, 0, .08);
+    --nivelamento-radius: 16px;
+
+    /* Acentos (seu site usa café, mas exercícios/estatística usam verde no Bootstrap) */
+    --success-border: rgba(25, 135, 84, .55);
+    /* borda verde mais elegante */
+}
+
+/* Fundo geral */
+body {
+    background: var(--bg, #faf7f4);
+    color: var(--text, #2b201c);
+}
+
+/* Container principal das páginas de nivelamento */
+main.nivelamento-main,
+main.container,
+.nivelamento-wrapper {
+    padding-top: 2rem;
+    padding-bottom: 3rem;
+}
+
+/* =======================================
+   HERO / BANNER
+======================================= */
+
+.nivelamento-hero {
+    height: 520px;
+    border-radius: 18px;
+    overflow: hidden;
+    position: relative;
+}
+
+.nivelamento-hero-img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    object-position: center top;
+}
+
+/* Overlay para contraste */
+.nivelamento-hero::before {
+    content: "";
+    position: absolute;
+    inset: 0;
+    background: linear-gradient(180deg, rgba(0, 0, 0, .25), rgba(0, 0, 0, .78));
+    z-index: 1;
+}
+
+.nivelamento-hero>* {
+    position: relative;
+    z-index: 2;
+}
+
+/* Caixa do título/subtítulo (contraste garantido) */
+.hero-text-box {
+    display: inline-block;
+    max-width: 820px;
+    padding: 14px 18px;
+    border-radius: 14px;
+    background: rgba(0, 0, 0, 0.55);
+    backdrop-filter: blur(6px);
+    -webkit-backdrop-filter: blur(6px);
+    border: 1px solid rgba(255, 255, 255, 0.18);
+}
+
+/* Títulos dentro do HERO */
+.hero-text-box .nivelamento-title,
+.hero-text-box h1.nivelamento-title {
+    text-align: left;
+    margin-bottom: 0.35rem;
+    background: none;
+    -webkit-background-clip: initial;
+    color: #fff;
+    font-weight: 800;
+}
+
+.hero-text-box .nivelamento-subtitle {
+    text-align: left;
+    color: rgba(255, 255, 255, 0.9);
+    margin-bottom: 0;
+}
+
+/* =======================================
+   TÍTULOS padrão (fora do HERO)
+======================================= */
+
+.nivelamento-title,
+h1.nivelamento-title {
+    font-weight: 700;
+    font-size: clamp(1.7rem, 2vw + 1rem, 2.2rem);
+    text-align: center;
+    margin-bottom: 0.5rem;
+    background: linear-gradient(90deg, var(--accent, #5D4037), var(--accent-hover, #3e2723));
+    -webkit-background-clip: text;
+    color: transparent;
+}
+
+.nivelamento-subtitle {
+    text-align: center;
+    color: var(--text-muted, #7a6c66);
+    margin-bottom: 2rem;
+}
+
+/* =======================================
+   CARDS (PADRÃO LIMPO — BRANCO)
+   Igual ao Noções de Estatística
+======================================= */
+
+.nivelamento-card,
+.card.nivelamento-card {
+    background: var(--nivelamento-card-bg);
+    border-radius: var(--nivelamento-radius);
+    border: 1px solid var(--nivelamento-card-border);
+    box-shadow: var(--nivelamento-card-shadow);
+    transition: transform 0.20s ease, box-shadow 0.20s ease, border-color .20s ease;
+}
+
+/* Hover suave (sem efeito “neumorphism”) */
+.nivelamento-card:hover {
+    transform: translateY(-3px);
+    box-shadow: 0 10px 26px rgba(0, 0, 0, 0.10);
+}
+
+/* Títulos dentro dos cards */
+.nivelamento-card h2,
+.nivelamento-card h3,
+.nivelamento-card h4 {
+    font-weight: 700;
+}
+
+/* =======================================
+   EXERCÍCIOS / QUESTÕES (BORDA VERDE TOTAL)
+   Você pediu: borda verde no card inteiro,
+   não só na lateral.
+======================================= */
+
+/* Classe utilitária (use no HTML/JS):
+   class="card nivelamento-card mb-4 exercise-green"
+*/
+.exercise-green {
+    border: 2px solid var(--success-border) !important;
+}
+
+/* Caso você use o padrão antigo (border-start...), neutraliza o visual:
+   - mantém o card branco
+   - e não “puxa” lateral grossa como estilo principal
+*/
+.card.border-start.border-4 {
+    border-left-width: 1px !important;
+}
+
+/* =======================================
+   CAIXAS ESPECIAIS (exemplos, lembretes)
+   Aqui pode ter leve bg, mas dentro do card.
+======================================= */
+
+.example-box {
+    background: rgba(0, 0, 0, 0.02);
+    border-radius: 14px;
+    padding: 14px 16px;
+    border: 1px solid rgba(0, 0, 0, 0.10);
+    cursor: pointer;
+    transition: transform 0.20s ease, box-shadow 0.20s ease, background 0.20s ease;
+}
+
+.example-box:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 8px 18px rgba(0, 0, 0, 0.10);
+    background: rgba(0, 0, 0, 0.03);
+}
+
+.example-box strong {
+    display: block;
+    margin-bottom: 4px;
+}
+
+.tip-box {
+    background: rgba(0, 0, 0, 0.02);
+    padding: 16px 18px;
+    border-radius: 14px;
+    border: 1px solid rgba(0, 0, 0, 0.10);
+    font-size: 0.95rem;
+}
+
+/* =======================================
+   QUESTÕES INTERATIVAS
+======================================= */
+
+#questions {
+    margin-top: 1.5rem;
+    margin-bottom: 2rem;
+}
+
+/* Cards das questões: seguem o padrão branco + borda verde total */
+#questions .card {
+    background: var(--nivelamento-card-bg);
+    border-radius: var(--nivelamento-radius);
+    border: 2px solid var(--success-border);
+    box-shadow: var(--nivelamento-card-shadow);
+}
+
+/* Enunciado */
+#questions .card-body>p.fw-bold {
+    margin-bottom: 0.75rem;
+}
+
+/* Botões de alternativa */
+.option-btn {
+    border-radius: 14px !important;
+    padding: 10px 12px !important;
+    background: #fff;
+    color: var(--text, #2b201c);
+    border: 1px solid rgba(0, 0, 0, 0.12);
+    transition: 0.20s ease;
+    text-align: left;
+    font-size: 0.96rem;
+}
+
+/* Hover */
+.option-btn:hover {
+    transform: translateX(4px);
+    background: rgba(0, 0, 0, 0.03);
+}
+
+/* Selecionada */
+.option-btn.selected {
+    background: var(--accent, #5D4037) !important;
+    color: #fff !important;
+    border-color: var(--accent-hover, #3e2723) !important;
+    box-shadow: 0 0 0 2px rgba(93, 64, 55, 0.20);
+}
+
+/* Descartada */
+.option-btn.discard {
+    text-decoration: line-through;
+    opacity: 0.45;
+}
+
+/* Botões de ação (evitar dependência de btn-primary) */
+#questions .btn {
+    border-radius: 12px;
+    padding-inline: 18px;
+}
+
+/* Feedback */
+#questions .alert {
+    border-radius: 12px;
+    animation: nivelamento-pop 0.3s ease-out forwards;
+}
+
+@keyframes nivelamento-pop {
+    0% {
+        transform: scale(0.95);
+        opacity: 0;
+    }
+
+    100% {
+        transform: scale(1);
+        opacity: 1;
+    }
+}
+
+/* Iframe de vídeo */
+.video-correção iframe {
+    border-radius: 14px;
+    border: 1px solid rgba(0, 0, 0, 0.10);
+}
+
+/* =======================================
+   RESPONSIVIDADE
+======================================= */
+
+@media (max-width: 768px) {
+
+    main.nivelamento-main,
+    main.container,
+    .nivelamento-wrapper {
+        padding-top: 1.5rem;
+        padding-bottom: 2.5rem;
+    }
+
+    #questions .card {
+        margin-inline: 0;
+    }
+
+    .nivelamento-hero {
+        height: 360px;
+    }
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+/* =======================================
+   IMAGEM PADRÃO NO INÍCIO DO NIVELAMENTO
+   (mesmo tamanho/largura dos cards)
+======================================= */
+
+/* Card que segura a imagem (igual um card comum) */
+.nivelamento-media-card {
+    overflow: hidden;
+    /* corta certinho nas bordas arredondadas */
+}
+
+/* Define um “tamanho padrão” para TODAS as capas */
+.nivelamento-cover {
+    width: 100%;
+    height: 260px;
+    /* ajuste aqui: 240~320 costuma ficar ótimo */
+    object-fit: cover;
+    /* garante corte consistente */
+    object-position: center;
+    /* ajuste fino do corte (center / top / etc) */
+    display: block;
+}
+
+/* Quando a imagem tem TEXTO e não pode cortar (ex.: Big Data, slides, cartazes)
+   use no HTML: class="nivelamento-cover nivelamento-cover--contain" */
+.nivelamento-cover--contain {
+    object-fit: contain;
+    object-position: center;
+    background: #fff;
+    padding: 10px 12px;
+    height: 360px;
+}
+
+@media (max-width: 768px) {
+    .nivelamento-cover--contain {
+        height: 260px;
+    }
+}
+
+.nivelamento-cover--contain {
+    object-fit: contain !important;
+    background: #fff;
+    height: 360px;
+    /* AQUI está o ajuste principal */
+}
+
+/* Responsivo */
+@media (max-width: 768px) {
+    .nivelamento-cover--contain {
+        height: 260px;
+    }
+}
+
+/* Opcional: legenda curta abaixo da imagem */
+.nivelamento-media-caption {
+    font-size: .95rem;
+    color: var(--text-muted, #7a6c66);
+}
+
+/* Responsivo */
+@media (max-width: 768px) {
+    .nivelamento-cover {
+        height: 190px;
+    }
+}
+
+/* Garantir ícones idênticos ao HTML original */
+h3>i.bi {
+    font-size: inherit;
+    color: inherit;
+    vertical-align: baseline;
+}
+
+/* Fix DEFINITIVO: impedir que seu CSS sobrescreva o Bootstrap Icons */
+.bi::before,
+[class^="bi-"]::before,
+[class*=" bi-"]::before {
+    font-family: "bootstrap-icons" !important;
+    font-style: normal !important;
+    font-weight: normal !important;
+    font-variant: normal !important;
+    text-transform: none !important;
+    line-height: 1;
+}
